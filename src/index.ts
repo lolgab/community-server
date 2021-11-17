@@ -185,6 +185,7 @@ export * from './init/ContainerInitializer';
 export * from './init/Initializer';
 export * from './init/LoggerInitializer';
 export * from './init/ServerInitializer';
+export * from './init/VarResolver';
 
 // Logging
 export * from './logging/LazyLogger';
