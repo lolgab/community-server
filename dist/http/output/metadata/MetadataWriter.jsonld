@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/metadata/MetadataWriter#MetadataWriter",
+      "@type": "AbstractClass",
+      "requireElement": "MetadataWriter",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "A serializer that converts metadata to headers for an HttpResponse.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

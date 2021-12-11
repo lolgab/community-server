@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/handlers/WaterfallHandler#WaterfallHandler",
+      "@type": "Class",
+      "requireElement": "WaterfallHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "A composite handler that tries multiple handlers one by one until it finds a handler that supports the input. The handlers will be checked in the order they appear in the input array, allowing for more fine-grained handlers to check before catch-all handlers.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/handlers/WaterfallHandler#WaterfallHandler_handlers",
+          "range": "scs:dist/util/handlers/AsyncHandler#AsyncHandler",
+          "comment": "Handlers over which it will run.",
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/handlers/WaterfallHandler#WaterfallHandler_handlers"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/patch/PatchHandler#PatchHandler",
+      "@type": "AbstractClass",
+      "requireElement": "PatchHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Executes the given Patch.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

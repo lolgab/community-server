@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/handlers/SequenceHandler#SequenceHandler",
+      "@type": "Class",
+      "requireElement": "SequenceHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "A composite handler that will try to run all supporting handlers sequentially and return the value of the last supported handler. The `canHandle` check of this handler will always succeed.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/handlers/SequenceHandler#SequenceHandler_handlers",
+          "range": "scs:dist/util/handlers/AsyncHandler#AsyncHandler",
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/handlers/SequenceHandler#SequenceHandler_handlers"
+        }
+      ]
+    }
+  ]
+}

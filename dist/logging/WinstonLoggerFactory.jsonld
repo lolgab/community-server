@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/logging/WinstonLoggerFactory#WinstonLoggerFactory",
+      "@type": "Class",
+      "requireElement": "WinstonLoggerFactory",
+      "extends": [
+        "scs:dist/logging/LoggerFactory#LoggerFactory"
+      ],
+      "comment": "Uses the winston library to create loggers for the given logging level. By default, it will print to the console with colorized logging levels.  This creates instances of {@link WinstonLogger}.",
+      "parameters": [
+        {
+          "@id": "scs:dist/logging/WinstonLoggerFactory#WinstonLoggerFactory_level",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/logging/WinstonLoggerFactory#WinstonLoggerFactory_level"
+        }
+      ]
+    }
+  ]
+}

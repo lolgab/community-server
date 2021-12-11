@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/errors/HttpError#HttpError",
+      "@type": "Class",
+      "requireElement": "HttpError",
+      "extends": [],
+      "comment": "A class for all errors that could be thrown by Solid. All errors inheriting from this should fix the status code thereby hiding the HTTP internals from other components.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/errors/HttpError#HttpError_statusCode",
+          "range": "xsd:number",
+          "comment": "HTTP status code needed for the HTTP response.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/errors/HttpError#HttpError_name",
+          "range": "xsd:string",
+          "comment": "Error name. Useful for logging and stack tracing.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/errors/HttpError#HttpError_message",
+          "range": "xsd:string",
+          "comment": "Error message.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/util/errors/HttpError#HttpError_options",
+          "comment": "Optional options.",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/errors/HttpError#HttpError_statusCode"
+        },
+        {
+          "@id": "scs:dist/util/errors/HttpError#HttpError_name"
+        },
+        {
+          "@id": "scs:dist/util/errors/HttpError#HttpError_message"
+        },
+        {
+          "@id": "scs:dist/util/errors/HttpError#HttpError_options"
+        }
+      ]
+    }
+  ]
+}

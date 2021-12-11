@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter",
+      "@type": "Class",
+      "requireElement": "QuadToRdfConverter",
+      "extends": [
+        "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter"
+      ],
+      "comment": "Converts `internal/quads` to most major RDF serializations.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter_options_outputPreferences",
+          "range": {
+            "@type": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter_options_outputPreferences_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter_options_outputPreferences_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter_options_outputPreferences_value",
+                "range": "xsd:number",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "outputPreferences",
+              "value": {
+                "fields": [
+                  {
+                    "collectEntries": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter_options_outputPreferences",
+                    "key": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter_options_outputPreferences_key",
+                    "value": {
+                      "@id": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter_options_outputPreferences_value"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

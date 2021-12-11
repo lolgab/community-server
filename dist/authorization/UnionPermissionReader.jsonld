@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/UnionPermissionReader#UnionPermissionReader",
+      "@type": "Class",
+      "requireElement": "UnionPermissionReader",
+      "extends": [
+        "scs:dist/util/handlers/UnionHandler#UnionHandler"
+      ],
+      "comment": "Combines the results of multiple PermissionReaders. Every permission in every credential type is handled according to the rule `false` \\> `true` \\> `undefined`.",
+      "parameters": [
+        {
+          "@id": "scs:dist/authorization/UnionPermissionReader#UnionPermissionReader_readers",
+          "range": "scs:dist/authorization/PermissionReader#PermissionReader",
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/authorization/UnionPermissionReader#UnionPermissionReader_readers"
+        }
+      ]
+    }
+  ]
+}

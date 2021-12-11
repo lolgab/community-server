@@ -1,0 +1,94 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser",
+      "@type": "Class",
+      "requireElement": "BasicRequestParser",
+      "extends": [
+        "scs:dist/http/input/RequestParser#RequestParser"
+      ],
+      "comment": "Creates an {@link Operation} from an incoming {@link HttpRequest} by aggregating the results of a {@link TargetExtractor}, {@link PreferenceParser}, {@link MetadataParser}, {@link ConditionsParser} and {@link BodyParser}.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_targetExtractor",
+          "range": "scs:dist/http/input/identifier/TargetExtractor#TargetExtractor",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_preferenceParser",
+          "range": "scs:dist/http/input/preferences/PreferenceParser#PreferenceParser",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_metadataParser",
+          "range": "scs:dist/http/input/metadata/MetadataParser#MetadataParser",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_conditionsParser",
+          "range": "scs:dist/http/input/conditions/ConditionsParser#ConditionsParser",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_bodyParser",
+          "range": "scs:dist/http/input/body/BodyParser#BodyParser",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "targetExtractor",
+              "value": {
+                "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_targetExtractor"
+              }
+            },
+            {
+              "keyRaw": "preferenceParser",
+              "value": {
+                "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_preferenceParser"
+              }
+            },
+            {
+              "keyRaw": "metadataParser",
+              "value": {
+                "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_metadataParser"
+              }
+            },
+            {
+              "keyRaw": "conditionsParser",
+              "value": {
+                "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_conditionsParser"
+              }
+            },
+            {
+              "keyRaw": "bodyParser",
+              "value": {
+                "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_bodyParser"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParserArgs",
+      "@type": "AbstractClass",
+      "requireElement": "BasicRequestParserArgs",
+      "extends": [],
+      "comment": "Input parsers required for a {@link BasicRequestParser}.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

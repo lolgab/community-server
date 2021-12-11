@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/handlers/AsyncHandler#AsyncHandler",
+      "@type": "AbstractClass",
+      "requireElement": "AsyncHandler",
+      "extends": [],
+      "comment": "Simple interface for classes that can potentially handle a specific kind of data asynchronously.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory",
+      "@type": "Class",
+      "requireElement": "BaseHttpServerFactory",
+      "extends": [
+        "scs:dist/server/HttpServerFactory#HttpServerFactory"
+      ],
+      "comment": "HttpServerFactory based on the native Node.js http module",
+      "parameters": [
+        {
+          "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_https",
+          "range": "xsd:boolean",
+          "comment": "If the server should start as an http or https server.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_handler",
+          "range": "scs:dist/server/HttpHandler#HttpHandler",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_showStackTrace",
+          "range": "xsd:boolean",
+          "comment": "If the error stack traces should be shown in case the HttpHandler throws one.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_key",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_cert",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_pfx",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_passphrase",
+          "range": "xsd:string",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_handler"
+        },
+        {
+          "fields": [
+            {
+              "keyRaw": "https",
+              "value": {
+                "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_https"
+              }
+            },
+            {
+              "keyRaw": "showStackTrace",
+              "value": {
+                "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_showStackTrace"
+              }
+            },
+            {
+              "keyRaw": "key",
+              "value": {
+                "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_key"
+              }
+            },
+            {
+              "keyRaw": "cert",
+              "value": {
+                "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_cert"
+              }
+            },
+            {
+              "keyRaw": "pfx",
+              "value": {
+                "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_pfx"
+              }
+            },
+            {
+              "keyRaw": "passphrase",
+              "value": {
+                "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_passphrase"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerOptions",
+      "@type": "AbstractClass",
+      "requireElement": "BaseHttpServerOptions",
+      "extends": [],
+      "comment": "Options to be used when creating the server. Due to Components.js not supporting external types, this has been simplified (for now?). The common https keys here (key/cert/pfx) will be interpreted as file paths that need to be read before passing the options to the `createServer` function.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

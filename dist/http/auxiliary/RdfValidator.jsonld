@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/auxiliary/RdfValidator#RdfValidator",
+      "@type": "Class",
+      "requireElement": "RdfValidator",
+      "extends": [
+        "scs:dist/http/auxiliary/Validator#Validator"
+      ],
+      "comment": "Validates a Representation by verifying if the data stream contains valid RDF data. It does this by letting the stored RepresentationConverter convert the data.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/auxiliary/RdfValidator#RdfValidator_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/auxiliary/RdfValidator#RdfValidator_converter"
+        }
+      ]
+    }
+  ]
+}

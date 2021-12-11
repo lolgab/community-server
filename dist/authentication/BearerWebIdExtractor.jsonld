@@ -1,0 +1,18 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authentication/BearerWebIdExtractor#BearerWebIdExtractor",
+      "@type": "Class",
+      "requireElement": "BearerWebIdExtractor",
+      "extends": [
+        "scs:dist/authentication/CredentialsExtractor#CredentialsExtractor"
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

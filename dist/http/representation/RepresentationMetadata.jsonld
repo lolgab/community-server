@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/representation/RepresentationMetadata#RepresentationMetadata",
+      "@type": "Class",
+      "requireElement": "RepresentationMetadata",
+      "extends": [],
+      "comment": "Stores the metadata triples and provides methods for easy access. Most functions return the metadata object to allow for chaining.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

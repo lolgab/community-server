@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy",
+      "@type": "Class",
+      "requireElement": "ComposedAuxiliaryStrategy",
+      "extends": [
+        "scs:dist/http/auxiliary/AuxiliaryStrategy#AuxiliaryStrategy"
+      ],
+      "comment": "An {@link AuxiliaryStrategy} that provides its functionality through the combination of an {@link AuxiliaryIdentifierStrategy}, {@link MetadataGenerator} and {@link Validator}.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_ownAuthorization",
+          "range": "xsd:boolean",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_requiredInRoot",
+          "range": "xsd:boolean",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_identifierStrategy",
+          "range": "scs:dist/http/auxiliary/AuxiliaryIdentifierStrategy#AuxiliaryIdentifierStrategy",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_metadataGenerator",
+          "range": "scs:dist/http/auxiliary/MetadataGenerator#MetadataGenerator",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_validator",
+          "range": "scs:dist/http/auxiliary/Validator#Validator",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_identifierStrategy"
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_metadataGenerator"
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_validator"
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_ownAuthorization"
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_requiredInRoot"
+        }
+      ]
+    }
+  ]
+}

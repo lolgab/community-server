@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/identifiers/SubdomainIdentifierStrategy#SubdomainIdentifierStrategy",
+      "@type": "Class",
+      "requireElement": "SubdomainIdentifierStrategy",
+      "extends": [
+        "scs:dist/util/identifiers/BaseIdentifierStrategy#BaseIdentifierStrategy"
+      ],
+      "comment": "An IdentifierStrategy that interprets all subdomains of the given base URL as roots.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/identifiers/SubdomainIdentifierStrategy#SubdomainIdentifierStrategy_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/identifiers/SubdomainIdentifierStrategy#SubdomainIdentifierStrategy_baseUrl"
+        }
+      ]
+    }
+  ]
+}

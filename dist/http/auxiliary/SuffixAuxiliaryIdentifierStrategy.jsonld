@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy#SuffixAuxiliaryIdentifierStrategy",
+      "@type": "Class",
+      "requireElement": "SuffixAuxiliaryIdentifierStrategy",
+      "extends": [
+        "scs:dist/http/auxiliary/AuxiliaryIdentifierStrategy#AuxiliaryIdentifierStrategy"
+      ],
+      "comment": "Helper class that uses a suffix to determine if a resource is an auxiliary resource or not. Simple string matching is used, so the dot needs to be included if needed, e.g. \".acl\".",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy#SuffixAuxiliaryIdentifierStrategy_suffix",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy#SuffixAuxiliaryIdentifierStrategy_suffix"
+        }
+      ]
+    }
+  ]
+}

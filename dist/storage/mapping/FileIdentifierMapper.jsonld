@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/mapping/FileIdentifierMapper#ResourceLink",
+      "@type": "AbstractClass",
+      "requireElement": "ResourceLink",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/storage/mapping/FileIdentifierMapper#FileIdentifierMapper",
+      "@type": "AbstractClass",
+      "requireElement": "FileIdentifierMapper",
+      "extends": [],
+      "comment": "Supports mapping a file to an URL and back.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/storage/mapping/FileIdentifierMapper#FileIdentifierMapperFactory",
+      "@type": "AbstractClass",
+      "requireElement": "FileIdentifierMapperFactory",
+      "extends": [],
+      "comment": "Factory that can create FileIdentifierMappers so the base and rootFilePath can be set dynamically. Specifically used when identifiers need to be generated for a new pod (since pod identifiers are generated).",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/email-password/handler/RegistrationHandler#RegistrationHandler",
+      "@type": "Class",
+      "requireElement": "RegistrationHandler",
+      "extends": [
+        "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionHandler"
+      ],
+      "comment": "Supports registration based on the `RegistrationManager` behaviour.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/interaction/email-password/handler/RegistrationHandler#RegistrationHandler_registrationManager",
+          "range": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/interaction/email-password/handler/RegistrationHandler#RegistrationHandler_registrationManager"
+        }
+      ]
+    }
+  ]
+}

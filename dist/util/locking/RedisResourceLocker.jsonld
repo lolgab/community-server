@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker",
+      "@type": "Class",
+      "requireElement": "RedisResourceLocker",
+      "extends": [
+        "scs:dist/util/locking/ResourceLocker#ResourceLocker",
+        "scs:dist/init/final/Finalizable#Finalizable"
+      ],
+      "comment": "A locking system that uses a Redis server or any number of Redis nodes / clusters This solution has issues though: - Redlock wants to handle expiration itself, this is against the design of a ResourceLocker. The workaround for this is to extend an active lock indefinitely. - This solution is not multithreaded! If threadA locks a resource, only threadA can unlock this resource. If threadB wont be able to lock a resource if threadA already acquired that lock, in that sense it is kind of multithreaded. - Redlock does not provide the ability to see which locks have expired",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redisClients",
+          "range": "xsd:string",
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redlockOptions",
+          "range": {
+            "@type": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redlockOptions_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redlockOptions_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redlockOptions_value",
+                "range": "xsd:number",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redisClients"
+        },
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redlockOptions",
+              "key": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redlockOptions_key",
+              "value": {
+                "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redlockOptions_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

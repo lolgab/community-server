@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/util/EmailSender#EmailSender",
+      "@type": "AbstractClass",
+      "requireElement": "EmailSender",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "A class that can send an e-mail.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/util/EmailSender#EmailArgs",
+      "@type": "AbstractClass",
+      "requireElement": "EmailArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

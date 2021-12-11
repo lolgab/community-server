@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/BasicResponseWriter#BasicResponseWriter",
+      "@type": "Class",
+      "requireElement": "BasicResponseWriter",
+      "extends": [
+        "scs:dist/http/output/ResponseWriter#ResponseWriter"
+      ],
+      "comment": "Writes to an {@link HttpResponse} based on the incoming {@link ResponseDescription}.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/output/BasicResponseWriter#BasicResponseWriter_metadataWriter",
+          "range": "scs:dist/http/output/metadata/MetadataWriter#MetadataWriter",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/output/BasicResponseWriter#BasicResponseWriter_metadataWriter"
+        }
+      ]
+    }
+  ]
+}

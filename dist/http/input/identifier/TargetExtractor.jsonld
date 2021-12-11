@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/input/identifier/TargetExtractor#TargetExtractor",
+      "@type": "AbstractClass",
+      "requireElement": "TargetExtractor",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Extracts a {@link ResourceIdentifier} from an incoming {@link HttpRequest}.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+      "@type": "AbstractClass",
+      "requireElement": "KeyValueStorage",
+      "extends": [],
+      "comment": "A simple storage solution that can be used for internal values that need to be stored.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

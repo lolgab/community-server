@@ -1,0 +1,31 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authentication/DPoPWebIdExtractor#DPoPWebIdExtractor",
+      "@type": "Class",
+      "requireElement": "DPoPWebIdExtractor",
+      "extends": [
+        "scs:dist/authentication/CredentialsExtractor#CredentialsExtractor"
+      ],
+      "comment": "Credentials extractor that extracts a WebID from a DPoP-bound access token.",
+      "parameters": [
+        {
+          "@id": "scs:dist/authentication/DPoPWebIdExtractor#DPoPWebIdExtractor_originalUrlExtractor",
+          "range": "scs:dist/http/input/identifier/TargetExtractor#TargetExtractor",
+          "comment": "Reconstructs the original URL as requested by the client",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/authentication/DPoPWebIdExtractor#DPoPWebIdExtractor_originalUrlExtractor"
+        }
+      ]
+    }
+  ]
+}

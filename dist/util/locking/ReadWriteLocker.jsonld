@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/locking/ReadWriteLocker#ReadWriteLocker",
+      "@type": "AbstractClass",
+      "requireElement": "ReadWriteLocker",
+      "extends": [],
+      "comment": "Allows the locking of resources which is needed for non-atomic {@link ResourceStore}s.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

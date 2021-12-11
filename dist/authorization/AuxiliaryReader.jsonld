@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/AuxiliaryReader#AuxiliaryReader",
+      "@type": "Class",
+      "requireElement": "AuxiliaryReader",
+      "extends": [
+        "scs:dist/authorization/PermissionReader#PermissionReader"
+      ],
+      "comment": "A PermissionReader for auxiliary resources such as acl or shape resources. By default, the access permissions of an auxiliary resource depend on those of its subject resource. This authorizer calls the source authorizer with the identifier of the subject resource.",
+      "parameters": [
+        {
+          "@id": "scs:dist/authorization/AuxiliaryReader#AuxiliaryReader_resourceReader",
+          "range": "scs:dist/authorization/PermissionReader#PermissionReader",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/authorization/AuxiliaryReader#AuxiliaryReader_auxiliaryStrategy",
+          "range": "scs:dist/http/auxiliary/AuxiliaryStrategy#AuxiliaryStrategy",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/authorization/AuxiliaryReader#AuxiliaryReader_resourceReader"
+        },
+        {
+          "@id": "scs:dist/authorization/AuxiliaryReader#AuxiliaryReader_auxiliaryStrategy"
+        }
+      ]
+    }
+  ]
+}

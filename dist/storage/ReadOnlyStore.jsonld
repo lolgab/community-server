@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/ReadOnlyStore#ReadOnlyStore",
+      "@type": "Class",
+      "requireElement": "ReadOnlyStore",
+      "extends": [
+        "scs:dist/storage/PassthroughStore#PassthroughStore"
+      ],
+      "comment": "Store that only allow read operations on the underlying source.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/ReadOnlyStore#ReadOnlyStore_source",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/ReadOnlyStore#ReadOnlyStore_source"
+        }
+      ]
+    }
+  ]
+}

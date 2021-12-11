@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader",
+      "@type": "Class",
+      "requireElement": "PathBasedReader",
+      "extends": [
+        "scs:dist/authorization/PermissionReader#PermissionReader"
+      ],
+      "comment": "Redirects requests to specific PermissionReaders based on their identifier. The keys in the input map will be converted to regular expressions. The regular expressions should all start with a slash and will be evaluated relative to the base URL.  Will error if no match is found.",
+      "parameters": [
+        {
+          "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader_paths",
+          "range": {
+            "@type": "scs:dist/authorization/PathBasedReader#PathBasedReader_paths_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader_paths_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader_paths_value",
+                "range": "scs:dist/authorization/PermissionReader#PermissionReader",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader_baseUrl"
+        },
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/authorization/PathBasedReader#PathBasedReader_paths",
+              "key": "scs:dist/authorization/PathBasedReader#PathBasedReader_paths_key",
+              "value": {
+                "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader_paths_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

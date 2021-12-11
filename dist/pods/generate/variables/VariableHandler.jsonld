@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/generate/variables/VariableHandler#VariableHandler",
+      "@type": "AbstractClass",
+      "requireElement": "VariableHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Updates the variables stored in the given agent. Can be used to set variables that are required for the Components.js instantiation but which should not be provided by the request. E.g.: The exact file path (when required) should be determined by the server to prevent abuse.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

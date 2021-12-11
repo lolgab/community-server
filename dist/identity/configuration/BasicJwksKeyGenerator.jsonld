@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/configuration/BasicJwksKeyGenerator#BasicJwksKeyGenerator",
+      "@type": "Class",
+      "requireElement": "BasicJwksKeyGenerator",
+      "extends": [
+        "scs:dist/identity/configuration/JwksKeyGenerator#JwksKeyGenerator"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/configuration/BasicJwksKeyGenerator#BasicJwksKeyGenerator_args_storage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "storage",
+              "value": {
+                "@id": "scs:dist/identity/configuration/BasicJwksKeyGenerator#BasicJwksKeyGenerator_args_storage"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/identity/configuration/BasicJwksKeyGenerator#BasicJwksKeyGeneratorArgs",
+      "@type": "AbstractClass",
+      "requireElement": "BasicJwksKeyGeneratorArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

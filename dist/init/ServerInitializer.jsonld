@@ -1,0 +1,40 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/init/ServerInitializer#ServerInitializer",
+      "@type": "Class",
+      "requireElement": "ServerInitializer",
+      "extends": [
+        "scs:dist/init/Initializer#Initializer",
+        "scs:dist/init/final/Finalizable#Finalizable"
+      ],
+      "comment": "Creates and starts an HTTP server.",
+      "parameters": [
+        {
+          "@id": "scs:dist/init/ServerInitializer#ServerInitializer_port",
+          "range": "xsd:number",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/ServerInitializer#ServerInitializer_serverFactory",
+          "range": "scs:dist/server/HttpServerFactory#HttpServerFactory",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/init/ServerInitializer#ServerInitializer_serverFactory"
+        },
+        {
+          "@id": "scs:dist/init/ServerInitializer#ServerInitializer_port"
+        }
+      ]
+    }
+  ]
+}

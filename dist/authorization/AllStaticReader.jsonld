@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/AllStaticReader#AllStaticReader",
+      "@type": "Class",
+      "requireElement": "AllStaticReader",
+      "extends": [
+        "scs:dist/authorization/PermissionReader#PermissionReader"
+      ],
+      "comment": "PermissionReader which sets all permissions to true or false independently of the identifier and requested permissions.",
+      "parameters": [
+        {
+          "@id": "scs:dist/authorization/AllStaticReader#AllStaticReader_allow",
+          "range": "xsd:boolean",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/authorization/AllStaticReader#AllStaticReader_allow"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/SessionHttpHandler#SessionHttpHandler",
+      "@type": "Class",
+      "requireElement": "SessionHttpHandler",
+      "extends": [
+        "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionHandler"
+      ],
+      "comment": "Simple InteractionHttpHandler that sends the session accountId to the InteractionCompleter as webId.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

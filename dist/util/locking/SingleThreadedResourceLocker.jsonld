@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/locking/SingleThreadedResourceLocker#SingleThreadedResourceLocker",
+      "@type": "Class",
+      "requireElement": "SingleThreadedResourceLocker",
+      "extends": [
+        "scs:dist/util/locking/ResourceLocker#ResourceLocker"
+      ],
+      "comment": "A resource locker making use of the `async-lock` library. Note that all locks are kept in memory until they are unlocked which could potentially result in a memory leak if locks are never unlocked, so make sure this is covered with expiring locks for example, and/or proper `finally` handles.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

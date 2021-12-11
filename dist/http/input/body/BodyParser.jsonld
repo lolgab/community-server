@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/input/body/BodyParser#BodyParser",
+      "@type": "AbstractClass",
+      "requireElement": "BodyParser",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Parses the body of an incoming {@link HttpRequest} and converts it to a {@link Representation}.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/http/input/body/BodyParser#BodyParserArgs",
+      "@type": "AbstractClass",
+      "requireElement": "BodyParserArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

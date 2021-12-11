@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter",
+      "@type": "Class",
+      "requireElement": "ContainerToTemplateConverter",
+      "extends": [
+        "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that creates a templated representation of a container.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter_templateEngine",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter_contentType",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter_identifierStrategy",
+          "range": "scs:dist/util/identifiers/IdentifierStrategy#IdentifierStrategy",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter_templateEngine"
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter_contentType"
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

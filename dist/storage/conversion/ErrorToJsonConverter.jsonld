@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/ErrorToJsonConverter#ErrorToJsonConverter",
+      "@type": "Class",
+      "requireElement": "ErrorToJsonConverter",
+      "extends": [
+        "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter"
+      ],
+      "comment": "Converts an Error object to JSON by copying its fields.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

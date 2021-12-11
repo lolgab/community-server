@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule",
+      "@type": "Class",
+      "requireElement": "ConvertingRouterRule",
+      "extends": [
+        "scs:dist/storage/routing/RouterRule#RouterRule"
+      ],
+      "comment": "Rule that directs requests based on how the data would need to be converted. In case the given converter can convert the data to the requested type, it will be directed to the `convertStore`. Otherwise the `defaultStore` will be chosen.  In case there is no data and only an identifier the `defaultStore` will be checked if it contains the given identifier. If not, the `convertStore` will be returned.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule_typedStore_store",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule_defaultStore",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule_typedStore_supportChecker",
+          "range": "scs:dist/storage/routing/PreferenceSupport#PreferenceSupport",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "store",
+              "value": {
+                "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule_typedStore_store"
+              }
+            },
+            {
+              "keyRaw": "supportChecker",
+              "value": {
+                "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule_typedStore_supportChecker"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule_defaultStore"
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingStoreEntry",
+      "@type": "AbstractClass",
+      "requireElement": "ConvertingStoreEntry",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

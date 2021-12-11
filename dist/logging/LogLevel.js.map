@@ -1,0 +1,1 @@
+{"version":3,"file":"LogLevel.js","sourceRoot":"","sources":["../../src/logging/LogLevel.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * Different log levels, from most important to least important.\n */\nexport type LogLevel = 'error' | 'warn' | 'info' | 'verbose' | 'debug' | 'silly';\n"]}

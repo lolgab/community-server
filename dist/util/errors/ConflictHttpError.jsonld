@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/errors/ConflictHttpError#ConflictHttpError",
+      "@type": "Class",
+      "requireElement": "ConflictHttpError",
+      "extends": [
+        "scs:dist/util/errors/HttpError#HttpError"
+      ],
+      "comment": "An error thrown when a request conflict with current state of the server.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/errors/ConflictHttpError#ConflictHttpError_message",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/util/errors/ConflictHttpError#ConflictHttpError_options",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/errors/ConflictHttpError#ConflictHttpError_message"
+        },
+        {
+          "@id": "scs:dist/util/errors/ConflictHttpError#ConflictHttpError_options"
+        }
+      ]
+    }
+  ]
+}

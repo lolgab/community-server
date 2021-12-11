@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore",
+      "@type": "Class",
+      "requireElement": "DataAccessorBasedStore",
+      "extends": [
+        "scs:dist/storage/ResourceStore#ResourceStore"
+      ],
+      "comment": "ResourceStore which uses a DataAccessor for backend access.  The DataAccessor interface provides elementary store operations such as read and write. This DataAccessorBasedStore uses those elementary store operations to implement the more high-level ResourceStore contact, abstracting all common functionality such that new stores can be added by implementing the more simple DataAccessor contract. DataAccessorBasedStore thereby provides behaviours for reuse across different stores, such as: * Converting container metadata to data * Converting slug to URI * Checking if addResource target is a container * Checking if no containment triples are written to a container * etc.  Currently \"metadata\" is seen as something that is not directly accessible. That means that a consumer can't write directly to the metadata of a resource, only indirectly through headers. (Except for containers where data and metadata overlap).  The one thing this store does not take care of (yet?) are containment triples for containers  Work has been done to minimize the number of required calls to the DataAccessor, but the main disadvantage is that sometimes multiple calls are required where a specific store might only need one.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore_accessor",
+          "range": "scs:dist/storage/accessors/DataAccessor#DataAccessor",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore_identifierStrategy",
+          "range": "scs:dist/util/identifiers/IdentifierStrategy#IdentifierStrategy",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore_auxiliaryStrategy",
+          "range": "scs:dist/http/auxiliary/AuxiliaryStrategy#AuxiliaryStrategy",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore_accessor"
+        },
+        {
+          "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore_identifierStrategy"
+        },
+        {
+          "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore_auxiliaryStrategy"
+        }
+      ]
+    }
+  ]
+}

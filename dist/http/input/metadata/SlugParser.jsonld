@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/input/metadata/SlugParser#SlugParser",
+      "@type": "Class",
+      "requireElement": "SlugParser",
+      "extends": [
+        "scs:dist/http/input/metadata/MetadataParser#MetadataParser"
+      ],
+      "comment": "Converts the contents of the slug header to metadata.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

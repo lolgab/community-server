@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/notification/SubscriptionHandler#Subscription",
+      "@type": "AbstractClass",
+      "requireElement": "Subscription",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/notification/SubscriptionHandler#SubscriptionHandler",
+      "@type": "AbstractClass",
+      "requireElement": "SubscriptionHandler",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

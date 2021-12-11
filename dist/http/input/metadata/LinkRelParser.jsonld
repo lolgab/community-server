@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser",
+      "@type": "Class",
+      "requireElement": "LinkRelParser",
+      "extends": [
+        "scs:dist/http/input/metadata/MetadataParser#MetadataParser"
+      ],
+      "comment": "Parses Link headers with a specific `rel` value and adds them as metadata with the given predicate.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser_linkRelMap",
+          "range": {
+            "@type": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser_linkRelMap_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser_linkRelMap_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser_linkRelMap_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser_linkRelMap",
+              "key": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser_linkRelMap_key",
+              "value": {
+                "@id": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser_linkRelMap_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

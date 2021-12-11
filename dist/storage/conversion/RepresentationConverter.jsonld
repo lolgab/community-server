@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+      "@type": "AbstractClass",
+      "requireElement": "RepresentationConverter",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Converts a {@link Representation} from one media type to another, based on the given preferences.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverterArgs",
+      "@type": "AbstractClass",
+      "requireElement": "RepresentationConverterArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/errors/UnauthorizedHttpError#UnauthorizedHttpError",
+      "@type": "Class",
+      "requireElement": "UnauthorizedHttpError",
+      "extends": [
+        "scs:dist/util/errors/HttpError#HttpError"
+      ],
+      "comment": "An error thrown when an agent is not authorized.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/errors/UnauthorizedHttpError#UnauthorizedHttpError_message",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/util/errors/UnauthorizedHttpError#UnauthorizedHttpError_options",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/errors/UnauthorizedHttpError#UnauthorizedHttpError_message"
+        },
+        {
+          "@id": "scs:dist/util/errors/UnauthorizedHttpError#UnauthorizedHttpError_options"
+        }
+      ]
+    }
+  ]
+}

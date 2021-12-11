@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/generate/IdentifierGenerator#IdentifierGenerator",
+      "@type": "AbstractClass",
+      "requireElement": "IdentifierGenerator",
+      "extends": [],
+      "comment": "Utility class for generating container identifiers.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

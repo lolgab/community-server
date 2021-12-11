@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/accessors/DataAccessor#DataAccessor",
+      "@type": "AbstractClass",
+      "requireElement": "DataAccessor",
+      "extends": [],
+      "comment": "A DataAccessor is the building block closest to the actual data storage. It should not worry about most Solid logic, most of that will be handled before it is called. There are a few things it still needs to do, and it is very important every implementation does this: * If the input identifier ends with a slash, it should be assumed the identifier is targeting a container. * Similarly, if there is no trailing slash it should assume a document. * It should always throw a NotFoundHttpError if it does not have data matching the input identifier. * DataAccessors should not generate containment triples. This will be done externally using `getChildren`.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

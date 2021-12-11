@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/generate/SuffixIdentifierGenerator#SuffixIdentifierGenerator",
+      "@type": "Class",
+      "requireElement": "SuffixIdentifierGenerator",
+      "extends": [
+        "scs:dist/pods/generate/IdentifierGenerator#IdentifierGenerator"
+      ],
+      "comment": "Generates identifiers by appending the name to a stored base identifier. Non-alphanumeric characters will be replaced with `-`.",
+      "parameters": [
+        {
+          "@id": "scs:dist/pods/generate/SuffixIdentifierGenerator#SuffixIdentifierGenerator_base",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/pods/generate/SuffixIdentifierGenerator#SuffixIdentifierGenerator_base"
+        }
+      ]
+    }
+  ]
+}

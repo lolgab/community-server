@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/accessors/InMemoryDataAccessor#InMemoryDataAccessor",
+      "@type": "Class",
+      "requireElement": "InMemoryDataAccessor",
+      "extends": [
+        "scs:dist/storage/accessors/DataAccessor#DataAccessor"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/accessors/InMemoryDataAccessor#InMemoryDataAccessor_identifierStrategy",
+          "range": "scs:dist/util/identifiers/IdentifierStrategy#IdentifierStrategy",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/accessors/InMemoryDataAccessor#InMemoryDataAccessor_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/UnsecureWebSocketsProtocol#UnsecureWebSocketsProtocol",
+      "@type": "Class",
+      "requireElement": "UnsecureWebSocketsProtocol",
+      "extends": [
+        "scs:dist/server/WebSocketHandler#WebSocketHandler"
+      ],
+      "comment": "Provides live update functionality following the Solid WebSockets API Spec solid-0.1",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/UnsecureWebSocketsProtocol#UnsecureWebSocketsProtocol_source",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/UnsecureWebSocketsProtocol#UnsecureWebSocketsProtocol_source"
+        }
+      ]
+    }
+  ]
+}

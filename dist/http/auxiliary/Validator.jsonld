@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/auxiliary/Validator#Validator",
+      "@type": "AbstractClass",
+      "requireElement": "Validator",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Generic interface for classes that validate Representations in some way.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

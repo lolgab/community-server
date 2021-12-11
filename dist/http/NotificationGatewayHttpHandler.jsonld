@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler",
+      "@type": "Class",
+      "requireElement": "NotificationGatewayHttpHandler",
+      "extends": [
+        "scs:dist/server/OperationHttpHandler#OperationHttpHandler"
+      ],
+      "comment": "Handles the negotiation of notification channels",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler_args_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the gateway.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler_args_subscriptionPath",
+          "range": "xsd:string",
+          "comment": "Relative path of the IDP entry point.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler_args_subscriptionHandler",
+          "range": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler",
+          "comment": "The notification handler.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "subscriptionPath",
+              "value": {
+                "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler_args_subscriptionPath"
+              }
+            },
+            {
+              "keyRaw": "subscriptionHandler",
+              "value": {
+                "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler_args_subscriptionHandler"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationGatewayHttpHandlerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

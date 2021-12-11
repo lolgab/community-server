@@ -1,0 +1,59 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapter",
+      "@type": "Class",
+      "requireElement": "ExpiringAdapter",
+      "extends": [],
+      "comment": "An IDP storage adapter that uses an ExpiringStorage to persist data.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapter_name",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapter_storage",
+          "range": "scs:dist/storage/keyvalue/ExpiringStorage#ExpiringStorage",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapter_name"
+        },
+        {
+          "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapter_storage"
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapterFactory",
+      "@type": "Class",
+      "requireElement": "ExpiringAdapterFactory",
+      "extends": [
+        "scs:dist/identity/storage/AdapterFactory#AdapterFactory"
+      ],
+      "comment": "The factory for a ExpiringStorageAdapter",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapterFactory_storage",
+          "range": "scs:dist/storage/keyvalue/ExpiringStorage#ExpiringStorage",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapterFactory_storage"
+        }
+      ]
+    }
+  ]
+}

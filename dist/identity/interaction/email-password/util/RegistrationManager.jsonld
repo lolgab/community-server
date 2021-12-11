@@ -1,0 +1,127 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager",
+      "@type": "Class",
+      "requireElement": "RegistrationManager",
+      "extends": [],
+      "comment": "Supports IDP registration and pod creation based on input parameters.  The above behaviour is combined in the two class functions. `validateInput` will make sure all incoming data is correct and makes sense. `register` will call all the correct handlers based on the requirements of the validated parameters.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_baseUrl",
+          "range": "xsd:string",
+          "comment": "Used to set the `oidcIssuer` value of newly registered pods.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_webIdSuffix",
+          "range": "xsd:string",
+          "comment": "Appended to the generated pod identifier to create the corresponding WebID.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_identifierGenerator",
+          "range": "scs:dist/pods/generate/IdentifierGenerator#IdentifierGenerator",
+          "comment": "Generates identifiers for new pods.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_ownershipValidator",
+          "range": "scs:dist/identity/ownership/OwnershipValidator#OwnershipValidator",
+          "comment": "Verifies the user is the owner of the WebID they provide.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_accountStore",
+          "range": "scs:dist/identity/interaction/email-password/storage/AccountStore#AccountStore",
+          "comment": "Stores all the registered account information.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_podManager",
+          "range": "scs:dist/pods/PodManager#PodManager",
+          "comment": "Creates the new pods.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "webIdSuffix",
+              "value": {
+                "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_webIdSuffix"
+              }
+            },
+            {
+              "keyRaw": "identifierGenerator",
+              "value": {
+                "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_identifierGenerator"
+              }
+            },
+            {
+              "keyRaw": "ownershipValidator",
+              "value": {
+                "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_ownershipValidator"
+              }
+            },
+            {
+              "keyRaw": "accountStore",
+              "value": {
+                "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_accountStore"
+              }
+            },
+            {
+              "keyRaw": "podManager",
+              "value": {
+                "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_podManager"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManagerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "RegistrationManagerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationParams",
+      "@type": "AbstractClass",
+      "requireElement": "RegistrationParams",
+      "extends": [],
+      "comment": "The parameters expected for registration.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationResponse",
+      "@type": "AbstractClass",
+      "requireElement": "RegistrationResponse",
+      "extends": [],
+      "comment": "The result of a registration action.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

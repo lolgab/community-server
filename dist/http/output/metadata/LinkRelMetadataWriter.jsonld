@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter",
+      "@type": "Class",
+      "requireElement": "LinkRelMetadataWriter",
+      "extends": [
+        "scs:dist/http/output/metadata/MetadataWriter#MetadataWriter"
+      ],
+      "comment": "A {@link MetadataWriter} that takes a linking metadata predicates to Link header \"rel\" values. The values of the objects will be put in a Link header with the corresponding \"rel\" value.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter_linkRelMap",
+          "range": {
+            "@type": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter_linkRelMap_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter_linkRelMap_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter_linkRelMap_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter_linkRelMap",
+              "key": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter_linkRelMap_key",
+              "value": {
+                "@id": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter_linkRelMap_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

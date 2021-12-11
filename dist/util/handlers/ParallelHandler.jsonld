@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/handlers/ParallelHandler#ParallelHandler",
+      "@type": "Class",
+      "requireElement": "ParallelHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "A composite handler that executes handlers in parallel.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/handlers/ParallelHandler#ParallelHandler_handlers",
+          "range": "scs:dist/util/handlers/AsyncHandler#AsyncHandler",
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/handlers/ParallelHandler#ParallelHandler_handlers"
+        }
+      ]
+    }
+  ]
+}

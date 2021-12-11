@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/errors/UnsupportedMediaTypeHttpError#UnsupportedMediaTypeHttpError",
+      "@type": "Class",
+      "requireElement": "UnsupportedMediaTypeHttpError",
+      "extends": [
+        "scs:dist/util/errors/HttpError#HttpError"
+      ],
+      "comment": "An error thrown when the media type of incoming data is not supported by a parser.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/errors/UnsupportedMediaTypeHttpError#UnsupportedMediaTypeHttpError_message",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/util/errors/UnsupportedMediaTypeHttpError#UnsupportedMediaTypeHttpError_options",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/errors/UnsupportedMediaTypeHttpError#UnsupportedMediaTypeHttpError_message"
+        },
+        {
+          "@id": "scs:dist/util/errors/UnsupportedMediaTypeHttpError#UnsupportedMediaTypeHttpError_options"
+        }
+      ]
+    }
+  ]
+}

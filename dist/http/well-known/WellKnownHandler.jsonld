@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/well-known/WellKnownHandler#WellKnownHandler",
+      "@type": "Class",
+      "requireElement": "WellKnownHandler",
+      "extends": [
+        "scs:dist/server/HttpHandler#HttpHandler"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/http/well-known/WellKnownHandler#WellKnownHandler_wellKnownBuilder",
+          "range": "scs:dist/http/well-known/WellKnownBuilder#WellKnownBuilder",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/well-known/WellKnownHandler#WellKnownHandler_wellKnownBuilder"
+        }
+      ]
+    }
+  ]
+}

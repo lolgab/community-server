@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/auxiliary/LinkMetadataGenerator#LinkMetadataGenerator",
+      "@type": "Class",
+      "requireElement": "LinkMetadataGenerator",
+      "extends": [
+        "scs:dist/http/auxiliary/MetadataGenerator#MetadataGenerator"
+      ],
+      "comment": "Adds a link to the auxiliary resource when called on the subject resource. Specifically: <subjectId> <link> <auxiliaryId> will be added.  In case the input is metadata of an auxiliary resource no metadata will be added",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/auxiliary/LinkMetadataGenerator#LinkMetadataGenerator_link",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/LinkMetadataGenerator#LinkMetadataGenerator_identifierStrategy",
+          "range": "scs:dist/http/auxiliary/AuxiliaryIdentifierStrategy#AuxiliaryIdentifierStrategy",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/auxiliary/LinkMetadataGenerator#LinkMetadataGenerator_link"
+        },
+        {
+          "@id": "scs:dist/http/auxiliary/LinkMetadataGenerator#LinkMetadataGenerator_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

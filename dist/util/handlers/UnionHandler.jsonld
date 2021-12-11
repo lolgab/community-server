@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler",
+      "@type": "AbstractClass",
+      "requireElement": "UnionHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Utility handler that allows combining the results of multiple handlers into one. Will run the handlers and then call the abstract `combine` function with the results, which then generates the handler's output.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler_requireAll",
+          "range": "xsd:boolean",
+          "comment": "If true, will fail if any of the handlers do not support the input. If false, only the handlers that support the input will be called; will fail only if none of the handlers can handle the input.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler_ignoreErrors",
+          "range": "xsd:boolean",
+          "comment": "If true, ignores handlers that fail by omitting their output; if false, fails when any handlers fail.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler_handlers",
+          "range": "scs:dist/util/handlers/AsyncHandler#AsyncHandler",
+          "comment": "The handlers whose output is to be combined.",
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler_handlers"
+        },
+        {
+          "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler_requireAll"
+        },
+        {
+          "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler_ignoreErrors"
+        }
+      ]
+    }
+  ]
+}

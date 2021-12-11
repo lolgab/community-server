@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/keyvalue/MemoryMapStorage#MemoryMapStorage",
+      "@type": "Class",
+      "requireElement": "MemoryMapStorage",
+      "extends": [
+        "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage"
+      ],
+      "comment": "A {@link KeyValueStorage} which uses a JavaScript Map for internal storage.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

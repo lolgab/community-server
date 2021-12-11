@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/input/preferences/PreferenceParser#PreferenceParser",
+      "@type": "AbstractClass",
+      "requireElement": "PreferenceParser",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Creates {@link RepresentationPreferences} based on the incoming HTTP headers in a {@link HttpRequest}.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

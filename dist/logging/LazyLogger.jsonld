@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/logging/LazyLogger#LazyLogger",
+      "@type": "Class",
+      "requireElement": "LazyLogger",
+      "extends": [
+        "scs:dist/logging/Logger#Logger"
+      ],
+      "comment": "Creates a logger lazily using a reference to {@link LazyLoggerFactory}.  An error will be thrown if {@link LazyLogger.log} is invoked before a {@link LoggerFactory} is set in {@link LazyLoggerFactory}.",
+      "parameters": [
+        {
+          "@id": "scs:dist/logging/LazyLogger#LazyLogger_label",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/logging/LazyLogger#LazyLogger_lazyLoggerFactory",
+          "range": "scs:dist/logging/LazyLoggerFactory#LazyLoggerFactory",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/logging/LazyLogger#LazyLogger_lazyLoggerFactory"
+        },
+        {
+          "@id": "scs:dist/logging/LazyLogger#LazyLogger_label"
+        }
+      ]
+    }
+  ]
+}

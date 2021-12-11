@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/ResourceStore#ModifiedResource",
+      "@type": "AbstractClass",
+      "requireElement": "ModifiedResource",
+      "extends": [],
+      "comment": "A modified resource with a specific modification type",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/storage/ResourceStore#ResourceStore",
+      "@type": "AbstractClass",
+      "requireElement": "ResourceStore",
+      "extends": [],
+      "comment": "A ResourceStore represents a collection of resources. It has been designed such that each of its methods can be implemented in an atomic way:  for each CRUD operation, only one dedicated method needs to be called. A fifth method enables the optimization of partial updates with PATCH. It is up to the implementer of the interface to (not) make an implementation atomic.  ResourceStores are also responsible for taking auxiliary resources into account should those be relevant to the store.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

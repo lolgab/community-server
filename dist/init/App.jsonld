@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/init/App#App",
+      "@type": "Class",
+      "requireElement": "App",
+      "extends": [],
+      "comment": "Entry point for the entire Solid server.",
+      "parameters": [
+        {
+          "@id": "scs:dist/init/App#App_initializer",
+          "range": "scs:dist/init/Initializer#Initializer",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/App#App_finalizer",
+          "range": "scs:dist/init/final/Finalizable#Finalizable",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/init/App#App_initializer"
+        },
+        {
+          "@id": "scs:dist/init/App#App_finalizer"
+        }
+      ]
+    }
+  ]
+}

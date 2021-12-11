@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/RoutingResourceStore#RoutingResourceStore",
+      "@type": "Class",
+      "requireElement": "RoutingResourceStore",
+      "extends": [
+        "scs:dist/storage/ResourceStore#ResourceStore"
+      ],
+      "comment": "Store that routes the incoming request to a specific store based on the stored ResourceRouter. In case no store was found for one of the functions that take no data (GET/PATCH/DELETE), a 404 will be thrown. In the other cases the error of the router will be thrown (which would probably be 400).",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/RoutingResourceStore#RoutingResourceStore_rule",
+          "range": "scs:dist/storage/routing/RouterRule#RouterRule",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/RoutingResourceStore#RoutingResourceStore_rule"
+        }
+      ]
+    }
+  ]
+}

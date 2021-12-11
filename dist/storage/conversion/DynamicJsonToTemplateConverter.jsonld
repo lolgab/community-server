@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/DynamicJsonToTemplateConverter#DynamicJsonToTemplateConverter",
+      "@type": "Class",
+      "requireElement": "DynamicJsonToTemplateConverter",
+      "extends": [
+        "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter"
+      ],
+      "comment": "Converts JSON data by using it as input parameters for rendering a template. The `extension` field can be used to only support a specific type of templates, such as \".ejs\" for EJS templates.  To find the templates it expects the Representation metadata to contain `SOLID_META.template` triples, with the objects being the template paths. For each of those templates there also needs to be a CONTENT_TYPE triple describing the content-type of that template.  The output of the result depends on the content-type matched with the template.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/conversion/DynamicJsonToTemplateConverter#DynamicJsonToTemplateConverter_templateEngine",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/conversion/DynamicJsonToTemplateConverter#DynamicJsonToTemplateConverter_templateEngine"
+        }
+      ]
+    }
+  ]
+}

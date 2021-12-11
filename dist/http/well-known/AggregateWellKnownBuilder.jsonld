@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/well-known/AggregateWellKnownBuilder#AggregateWellKnownBuilder",
+      "@type": "Class",
+      "requireElement": "AggregateWellKnownBuilder",
+      "extends": [
+        "scs:dist/http/well-known/WellKnownBuilder#WellKnownBuilder"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/http/well-known/AggregateWellKnownBuilder#AggregateWellKnownBuilder_wellKnownBuilders",
+          "range": "scs:dist/http/well-known/WellKnownBuilder#WellKnownBuilder",
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/well-known/AggregateWellKnownBuilder#AggregateWellKnownBuilder_wellKnownBuilders"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/server/middleware/WebSocketAdvertiser#WebSocketAdvertiser",
+      "@type": "Class",
+      "requireElement": "WebSocketAdvertiser",
+      "extends": [
+        "scs:dist/server/HttpHandler#HttpHandler"
+      ],
+      "comment": "Handler that advertises a WebSocket through the Updates-Via header.",
+      "parameters": [
+        {
+          "@id": "scs:dist/server/middleware/WebSocketAdvertiser#WebSocketAdvertiser_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/server/middleware/WebSocketAdvertiser#WebSocketAdvertiser_baseUrl"
+        }
+      ]
+    }
+  ]
+}

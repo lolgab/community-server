@@ -1,0 +1,59 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator",
+      "@type": "Class",
+      "requireElement": "TemplatedResourcesGenerator",
+      "extends": [
+        "scs:dist/pods/generate/ResourcesGenerator#ResourcesGenerator"
+      ],
+      "comment": "Generates resources by making use of a template engine. The template folder structure will be kept. Folders will be interpreted as containers and files as documents. A FileIdentifierMapper will be used to generate identifiers that correspond to the relative structure.  A relative `templateFolder` is resolved relative to cwd, unless it's preceded by `@css:`, e.g. `@css:foo/bar`.",
+      "parameters": [
+        {
+          "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_templateFolder",
+          "range": "xsd:string",
+          "comment": "Folder where the templates are located.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_templateEngine",
+          "comment": "Template engine for generating the resources.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_templateExtension",
+          "range": "xsd:string",
+          "comment": "The extension of files that need to be interpreted as templates. Will be removed to generate the identifier.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_factory",
+          "range": "scs:dist/storage/mapping/FileIdentifierMapper#FileIdentifierMapperFactory",
+          "comment": "Factory used to generate mapper relative to the base identifier.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_templateFolder"
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_factory"
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_templateEngine"
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_templateExtension"
+        }
+      ]
+    }
+  ]
+}

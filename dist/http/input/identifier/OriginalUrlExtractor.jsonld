@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/input/identifier/OriginalUrlExtractor#OriginalUrlExtractor",
+      "@type": "Class",
+      "requireElement": "OriginalUrlExtractor",
+      "extends": [
+        "scs:dist/http/input/identifier/TargetExtractor#TargetExtractor"
+      ],
+      "comment": "Reconstructs the original URL of an incoming {@link HttpRequest}.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/input/identifier/OriginalUrlExtractor#OriginalUrlExtractor_options_includeQueryString",
+          "range": "xsd:boolean",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "includeQueryString",
+              "value": {
+                "@id": "scs:dist/http/input/identifier/OriginalUrlExtractor#OriginalUrlExtractor_options_includeQueryString"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

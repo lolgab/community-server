@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/MarkdownToHtmlConverter#MarkdownToHtmlConverter",
+      "@type": "Class",
+      "requireElement": "MarkdownToHtmlConverter",
+      "extends": [
+        "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter"
+      ],
+      "comment": "Converts Markdown data to HTML. The generated HTML will be injected into the given template using the parameter `htmlBody`. A standard Markdown string will be converted to a <p> tag, so html and body tags should be part of the template. In case the Markdown body starts with a header (#), that value will also be used as `title` parameter.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/conversion/MarkdownToHtmlConverter#MarkdownToHtmlConverter_templateEngine",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/conversion/MarkdownToHtmlConverter#MarkdownToHtmlConverter_templateEngine"
+        }
+      ]
+    }
+  ]
+}

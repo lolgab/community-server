@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/identifiers/IdentifierStrategy#IdentifierStrategy",
+      "@type": "AbstractClass",
+      "requireElement": "IdentifierStrategy",
+      "extends": [],
+      "comment": "Captures the behavior of container identifiers in a certain storage configuration.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

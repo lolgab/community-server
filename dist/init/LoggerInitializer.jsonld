@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/init/LoggerInitializer#LoggerInitializer",
+      "@type": "Class",
+      "requireElement": "LoggerInitializer",
+      "extends": [
+        "scs:dist/init/Initializer#Initializer"
+      ],
+      "comment": "Sets up the global logger factory.",
+      "parameters": [
+        {
+          "@id": "scs:dist/init/LoggerInitializer#LoggerInitializer_loggerFactory",
+          "range": "scs:dist/logging/LoggerFactory#LoggerFactory",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/init/LoggerInitializer#LoggerInitializer_loggerFactory"
+        }
+      ]
+    }
+  ]
+}

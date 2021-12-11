@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/GeneratedPodManager#GeneratedPodManager",
+      "@type": "Class",
+      "requireElement": "GeneratedPodManager",
+      "extends": [
+        "scs:dist/pods/PodManager#PodManager"
+      ],
+      "comment": "Pod manager that uses an {@link IdentifierGenerator} and {@link ResourcesGenerator} to create the default resources and identifier for a new pod.",
+      "parameters": [
+        {
+          "@id": "scs:dist/pods/GeneratedPodManager#GeneratedPodManager_store",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/pods/GeneratedPodManager#GeneratedPodManager_resourcesGenerator",
+          "range": "scs:dist/pods/generate/ResourcesGenerator#ResourcesGenerator",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/pods/GeneratedPodManager#GeneratedPodManager_store"
+        },
+        {
+          "@id": "scs:dist/pods/GeneratedPodManager#GeneratedPodManager_resourcesGenerator"
+        }
+      ]
+    }
+  ]
+}

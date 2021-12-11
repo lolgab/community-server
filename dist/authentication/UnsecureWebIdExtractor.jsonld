@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authentication/UnsecureWebIdExtractor#UnsecureWebIdExtractor",
+      "@type": "Class",
+      "requireElement": "UnsecureWebIdExtractor",
+      "extends": [
+        "scs:dist/authentication/CredentialsExtractor#CredentialsExtractor"
+      ],
+      "comment": "Credentials extractor which simply interprets the contents of the Authorization header as a WebID.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

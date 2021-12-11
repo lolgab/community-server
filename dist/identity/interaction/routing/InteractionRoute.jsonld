@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/routing/InteractionRoute#InteractionRoute",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionRoute",
+      "extends": [],
+      "comment": "Handles the routing behaviour for IDP handlers.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

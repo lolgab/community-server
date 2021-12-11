@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage",
+      "@type": "Class",
+      "requireElement": "JsonResourceStorage",
+      "extends": [
+        "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage"
+      ],
+      "comment": "A {@link KeyValueStorage} for JSON-like objects using a {@link ResourceStore} as backend.  The keys will be transformed so they can be safely used as a resource name in the given container. Values will be sent as data streams, so how these are stored depends on the underlying store.  All non-404 errors will be re-thrown.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage_container",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage_source",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage_source"
+        },
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage_baseUrl"
+        },
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage_container"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler",
+      "@type": "Class",
+      "requireElement": "NotificationSubscriptionHttpHandler",
+      "extends": [
+        "scs:dist/server/OperationHttpHandler#OperationHttpHandler"
+      ],
+      "comment": "Handles the negotiation of notification channels",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the gateway.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_wsEndpoint",
+          "range": "xsd:string",
+          "comment": "Relative path of the IDP entry point.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_credentialsExtractor",
+          "range": "scs:dist/authentication/CredentialsExtractor#CredentialsExtractor",
+          "comment": "Extracts the credentials from the incoming request.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_permissionReader",
+          "range": "scs:dist/authorization/PermissionReader#PermissionReader",
+          "comment": "Reads the permissions available for the Operation.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_notificationStorage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "comment": "The storage where notification metadata will be stored.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_handlers",
+          "range": "scs:dist/notification/SubscriptionHandler#SubscriptionHandler",
+          "comment": "The configured subscription handlers",
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_source",
+          "comment": "The resource store to monitor for changes",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "wsEndpoint",
+              "value": {
+                "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_wsEndpoint"
+              }
+            },
+            {
+              "keyRaw": "credentialsExtractor",
+              "value": {
+                "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_credentialsExtractor"
+              }
+            },
+            {
+              "keyRaw": "permissionReader",
+              "value": {
+                "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_permissionReader"
+              }
+            },
+            {
+              "keyRaw": "notificationStorage",
+              "value": {
+                "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_notificationStorage"
+              }
+            },
+            {
+              "keyRaw": "handlers",
+              "value": {
+                "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_handlers"
+              }
+            },
+            {
+              "keyRaw": "source",
+              "value": {
+                "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_source"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationSubscriptionHttpHandlerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#Topic",
+      "@type": "AbstractClass",
+      "requireElement": "Topic",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

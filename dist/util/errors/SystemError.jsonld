@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/errors/SystemError#SystemError",
+      "@type": "AbstractClass",
+      "requireElement": "SystemError",
+      "extends": [],
+      "comment": "Interface for Node.js System errors  Node.js generates system errors when exceptions occur within its runtime environment. These usually occur when an application violates an operating system constraint. For example, a system error will occur if an application attempts to read a file that does not exist.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

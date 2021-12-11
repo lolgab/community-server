@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/generate/SubdomainIdentifierGenerator#SubdomainIdentifierGenerator",
+      "@type": "Class",
+      "requireElement": "SubdomainIdentifierGenerator",
+      "extends": [
+        "scs:dist/pods/generate/IdentifierGenerator#IdentifierGenerator"
+      ],
+      "comment": "Generates identifiers by using the name as a subdomain on the base URL. Non-alphanumeric characters will be replaced with `-`.",
+      "parameters": [
+        {
+          "@id": "scs:dist/pods/generate/SubdomainIdentifierGenerator#SubdomainIdentifierGenerator_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/pods/generate/SubdomainIdentifierGenerator#SubdomainIdentifierGenerator_baseUrl"
+        }
+      ]
+    }
+  ]
+}

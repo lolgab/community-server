@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/HeaderUtil#AcceptHeader",
+      "@type": "AbstractClass",
+      "requireElement": "AcceptHeader",
+      "extends": [],
+      "comment": "General interface for all Accept* headers.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/util/HeaderUtil#Accept",
+      "@type": "AbstractClass",
+      "requireElement": "Accept",
+      "extends": [
+        "scs:dist/util/HeaderUtil#AcceptHeader"
+      ],
+      "comment": "Contents of an HTTP Accept header. Range is type/subtype. Both can be `*`.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/util/HeaderUtil#AcceptCharset",
+      "@type": "AbstractClass",
+      "requireElement": "AcceptCharset",
+      "extends": [
+        "scs:dist/util/HeaderUtil#AcceptHeader"
+      ],
+      "comment": "Contents of an HTTP Accept-Charset header.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/util/HeaderUtil#AcceptEncoding",
+      "@type": "AbstractClass",
+      "requireElement": "AcceptEncoding",
+      "extends": [
+        "scs:dist/util/HeaderUtil#AcceptHeader"
+      ],
+      "comment": "Contents of an HTTP Accept-Encoding header.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/util/HeaderUtil#AcceptLanguage",
+      "@type": "AbstractClass",
+      "requireElement": "AcceptLanguage",
+      "extends": [
+        "scs:dist/util/HeaderUtil#AcceptHeader"
+      ],
+      "comment": "Contents of an HTTP Accept-Language header.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/util/HeaderUtil#AcceptDatetime",
+      "@type": "AbstractClass",
+      "requireElement": "AcceptDatetime",
+      "extends": [
+        "scs:dist/util/HeaderUtil#AcceptHeader"
+      ],
+      "comment": "Contents of an HTTP Accept-Datetime header.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/util/HeaderUtil#Forwarded",
+      "@type": "AbstractClass",
+      "requireElement": "Forwarded",
+      "extends": [],
+      "comment": "The Forwarded header from RFC7239",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

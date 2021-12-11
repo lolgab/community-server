@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/errors/NotFoundHttpError#NotFoundHttpError",
+      "@type": "Class",
+      "requireElement": "NotFoundHttpError",
+      "extends": [
+        "scs:dist/util/errors/HttpError#HttpError"
+      ],
+      "comment": "An error thrown when no data was found for the requested identifier.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/errors/NotFoundHttpError#NotFoundHttpError_message",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/util/errors/NotFoundHttpError#NotFoundHttpError_options",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/errors/NotFoundHttpError#NotFoundHttpError_message"
+        },
+        {
+          "@id": "scs:dist/util/errors/NotFoundHttpError#NotFoundHttpError_options"
+        }
+      ]
+    }
+  ]
+}

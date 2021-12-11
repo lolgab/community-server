@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/logging/LazyLoggerFactory#LazyLoggerFactory",
+      "@type": "Class",
+      "requireElement": "LazyLoggerFactory",
+      "extends": [
+        "scs:dist/logging/LoggerFactory#LoggerFactory"
+      ],
+      "comment": "Wraps over another {@link LoggerFactory} that can be set lazily. This is a singleton class, for which the instance can be retrieved using {@link LazyLoggerFactory.getInstance}.  Loggers can safely be created before a {@link LoggerFactory} is set. But an error will be thrown if {@link Logger.log} is invoked before a {@link LoggerFactory} is set.  This creates instances of {@link LazyLogger}.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

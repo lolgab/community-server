@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleter",
+      "@type": "Class",
+      "requireElement": "InteractionCompleter",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Completes an IDP interaction, logging the user in. Returns the URL the request should be redirected to.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleter_providerFactory",
+          "range": "scs:dist/identity/configuration/ProviderFactory#ProviderFactory",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleter_providerFactory"
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleterParams",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionCompleterParams",
+      "extends": [],
+      "comment": "Parameters required to specify how the interaction should be completed.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleterInput",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionCompleterInput",
+      "extends": [
+        "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleterParams"
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

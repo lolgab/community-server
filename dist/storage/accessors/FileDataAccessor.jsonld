@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/accessors/FileDataAccessor#FileDataAccessor",
+      "@type": "Class",
+      "requireElement": "FileDataAccessor",
+      "extends": [
+        "scs:dist/storage/accessors/DataAccessor#DataAccessor"
+      ],
+      "comment": "DataAccessor that uses the file system to store documents as files and containers as folders.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/accessors/FileDataAccessor#FileDataAccessor_resourceMapper",
+          "range": "scs:dist/storage/mapping/FileIdentifierMapper#FileIdentifierMapper",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/accessors/FileDataAccessor#FileDataAccessor_resourceMapper"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/init/final/ParallelFinalizer#ParallelFinalizer",
+      "@type": "Class",
+      "requireElement": "ParallelFinalizer",
+      "extends": [
+        "scs:dist/init/final/Finalizable#Finalizable"
+      ],
+      "comment": "Finalizes all the injected Finalizable classes in parallel.",
+      "parameters": [
+        {
+          "@id": "scs:dist/init/final/ParallelFinalizer#ParallelFinalizer_finalizers",
+          "range": "scs:dist/init/final/Finalizable#Finalizable"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/init/final/ParallelFinalizer#ParallelFinalizer_finalizers"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/logging/VoidLogger#VoidLogger",
+      "@type": "Class",
+      "requireElement": "VoidLogger",
+      "extends": [
+        "scs:dist/logging/Logger#Logger"
+      ],
+      "comment": "A logger that does nothing on a log message.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

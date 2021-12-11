@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/server/middleware/HeaderHandler#HeaderHandler",
+      "@type": "Class",
+      "requireElement": "HeaderHandler",
+      "extends": [
+        "scs:dist/server/HttpHandler#HttpHandler"
+      ],
+      "comment": "Handler that sets custom headers on the response.",
+      "parameters": [
+        {
+          "@id": "scs:dist/server/middleware/HeaderHandler#HeaderHandler_headers",
+          "range": {
+            "@type": "scs:dist/server/middleware/HeaderHandler#HeaderHandler_headers_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/server/middleware/HeaderHandler#HeaderHandler_headers_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/server/middleware/HeaderHandler#HeaderHandler_headers_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/server/middleware/HeaderHandler#HeaderHandler_headers",
+              "key": "scs:dist/server/middleware/HeaderHandler#HeaderHandler_headers_key",
+              "value": {
+                "@id": "scs:dist/server/middleware/HeaderHandler#HeaderHandler_headers_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#BaseAccountStore",
+      "@type": "Class",
+      "requireElement": "BaseAccountStore",
+      "extends": [
+        "scs:dist/identity/interaction/email-password/storage/AccountStore#AccountStore"
+      ],
+      "comment": "A EmailPasswordStore that uses a KeyValueStorage to persist its information.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#BaseAccountStore_saltRounds",
+          "range": "xsd:number",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#BaseAccountStore_storage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#BaseAccountStore_storage"
+        },
+        {
+          "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#BaseAccountStore_saltRounds"
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#AccountPayload",
+      "@type": "AbstractClass",
+      "requireElement": "AccountPayload",
+      "extends": [],
+      "comment": "A payload to persist a user account",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#ForgotPasswordPayload",
+      "@type": "AbstractClass",
+      "requireElement": "ForgotPasswordPayload",
+      "extends": [],
+      "comment": "A payload to persist the fact that a user has requested to reset their password",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

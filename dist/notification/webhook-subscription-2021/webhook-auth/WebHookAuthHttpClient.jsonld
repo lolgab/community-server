@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClient",
+      "@type": "Class",
+      "requireElement": "WebHookAuthHttpClient",
+      "extends": [
+        "scs:dist/http/client/HttpClient#HttpClient"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClient_args_jwksKeyGenerator",
+          "range": "scs:dist/identity/configuration/JwksKeyGenerator#JwksKeyGenerator",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClient_args_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "jwksKeyGenerator",
+              "value": {
+                "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClient_args_jwksKeyGenerator"
+              }
+            },
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClient_args_baseUrl"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClientArgs",
+      "@type": "AbstractClass",
+      "requireElement": "WebHookAuthHttpClientArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

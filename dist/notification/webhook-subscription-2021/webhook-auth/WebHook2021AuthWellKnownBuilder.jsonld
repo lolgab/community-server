@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHook2021AuthWellKnownBuilder#WebHook2021AuthWellKnownBuilder",
+      "@type": "Class",
+      "requireElement": "WebHook2021AuthWellKnownBuilder",
+      "extends": [
+        "scs:dist/http/well-known/WellKnownBuilder#WellKnownBuilder"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHook2021AuthWellKnownBuilder#WebHook2021AuthWellKnownBuilder_args_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHook2021AuthWellKnownBuilder#WebHook2021AuthWellKnownBuilder_args_jwksEndpointPath",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHook2021AuthWellKnownBuilder#WebHook2021AuthWellKnownBuilder_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "jwksEndpointPath",
+              "value": {
+                "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHook2021AuthWellKnownBuilder#WebHook2021AuthWellKnownBuilder_args_jwksEndpointPath"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

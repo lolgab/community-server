@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter",
+      "@type": "Class",
+      "requireElement": "WebIdAdapter",
+      "extends": [],
+      "comment": "This {@link Adapter} redirects the `find` call to its source adapter. In case no client data was found in the source for the given WebId, this class will do an HTTP GET request to that WebId. If a valid `solid:oidcRegistration` triple is found there, that data will be returned instead.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter_name",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter_source",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter_name"
+        },
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter_source"
+        },
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter_converter"
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapterFactory",
+      "@type": "Class",
+      "requireElement": "WebIdAdapterFactory",
+      "extends": [
+        "scs:dist/identity/storage/AdapterFactory#AdapterFactory"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapterFactory_source",
+          "range": "scs:dist/identity/storage/AdapterFactory#AdapterFactory",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapterFactory_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapterFactory_source"
+        },
+        {
+          "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapterFactory_converter"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule",
+      "@type": "Class",
+      "requireElement": "RegexRouterRule",
+      "extends": [
+        "scs:dist/storage/routing/RouterRule#RouterRule"
+      ],
+      "comment": "Routes requests to a store based on the path of the identifier. The identifier will be stripped of the base URI after which regexes will be used to find the correct store. The trailing slash of the base URI will still be present so the first character a regex can match would be that `/`. This way regexes such as `/container/` can match containers in any position.  In case none of the regexes match an error will be thrown.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_base",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_storeMap",
+          "range": {
+            "@type": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_storeMap_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_storeMap_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_storeMap_value",
+                "range": "scs:dist/storage/ResourceStore#ResourceStore",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_base"
+        },
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_storeMap",
+              "key": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_storeMap_key",
+              "value": {
+                "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_storeMap_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

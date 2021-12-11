@@ -1,0 +1,134 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory",
+      "@type": "Class",
+      "requireElement": "IdentityProviderFactory",
+      "extends": [
+        "scs:dist/identity/configuration/ProviderFactory#ProviderFactory"
+      ],
+      "comment": "Creates an OIDC Provider based on the provided configuration and parameters. The provider will be cached and returned on subsequent calls. Cookie and JWT keys will be stored in an internal storage so they can be re-used over multiple threads. Necessary claims for Solid OIDC interactions will be added. Routes will be updated based on the `baseUrl` and `idpPath`.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_config",
+          "range": "rdf:JSON",
+          "comment": "JSON config for the OIDC library",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_adapterFactory",
+          "range": "scs:dist/identity/storage/AdapterFactory#AdapterFactory",
+          "comment": "Factory that creates the adapter used for OIDC data storage.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the server.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_idpPath",
+          "range": "xsd:string",
+          "comment": "Path of the IDP component in the server. Should start with a slash.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_storage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "comment": "Storage used to store cookie and JWT keys so they can be re-used in case of multithreading.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_errorHandler",
+          "range": "scs:dist/http/output/error/ErrorHandler#ErrorHandler",
+          "comment": "Used to convert errors thrown by the OIDC library.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_responseWriter",
+          "range": "scs:dist/http/output/ResponseWriter#ResponseWriter",
+          "comment": "Used to write out errors thrown by the OIDC library.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_jwksKeyGenerator",
+          "range": "scs:dist/identity/configuration/JwksKeyGenerator#JwksKeyGenerator",
+          "comment": "Used to generate and store JWKS",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_config"
+        },
+        {
+          "fields": [
+            {
+              "keyRaw": "adapterFactory",
+              "value": {
+                "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_adapterFactory"
+              }
+            },
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "idpPath",
+              "value": {
+                "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_idpPath"
+              }
+            },
+            {
+              "keyRaw": "storage",
+              "value": {
+                "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_storage"
+              }
+            },
+            {
+              "keyRaw": "errorHandler",
+              "value": {
+                "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_errorHandler"
+              }
+            },
+            {
+              "keyRaw": "responseWriter",
+              "value": {
+                "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_responseWriter"
+              }
+            },
+            {
+              "keyRaw": "jwksKeyGenerator",
+              "value": {
+                "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_jwksKeyGenerator"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactoryArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IdentityProviderFactoryArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/error/ConvertingErrorHandler#ConvertingErrorHandler",
+      "@type": "Class",
+      "requireElement": "ConvertingErrorHandler",
+      "extends": [
+        "scs:dist/http/output/error/ErrorHandler#ErrorHandler"
+      ],
+      "comment": "Converts an error into a Representation of content type internal/error. Then feeds that representation into its converter to create a representation based on the given preferences.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/output/error/ConvertingErrorHandler#ConvertingErrorHandler_showStackTrace",
+          "range": "xsd:boolean",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/http/output/error/ConvertingErrorHandler#ConvertingErrorHandler_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/output/error/ConvertingErrorHandler#ConvertingErrorHandler_converter"
+        },
+        {
+          "@id": "scs:dist/http/output/error/ConvertingErrorHandler#ConvertingErrorHandler_showStackTrace"
+        }
+      ]
+    }
+  ]
+}

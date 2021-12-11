@@ -1,0 +1,144 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler",
+      "@type": "Class",
+      "requireElement": "SetupHttpHandler",
+      "extends": [
+        "scs:dist/server/OperationHttpHandler#OperationHttpHandler"
+      ],
+      "comment": "Handles the initial setup of a server. Will capture all requests until setup is finished, this to prevent accidentally running unsafe servers.  GET requests will return the view template which should contain the setup information for the user. POST requests will run an initializer and/or perform a registration step, both optional. After successfully completing a POST request this handler will disable itself and become unreachable. All other methods will be rejected.",
+      "parameters": [
+        {
+          "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_registrationManager",
+          "range": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager",
+          "comment": "Used for registering a pod during setup.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_initializer",
+          "range": "scs:dist/init/Initializer#Initializer",
+          "comment": "Initializer to call in case no registration procedure needs to happen. This Initializer should make sure the necessary resources are there so the server can work correctly.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "comment": "Used for content negotiation.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_storageKey",
+          "range": "xsd:string",
+          "comment": "Key that is used to store the boolean in the storage indicating setup is finished.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_storage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "comment": "Used to store setup status.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_viewTemplate",
+          "range": "xsd:string",
+          "comment": "Template to use for GET requests.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_responseTemplate",
+          "range": "xsd:string",
+          "comment": "Template to show when setup was completed successfully.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_errorHandler",
+          "range": "scs:dist/http/output/error/ErrorHandler#ErrorHandler",
+          "comment": "Used for converting output errors.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "registrationManager",
+              "value": {
+                "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_registrationManager"
+              }
+            },
+            {
+              "keyRaw": "initializer",
+              "value": {
+                "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_initializer"
+              }
+            },
+            {
+              "keyRaw": "converter",
+              "value": {
+                "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_converter"
+              }
+            },
+            {
+              "keyRaw": "storageKey",
+              "value": {
+                "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_storageKey"
+              }
+            },
+            {
+              "keyRaw": "storage",
+              "value": {
+                "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_storage"
+              }
+            },
+            {
+              "keyRaw": "viewTemplate",
+              "value": {
+                "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_viewTemplate"
+              }
+            },
+            {
+              "keyRaw": "responseTemplate",
+              "value": {
+                "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_responseTemplate"
+              }
+            },
+            {
+              "keyRaw": "errorHandler",
+              "value": {
+                "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_errorHandler"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/init/setup/SetupHttpHandler#SetupInput",
+      "@type": "AbstractClass",
+      "requireElement": "SetupInput",
+      "extends": [],
+      "comment": "Input parameters expected in calls to the handler. Will be sent to the RegistrationManager for validation and registration. The reason this is a flat object and does not have a specific field for all the registration parameters is so we can also support form data.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "SetupHttpHandlerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

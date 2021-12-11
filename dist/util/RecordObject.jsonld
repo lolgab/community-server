@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/RecordObject#RecordObject",
+      "@type": "Class",
+      "requireElement": "RecordObject",
+      "extends": [],
+      "comment": "Helper class for instantiating multiple objects with Components.js. See https://github.com/LinkedSoftwareDependencies/Components.js/issues/26",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/RecordObject#RecordObject_record",
+          "range": {
+            "@type": "scs:dist/util/RecordObject#RecordObject_record_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/util/RecordObject#RecordObject_record_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/util/RecordObject#RecordObject_record_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/util/RecordObject#RecordObject_record",
+              "key": "scs:dist/util/RecordObject#RecordObject_record_key",
+              "value": {
+                "@id": "scs:dist/util/RecordObject#RecordObject_record_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/permissions/MethodModesExtractor#MethodModesExtractor",
+      "@type": "Class",
+      "requireElement": "MethodModesExtractor",
+      "extends": [
+        "scs:dist/authorization/permissions/ModesExtractor#ModesExtractor"
+      ],
+      "comment": "Generates permissions for the base set of methods that always require the same permissions. Specifically: GET, HEAD, POST, PUT and DELETE.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

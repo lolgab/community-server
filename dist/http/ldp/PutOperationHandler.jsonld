@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/ldp/PutOperationHandler#PutOperationHandler",
+      "@type": "Class",
+      "requireElement": "PutOperationHandler",
+      "extends": [
+        "scs:dist/http/ldp/OperationHandler#OperationHandler"
+      ],
+      "comment": "Handles PUT {@link Operation}s. Calls the setRepresentation function from a {@link ResourceStore}.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/ldp/PutOperationHandler#PutOperationHandler_store",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/ldp/PutOperationHandler#PutOperationHandler_store"
+        }
+      ]
+    }
+  ]
+}

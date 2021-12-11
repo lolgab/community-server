@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/locking/EqualReadWriteLocker#EqualReadWriteLocker",
+      "@type": "Class",
+      "requireElement": "EqualReadWriteLocker",
+      "extends": [
+        "scs:dist/util/locking/ReadWriteLocker#ReadWriteLocker"
+      ],
+      "comment": "A {@link ReadWriteLocker} that gives no priority to read or write operations: both use the same lock.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/locking/EqualReadWriteLocker#EqualReadWriteLocker_locker",
+          "range": "scs:dist/util/locking/ResourceLocker#ResourceLocker",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/locking/EqualReadWriteLocker#EqualReadWriteLocker_locker"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/PassthroughConverter#PassthroughConverter",
+      "@type": "Class",
+      "requireElement": "PassthroughConverter",
+      "extends": [
+        "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that does not perform any conversion.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

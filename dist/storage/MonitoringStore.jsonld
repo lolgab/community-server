@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/MonitoringStore#MonitoringStore",
+      "@type": "Class",
+      "requireElement": "MonitoringStore",
+      "extends": [
+        "scs:dist/storage/ResourceStore#ResourceStore"
+      ],
+      "comment": "Store that notifies listeners of changes to its source by emitting a `modified` event.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/MonitoringStore#MonitoringStore_source",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/MonitoringStore#MonitoringStore_source"
+        }
+      ]
+    }
+  ]
+}

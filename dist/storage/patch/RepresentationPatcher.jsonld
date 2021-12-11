@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcher",
+      "@type": "AbstractClass",
+      "requireElement": "RepresentationPatcher",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Handles the patching of a specific Representation.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcherInput",
+      "@type": "AbstractClass",
+      "requireElement": "RepresentationPatcherInput",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

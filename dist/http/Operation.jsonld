@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/Operation#Operation",
+      "@type": "AbstractClass",
+      "requireElement": "Operation",
+      "extends": [],
+      "comment": "A single REST operation.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

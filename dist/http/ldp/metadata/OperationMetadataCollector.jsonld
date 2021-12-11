@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/ldp/metadata/OperationMetadataCollector#OperationMetadataCollector",
+      "@type": "AbstractClass",
+      "requireElement": "OperationMetadataCollector",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Adds metadata about the operation to the provided metadata object.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/http/ldp/metadata/OperationMetadataCollector#OperationMetadataCollectorInput",
+      "@type": "AbstractClass",
+      "requireElement": "OperationMetadataCollectorInput",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

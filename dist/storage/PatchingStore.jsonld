@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/PatchingStore#PatchingStore",
+      "@type": "Class",
+      "requireElement": "PatchingStore",
+      "extends": [
+        "scs:dist/storage/PassthroughStore#PassthroughStore"
+      ],
+      "comment": "{@link ResourceStore} using decorator pattern for the `modifyResource` function. If the original store supports the {@link Patch}, behaviour will be identical, otherwise the {@link PatchHandler} will be called instead.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/PatchingStore#PatchingStore_source",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/PatchingStore#PatchingStore_patchHandler",
+          "range": "scs:dist/storage/patch/PatchHandler#PatchHandler",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/PatchingStore#PatchingStore_source"
+        },
+        {
+          "@id": "scs:dist/storage/PatchingStore#PatchingStore_patchHandler"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/patch/RepresentationPatchHandler#RepresentationPatchHandler",
+      "@type": "Class",
+      "requireElement": "RepresentationPatchHandler",
+      "extends": [
+        "scs:dist/storage/patch/PatchHandler#PatchHandler"
+      ],
+      "comment": "Handles a patch operation by getting the representation from the store, applying a `RepresentationPatcher`, and then writing the result back to the store.  In case there is no original representation (the store throws a `NotFoundHttpError`), the patcher is expected to create a new one.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/patch/RepresentationPatchHandler#RepresentationPatchHandler_patcher",
+          "range": "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcher",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/patch/RepresentationPatchHandler#RepresentationPatchHandler_patcher"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/metadata/ModifiedMetadataWriter#ModifiedMetadataWriter",
+      "@type": "Class",
+      "requireElement": "ModifiedMetadataWriter",
+      "extends": [
+        "scs:dist/http/output/metadata/MetadataWriter#MetadataWriter"
+      ],
+      "comment": "A {@link MetadataWriter} that generates all the necessary headers related to the modification date of a resource.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

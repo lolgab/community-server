@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/templates/EjsTemplateEngine#EjsTemplateEngine",
+      "@type": "Class",
+      "requireElement": "EjsTemplateEngine",
+      "extends": [],
+      "comment": "Fills in EJS templates.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/templates/EjsTemplateEngine#EjsTemplateEngine_template",
+          "range": "rdf:JSON",
+          "comment": "The default template",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/templates/EjsTemplateEngine#EjsTemplateEngine_template"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/metadata/WacAllowMetadataWriter#WacAllowMetadataWriter",
+      "@type": "Class",
+      "requireElement": "WacAllowMetadataWriter",
+      "extends": [
+        "scs:dist/http/output/metadata/MetadataWriter#MetadataWriter"
+      ],
+      "comment": "Add the necessary WAC-Allow header values. Solid, §10.1: \"Servers exposing client’s access privileges on a resource URL MUST advertise by including the WAC-Allow HTTP header in the response of HTTP HEAD and GET requests.\" https://solid.github.io/specification/protocol#web-access-control",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter",
+      "@type": "Class",
+      "requireElement": "ConstantMetadataWriter",
+      "extends": [
+        "scs:dist/http/output/metadata/MetadataWriter#MetadataWriter"
+      ],
+      "comment": "A {@link MetadataWriter} that takes a constant map of header names and values.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter_headers",
+          "range": {
+            "@type": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter_headers_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter_headers_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter_headers_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter_headers",
+              "key": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter_headers_key",
+              "value": {
+                "@id": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter_headers_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

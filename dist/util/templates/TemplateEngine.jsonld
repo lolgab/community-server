@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/templates/TemplateEngine#TemplateString",
+      "@type": "AbstractClass",
+      "requireElement": "TemplateString",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/util/templates/TemplateEngine#TemplatePath",
+      "@type": "AbstractClass",
+      "requireElement": "TemplatePath",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

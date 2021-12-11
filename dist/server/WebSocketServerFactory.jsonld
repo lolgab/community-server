@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/server/WebSocketServerFactory#WebSocketServerFactory",
+      "@type": "Class",
+      "requireElement": "WebSocketServerFactory",
+      "extends": [
+        "scs:dist/server/HttpServerFactory#HttpServerFactory"
+      ],
+      "comment": "Factory that adds WebSocket functionality to an existing server",
+      "parameters": [
+        {
+          "@id": "scs:dist/server/WebSocketServerFactory#WebSocketServerFactory_baseServerFactory",
+          "range": "scs:dist/server/HttpServerFactory#HttpServerFactory",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/server/WebSocketServerFactory#WebSocketServerFactory_webSocketHandler",
+          "range": "scs:dist/server/WebSocketHandler#WebSocketHandler",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/server/WebSocketServerFactory#WebSocketServerFactory_baseServerFactory"
+        },
+        {
+          "@id": "scs:dist/server/WebSocketServerFactory#WebSocketServerFactory_webSocketHandler"
+        }
+      ]
+    }
+  ]
+}

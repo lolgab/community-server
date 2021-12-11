@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/server/OperationHttpHandler#OperationHttpHandler",
+      "@type": "AbstractClass",
+      "requireElement": "OperationHttpHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "An HTTP handler that makes use of an already parsed Operation. Can either return a ResponseDescription to be resolved by the calling class, or undefined if this class handles the response itself.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/server/OperationHttpHandler#OperationHttpHandlerInput",
+      "@type": "AbstractClass",
+      "requireElement": "OperationHttpHandlerInput",
+      "extends": [
+        "scs:dist/server/HttpHandler#HttpHandlerInput"
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

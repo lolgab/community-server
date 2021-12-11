@@ -1,0 +1,112 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter",
+      "@type": "Class",
+      "requireElement": "ConstantConverter",
+      "extends": [
+        "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that ensures a representation for a certain content type is available.  Representations of the same content type are served as is; others are replaced by a constant document.  This can for example be used to serve an index.html file, which could then interactively load another representation.  Options default to the most permissive values when not defined.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_filePath",
+          "range": "xsd:string",
+          "comment": "The path to the constant representation.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_contentType",
+          "range": "xsd:string",
+          "comment": "The content type of the constant representation.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_container",
+          "range": "xsd:boolean",
+          "comment": "Whether this should trigger on containers.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_document",
+          "range": "xsd:boolean",
+          "comment": "Whether this should trigger on documents.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_minQuality",
+          "range": "xsd:number",
+          "comment": "The minimum requested quality/preference before this should trigger.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_enabledMediaRanges",
+          "range": "xsd:string",
+          "comment": "Media ranges for which the conversion should happen."
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_disabledMediaRanges",
+          "range": "xsd:string",
+          "comment": "Media ranges for which the conversion should not happen."
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_filePath"
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_contentType"
+        },
+        {
+          "fields": [
+            {
+              "keyRaw": "container",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_container"
+              }
+            },
+            {
+              "keyRaw": "document",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_document"
+              }
+            },
+            {
+              "keyRaw": "minQuality",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_minQuality"
+              }
+            },
+            {
+              "keyRaw": "enabledMediaRanges",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_enabledMediaRanges"
+              }
+            },
+            {
+              "keyRaw": "disabledMediaRanges",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_disabledMediaRanges"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverterOptions",
+      "@type": "AbstractClass",
+      "requireElement": "ConstantConverterOptions",
+      "extends": [],
+      "comment": "Extra options for the ConstantConverter.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

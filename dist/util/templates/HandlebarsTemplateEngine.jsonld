@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/templates/HandlebarsTemplateEngine#HandlebarsTemplateEngine",
+      "@type": "Class",
+      "requireElement": "HandlebarsTemplateEngine",
+      "extends": [],
+      "comment": "Fills in Handlebars templates.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/templates/HandlebarsTemplateEngine#HandlebarsTemplateEngine_template",
+          "range": "rdf:JSON",
+          "comment": "The default template",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/templates/HandlebarsTemplateEngine#HandlebarsTemplateEngine_template"
+        }
+      ]
+    }
+  ]
+}

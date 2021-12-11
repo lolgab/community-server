@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/response/ResponseDescription#ResponseDescription",
+      "@type": "Class",
+      "requireElement": "ResponseDescription",
+      "extends": [],
+      "comment": "The result of executing an operation.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/output/response/ResponseDescription#ResponseDescription_statusCode",
+          "range": "xsd:number",
+          "comment": "Status code to return.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/output/response/ResponseDescription#ResponseDescription_metadata",
+          "range": "scs:dist/http/representation/RepresentationMetadata#RepresentationMetadata",
+          "comment": "Metadata corresponding to the response (and data potentially).",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/output/response/ResponseDescription#ResponseDescription_statusCode"
+        },
+        {
+          "@id": "scs:dist/http/output/response/ResponseDescription#ResponseDescription_metadata"
+        }
+      ]
+    }
+  ]
+}

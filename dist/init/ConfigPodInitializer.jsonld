@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer",
+      "@type": "Class",
+      "requireElement": "ConfigPodInitializer",
+      "extends": [
+        "scs:dist/init/Initializer#Initializer"
+      ],
+      "comment": "Initializes all pods that have been stored and loads them in memory. This reads the pod settings from a permanent storage and uses those to create the corresponding ResourceStores in memory, so this is required every time the server starts.  Part of the dynamic pod creation. Reads the contents from the configuration storage, uses those values to instantiate ResourceStores, and then adds them to the routing storage.",
+      "parameters": [
+        {
+          "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer_storeFactory",
+          "range": "scs:dist/pods/generate/ComponentsJsFactory#ComponentsJsFactory",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer_configStorage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer_routingStorage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer_storeFactory"
+        },
+        {
+          "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer_configStorage"
+        },
+        {
+          "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer_routingStorage"
+        }
+      ]
+    }
+  ]
+}

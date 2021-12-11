@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/settings/PodSettings#PodSettings",
+      "@type": "AbstractClass",
+      "requireElement": "PodSettings",
+      "extends": [],
+      "comment": "Metadata related to pod generation. Although the optional fields are not that relevant since this extends Dict, they give an indication of what is sometimes expected.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager",
+      "@type": "Class",
+      "requireElement": "ConfigPodManager",
+      "extends": [
+        "scs:dist/pods/PodManager#PodManager"
+      ],
+      "comment": "Pod manager that creates a store for the pod with a {@link PodGenerator} and fills it with resources from a {@link ResourcesGenerator}.  Part of the dynamic pod creation. 1. Calls a PodGenerator to instantiate a new resource store for the pod. 2. Generates the pod resources based on the templates as usual. 3. Adds the created pod to the routing storage, which is used for linking pod identifiers to their resource stores.",
+      "parameters": [
+        {
+          "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager_podGenerator",
+          "range": "scs:dist/pods/generate/PodGenerator#PodGenerator",
+          "comment": "Generator for the pod stores.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager_resourcesGenerator",
+          "range": "scs:dist/pods/generate/ResourcesGenerator#ResourcesGenerator",
+          "comment": "Generator for the pod resources.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager_routingStorage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "comment": "Where to store the generated pods so they can be routed to.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager_podGenerator"
+        },
+        {
+          "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager_resourcesGenerator"
+        },
+        {
+          "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager_routingStorage"
+        }
+      ]
+    }
+  ]
+}

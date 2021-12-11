@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper",
+      "@type": "Class",
+      "requireElement": "FixedContentTypeMapper",
+      "extends": [
+        "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper"
+      ],
+      "comment": "A mapper that always returns a fixed content type for files.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_base",
+          "range": "xsd:string",
+          "comment": "Base URL.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_rootFilepath",
+          "range": "xsd:string",
+          "comment": "Base file path.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_contentType",
+          "range": "xsd:string",
+          "comment": "Fixed content type that will be used for all resources.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_pathSuffix",
+          "range": "xsd:string",
+          "comment": "An optional suffix that will be appended to all file paths. Requested file paths without this suffix will be rejected.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_urlSuffix",
+          "range": "xsd:string",
+          "comment": "An optional suffix that will be appended to all URL. Requested URLs without this suffix will be rejected.",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_base"
+        },
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_rootFilepath"
+        },
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_contentType"
+        },
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_pathSuffix"
+        },
+        {
+          "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_urlSuffix"
+        }
+      ]
+    }
+  ]
+}

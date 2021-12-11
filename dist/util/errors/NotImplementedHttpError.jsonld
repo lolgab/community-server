@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/errors/NotImplementedHttpError#NotImplementedHttpError",
+      "@type": "Class",
+      "requireElement": "NotImplementedHttpError",
+      "extends": [
+        "scs:dist/util/errors/HttpError#HttpError"
+      ],
+      "comment": "The server either does not recognize the request method, or it lacks the ability to fulfil the request. Usually this implies future availability (e.g., a new feature of a web-service API).",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/errors/NotImplementedHttpError#NotImplementedHttpError_message",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/util/errors/NotImplementedHttpError#NotImplementedHttpError_options",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/errors/NotImplementedHttpError#NotImplementedHttpError_message"
+        },
+        {
+          "@id": "scs:dist/util/errors/NotImplementedHttpError#NotImplementedHttpError_options"
+        }
+      ]
+    }
+  ]
+}

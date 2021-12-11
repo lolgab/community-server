@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/error/ErrorHandler#ErrorHandler",
+      "@type": "AbstractClass",
+      "requireElement": "ErrorHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Converts an error into a {@link ResponseDescription} based on the request preferences.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/http/output/error/ErrorHandler#ErrorHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "ErrorHandlerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

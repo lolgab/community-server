@@ -1,0 +1,106 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender",
+      "@type": "Class",
+      "requireElement": "BaseEmailSender",
+      "extends": [
+        "scs:dist/identity/interaction/util/EmailSender#EmailSender"
+      ],
+      "comment": "Sends e-mails using nodemailer.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_host",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_port",
+          "range": "xsd:number",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_auth_user",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_auth_pass",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_senderName",
+          "range": "xsd:string",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "emailConfig",
+              "value": {
+                "fields": [
+                  {
+                    "keyRaw": "host",
+                    "value": {
+                      "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_host"
+                    }
+                  },
+                  {
+                    "keyRaw": "port",
+                    "value": {
+                      "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_port"
+                    }
+                  },
+                  {
+                    "keyRaw": "auth",
+                    "value": {
+                      "fields": [
+                        {
+                          "keyRaw": "user",
+                          "value": {
+                            "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_auth_user"
+                          }
+                        },
+                        {
+                          "keyRaw": "pass",
+                          "value": {
+                            "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_auth_pass"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "keyRaw": "senderName",
+              "value": {
+                "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_senderName"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/identity/interaction/util/BaseEmailSender#EmailSenderArgs",
+      "@type": "AbstractClass",
+      "requireElement": "EmailSenderArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

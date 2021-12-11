@@ -1,0 +1,31 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/response/OkResponseDescription#OkResponseDescription",
+      "@type": "Class",
+      "requireElement": "OkResponseDescription",
+      "extends": [
+        "scs:dist/http/output/response/ResponseDescription#ResponseDescription"
+      ],
+      "comment": "Corresponds to a 200 response, containing relevant metadata and potentially data.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/output/response/OkResponseDescription#OkResponseDescription_metadata",
+          "range": "scs:dist/http/representation/RepresentationMetadata#RepresentationMetadata",
+          "comment": "Metadata concerning the response.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/output/response/OkResponseDescription#OkResponseDescription_metadata"
+        }
+      ]
+    }
+  ]
+}

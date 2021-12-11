@@ -1,0 +1,111 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer",
+      "@type": "Class",
+      "requireElement": "ContainerInitializer",
+      "extends": [
+        "scs:dist/init/Initializer#Initializer"
+      ],
+      "comment": "Initializer that sets up a container. Will copy all the files and folders in the given path to the corresponding documents and containers.",
+      "parameters": [
+        {
+          "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the server.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_path",
+          "range": "xsd:string",
+          "comment": "Relative path of the container.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_store",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "comment": "ResourceStore where the container should be stored.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_generator",
+          "range": "scs:dist/pods/generate/ResourcesGenerator#ResourcesGenerator",
+          "comment": "Generator that should be used to generate container contents.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_storageKey",
+          "range": "xsd:string",
+          "comment": "Key that is used to store the boolean in the storage indicating the container is initialized.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_storage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "comment": "Used to store initialization status.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "path",
+              "value": {
+                "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_path"
+              }
+            },
+            {
+              "keyRaw": "store",
+              "value": {
+                "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_store"
+              }
+            },
+            {
+              "keyRaw": "generator",
+              "value": {
+                "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_generator"
+              }
+            },
+            {
+              "keyRaw": "storageKey",
+              "value": {
+                "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_storageKey"
+              }
+            },
+            {
+              "keyRaw": "storage",
+              "value": {
+                "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_storage"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/init/ContainerInitializer#ContainerInitializerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "ContainerInitializerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

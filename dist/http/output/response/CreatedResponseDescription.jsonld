@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/response/CreatedResponseDescription#CreatedResponseDescription",
+      "@type": "Class",
+      "requireElement": "CreatedResponseDescription",
+      "extends": [
+        "scs:dist/http/output/response/ResponseDescription#ResponseDescription"
+      ],
+      "comment": "Corresponds to a 201 response, containing the relevant location metadata.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/output/response/CreatedResponseDescription#CreatedResponseDescription_location_path",
+          "range": "xsd:string",
+          "comment": "Path to the relevant resource.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "path",
+              "value": {
+                "@id": "scs:dist/http/output/response/CreatedResponseDescription#CreatedResponseDescription_location_path"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

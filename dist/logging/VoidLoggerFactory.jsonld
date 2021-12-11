@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/logging/VoidLoggerFactory#VoidLoggerFactory",
+      "@type": "Class",
+      "requireElement": "VoidLoggerFactory",
+      "extends": [
+        "scs:dist/logging/LoggerFactory#LoggerFactory"
+      ],
+      "comment": "A factory that always returns {@link VoidLogger}, which does nothing on log messages.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

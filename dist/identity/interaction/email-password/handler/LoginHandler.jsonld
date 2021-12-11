@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/email-password/handler/LoginHandler#LoginHandler",
+      "@type": "Class",
+      "requireElement": "LoginHandler",
+      "extends": [
+        "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionHandler"
+      ],
+      "comment": "Handles the submission of the Login Form and logs the user in.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/interaction/email-password/handler/LoginHandler#LoginHandler_accountStore",
+          "range": "scs:dist/identity/interaction/email-password/storage/AccountStore#AccountStore",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/interaction/email-password/handler/LoginHandler#LoginHandler_accountStore"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker",
+      "@type": "Class",
+      "requireElement": "GreedyReadWriteLocker",
+      "extends": [
+        "scs:dist/util/locking/ReadWriteLocker#ReadWriteLocker"
+      ],
+      "comment": "A {@link ReadWriteLocker} that allows for multiple simultaneous read operations. Write operations will be blocked as long as read operations are not finished. New read operations are allowed while this is going on, which will cause write operations to wait longer.  Based on https://en.wikipedia.org/wiki/Readers%E2%80%93writer_lock#Using_two_mutexes . As soon as 1 read lock request is made, the write lock is locked. Internally a counter keeps track of the amount of active read locks. Only when this number reaches 0 will the write lock be released again. The internal read lock is only locked to increase/decrease this counter and is released afterwards. This allows for multiple read operations, although only 1 at the time can update the counter, which means there can still be a small waiting period if there are multiple simultaneous read operations.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_suffixes_count",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_locker",
+          "range": "scs:dist/util/locking/ResourceLocker#ResourceLocker",
+          "comment": "Used for creating read and write locks.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_storage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "comment": "Used for storing the amount of active read operations on a resource.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_suffixes_read",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_suffixes_write",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_locker"
+        },
+        {
+          "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_storage"
+        },
+        {
+          "fields": [
+            {
+              "keyRaw": "count",
+              "value": {
+                "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_suffixes_count"
+              }
+            },
+            {
+              "keyRaw": "read",
+              "value": {
+                "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_suffixes_read"
+              }
+            },
+            {
+              "keyRaw": "write",
+              "value": {
+                "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_suffixes_write"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteSuffixes",
+      "@type": "AbstractClass",
+      "requireElement": "GreedyReadWriteSuffixes",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

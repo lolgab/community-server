@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/OwnerPermissionReader#OwnerPermissionReader",
+      "@type": "Class",
+      "requireElement": "OwnerPermissionReader",
+      "extends": [
+        "scs:dist/authorization/PermissionReader#PermissionReader"
+      ],
+      "comment": "Allows control access if the request is being made by the owner of the pod containing the resource.",
+      "parameters": [
+        {
+          "@id": "scs:dist/authorization/OwnerPermissionReader#OwnerPermissionReader_accountStore",
+          "range": "scs:dist/identity/interaction/email-password/storage/AccountStore#AccountStore",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/authorization/OwnerPermissionReader#OwnerPermissionReader_aclStrategy",
+          "range": "scs:dist/http/auxiliary/AuxiliaryIdentifierStrategy#AuxiliaryIdentifierStrategy",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/authorization/OwnerPermissionReader#OwnerPermissionReader_accountStore"
+        },
+        {
+          "@id": "scs:dist/authorization/OwnerPermissionReader#OwnerPermissionReader_aclStrategy"
+        }
+      ]
+    }
+  ]
+}

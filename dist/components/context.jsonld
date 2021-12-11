@@ -1,0 +1,2951 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^4.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "scs": "npmd:@solid/community-server/",
+      "files-scs": "scs:^2.0.0/",
+      "BearerWebIdExtractor": {
+        "@id": "scs:dist/authentication/BearerWebIdExtractor#BearerWebIdExtractor",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Credential": {
+        "@id": "scs:dist/authentication/Credentials#Credential",
+        "@prefix": true,
+        "@context": {}
+      },
+      "CredentialsExtractor": {
+        "@id": "scs:dist/authentication/CredentialsExtractor#CredentialsExtractor",
+        "@prefix": true,
+        "@context": {}
+      },
+      "DPoPWebIdExtractor": {
+        "@id": "scs:dist/authentication/DPoPWebIdExtractor#DPoPWebIdExtractor",
+        "@prefix": true,
+        "@context": {
+          "originalUrlExtractor": {
+            "@id": "scs:dist/authentication/DPoPWebIdExtractor#DPoPWebIdExtractor_originalUrlExtractor"
+          }
+        }
+      },
+      "PublicCredentialsExtractor": {
+        "@id": "scs:dist/authentication/PublicCredentialsExtractor#PublicCredentialsExtractor",
+        "@prefix": true,
+        "@context": {}
+      },
+      "UnionCredentialsExtractor": {
+        "@id": "scs:dist/authentication/UnionCredentialsExtractor#UnionCredentialsExtractor",
+        "@prefix": true,
+        "@context": {
+          "extractors": {
+            "@id": "scs:dist/authentication/UnionCredentialsExtractor#UnionCredentialsExtractor_extractors",
+            "@container": "@list"
+          }
+        }
+      },
+      "UnsecureConstantCredentialsExtractor": {
+        "@id": "scs:dist/authentication/UnsecureConstantCredentialsExtractor#UnsecureConstantCredentialsExtractor",
+        "@prefix": true,
+        "@context": {
+          "agent": {
+            "@id": "scs:dist/authentication/UnsecureConstantCredentialsExtractor#UnsecureConstantCredentialsExtractor_agent"
+          }
+        }
+      },
+      "UnsecureWebIdExtractor": {
+        "@id": "scs:dist/authentication/UnsecureWebIdExtractor#UnsecureWebIdExtractor",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AccessChecker": {
+        "@id": "scs:dist/authorization/access/AccessChecker#AccessChecker",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AccessCheckerArgs": {
+        "@id": "scs:dist/authorization/access/AccessChecker#AccessCheckerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AgentAccessChecker": {
+        "@id": "scs:dist/authorization/access/AgentAccessChecker#AgentAccessChecker",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AgentClassAccessChecker": {
+        "@id": "scs:dist/authorization/access/AgentClassAccessChecker#AgentClassAccessChecker",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AgentGroupAccessChecker": {
+        "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker",
+        "@prefix": true,
+        "@context": {
+          "expiration": {
+            "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker_expiration"
+          },
+          "converter": {
+            "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker_converter"
+          },
+          "cache": {
+            "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker_cache"
+          }
+        }
+      },
+      "ModesExtractor": {
+        "@id": "scs:dist/authorization/permissions/ModesExtractor#ModesExtractor",
+        "@prefix": true,
+        "@context": {}
+      },
+      "MethodModesExtractor": {
+        "@id": "scs:dist/authorization/permissions/MethodModesExtractor#MethodModesExtractor",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SparqlPatchModesExtractor": {
+        "@id": "scs:dist/authorization/permissions/SparqlPatchModesExtractor#SparqlPatchModesExtractor",
+        "@prefix": true,
+        "@context": {}
+      },
+      "OwnerPermissionReader": {
+        "@id": "scs:dist/authorization/OwnerPermissionReader#OwnerPermissionReader",
+        "@prefix": true,
+        "@context": {
+          "accountStore": {
+            "@id": "scs:dist/authorization/OwnerPermissionReader#OwnerPermissionReader_accountStore"
+          },
+          "aclStrategy": {
+            "@id": "scs:dist/authorization/OwnerPermissionReader#OwnerPermissionReader_aclStrategy"
+          }
+        }
+      },
+      "AllStaticReader": {
+        "@id": "scs:dist/authorization/AllStaticReader#AllStaticReader",
+        "@prefix": true,
+        "@context": {
+          "allow": {
+            "@id": "scs:dist/authorization/AllStaticReader#AllStaticReader_allow"
+          }
+        }
+      },
+      "Authorizer": {
+        "@id": "scs:dist/authorization/Authorizer#Authorizer",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AuthorizerInput": {
+        "@id": "scs:dist/authorization/Authorizer#AuthorizerInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AuxiliaryReader": {
+        "@id": "scs:dist/authorization/AuxiliaryReader#AuxiliaryReader",
+        "@prefix": true,
+        "@context": {
+          "resourceReader": {
+            "@id": "scs:dist/authorization/AuxiliaryReader#AuxiliaryReader_resourceReader"
+          },
+          "auxiliaryStrategy": {
+            "@id": "scs:dist/authorization/AuxiliaryReader#AuxiliaryReader_auxiliaryStrategy"
+          }
+        }
+      },
+      "PathBasedReader": {
+        "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader",
+        "@prefix": true,
+        "@context": {
+          "baseUrl": {
+            "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader_baseUrl"
+          },
+          "paths": {
+            "@id": "scs:dist/authorization/PathBasedReader#PathBasedReader_paths",
+            "@container": "@list"
+          }
+        }
+      },
+      "PermissionBasedAuthorizer": {
+        "@id": "scs:dist/authorization/PermissionBasedAuthorizer#PermissionBasedAuthorizer",
+        "@prefix": true,
+        "@context": {}
+      },
+      "PermissionReader": {
+        "@id": "scs:dist/authorization/PermissionReader#PermissionReader",
+        "@prefix": true,
+        "@context": {}
+      },
+      "PermissionReaderInput": {
+        "@id": "scs:dist/authorization/PermissionReader#PermissionReaderInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "UnionPermissionReader": {
+        "@id": "scs:dist/authorization/UnionPermissionReader#UnionPermissionReader",
+        "@prefix": true,
+        "@context": {
+          "readers": {
+            "@id": "scs:dist/authorization/UnionPermissionReader#UnionPermissionReader_readers",
+            "@container": "@list"
+          }
+        }
+      },
+      "WebAclReader": {
+        "@id": "scs:dist/authorization/WebAclReader#WebAclReader",
+        "@prefix": true,
+        "@context": {
+          "aclStrategy": {
+            "@id": "scs:dist/authorization/WebAclReader#WebAclReader_aclStrategy"
+          },
+          "aclStore": {
+            "@id": "scs:dist/authorization/WebAclReader#WebAclReader_aclStore"
+          },
+          "identifierStrategy": {
+            "@id": "scs:dist/authorization/WebAclReader#WebAclReader_identifierStrategy"
+          },
+          "accessChecker": {
+            "@id": "scs:dist/authorization/WebAclReader#WebAclReader_accessChecker"
+          }
+        }
+      },
+      "AuxiliaryIdentifierStrategy": {
+        "@id": "scs:dist/http/auxiliary/AuxiliaryIdentifierStrategy#AuxiliaryIdentifierStrategy",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AuxiliaryStrategy": {
+        "@id": "scs:dist/http/auxiliary/AuxiliaryStrategy#AuxiliaryStrategy",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ComposedAuxiliaryStrategy": {
+        "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy",
+        "@prefix": true,
+        "@context": {
+          "ownAuthorization": {
+            "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_ownAuthorization"
+          },
+          "requiredInRoot": {
+            "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_requiredInRoot"
+          },
+          "identifierStrategy": {
+            "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_identifierStrategy"
+          },
+          "metadataGenerator": {
+            "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_metadataGenerator"
+          },
+          "validator": {
+            "@id": "scs:dist/http/auxiliary/ComposedAuxiliaryStrategy#ComposedAuxiliaryStrategy_validator"
+          }
+        }
+      },
+      "LinkMetadataGenerator": {
+        "@id": "scs:dist/http/auxiliary/LinkMetadataGenerator#LinkMetadataGenerator",
+        "@prefix": true,
+        "@context": {
+          "link": {
+            "@id": "scs:dist/http/auxiliary/LinkMetadataGenerator#LinkMetadataGenerator_link"
+          },
+          "identifierStrategy": {
+            "@id": "scs:dist/http/auxiliary/LinkMetadataGenerator#LinkMetadataGenerator_identifierStrategy"
+          }
+        }
+      },
+      "MetadataGenerator": {
+        "@id": "scs:dist/http/auxiliary/MetadataGenerator#MetadataGenerator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RdfValidator": {
+        "@id": "scs:dist/http/auxiliary/RdfValidator#RdfValidator",
+        "@prefix": true,
+        "@context": {
+          "converter": {
+            "@id": "scs:dist/http/auxiliary/RdfValidator#RdfValidator_converter"
+          }
+        }
+      },
+      "RoutingAuxiliaryIdentifierStrategy": {
+        "@id": "scs:dist/http/auxiliary/RoutingAuxiliaryIdentifierStrategy#RoutingAuxiliaryIdentifierStrategy",
+        "@prefix": true,
+        "@context": {
+          "sources": {
+            "@id": "scs:dist/http/auxiliary/RoutingAuxiliaryIdentifierStrategy#RoutingAuxiliaryIdentifierStrategy_sources",
+            "@container": "@list"
+          }
+        }
+      },
+      "RoutingAuxiliaryStrategy": {
+        "@id": "scs:dist/http/auxiliary/RoutingAuxiliaryStrategy#RoutingAuxiliaryStrategy",
+        "@prefix": true,
+        "@context": {
+          "sources": {
+            "@id": "scs:dist/http/auxiliary/RoutingAuxiliaryStrategy#RoutingAuxiliaryStrategy_sources",
+            "@container": "@list"
+          }
+        }
+      },
+      "SuffixAuxiliaryIdentifierStrategy": {
+        "@id": "scs:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy#SuffixAuxiliaryIdentifierStrategy",
+        "@prefix": true,
+        "@context": {
+          "suffix": {
+            "@id": "scs:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy#SuffixAuxiliaryIdentifierStrategy_suffix"
+          }
+        }
+      },
+      "Validator": {
+        "@id": "scs:dist/http/auxiliary/Validator#Validator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BodyParser": {
+        "@id": "scs:dist/http/input/body/BodyParser#BodyParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BodyParserArgs": {
+        "@id": "scs:dist/http/input/body/BodyParser#BodyParserArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RawBodyParser": {
+        "@id": "scs:dist/http/input/body/RawBodyParser#RawBodyParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SparqlUpdateBodyParser": {
+        "@id": "scs:dist/http/input/body/SparqlUpdateBodyParser#SparqlUpdateBodyParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BasicConditionsParser": {
+        "@id": "scs:dist/http/input/conditions/BasicConditionsParser#BasicConditionsParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ConditionsParser": {
+        "@id": "scs:dist/http/input/conditions/ConditionsParser#ConditionsParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "OriginalUrlExtractor": {
+        "@id": "scs:dist/http/input/identifier/OriginalUrlExtractor#OriginalUrlExtractor",
+        "@prefix": true,
+        "@context": {
+          "options_includeQueryString": {
+            "@id": "scs:dist/http/input/identifier/OriginalUrlExtractor#OriginalUrlExtractor_options_includeQueryString"
+          }
+        }
+      },
+      "TargetExtractor": {
+        "@id": "scs:dist/http/input/identifier/TargetExtractor#TargetExtractor",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ContentTypeParser": {
+        "@id": "scs:dist/http/input/metadata/ContentTypeParser#ContentTypeParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "LinkRelParser": {
+        "@id": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser",
+        "@prefix": true,
+        "@context": {
+          "linkRelMap": {
+            "@id": "scs:dist/http/input/metadata/LinkRelParser#LinkRelParser_linkRelMap",
+            "@container": "@list"
+          }
+        }
+      },
+      "MetadataParser": {
+        "@id": "scs:dist/http/input/metadata/MetadataParser#MetadataParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SlugParser": {
+        "@id": "scs:dist/http/input/metadata/SlugParser#SlugParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AcceptPreferenceParser": {
+        "@id": "scs:dist/http/input/preferences/AcceptPreferenceParser#AcceptPreferenceParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "PreferenceParser": {
+        "@id": "scs:dist/http/input/preferences/PreferenceParser#PreferenceParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BasicRequestParser": {
+        "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser",
+        "@prefix": true,
+        "@context": {
+          "args_targetExtractor": {
+            "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_targetExtractor"
+          },
+          "args_preferenceParser": {
+            "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_preferenceParser"
+          },
+          "args_metadataParser": {
+            "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_metadataParser"
+          },
+          "args_conditionsParser": {
+            "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_conditionsParser"
+          },
+          "args_bodyParser": {
+            "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParser_args_bodyParser"
+          }
+        }
+      },
+      "BasicRequestParserArgs": {
+        "@id": "scs:dist/http/input/BasicRequestParser#BasicRequestParserArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RequestParser": {
+        "@id": "scs:dist/http/input/RequestParser#RequestParser",
+        "@prefix": true,
+        "@context": {}
+      },
+      "OperationMetadataCollector": {
+        "@id": "scs:dist/http/ldp/metadata/OperationMetadataCollector#OperationMetadataCollector",
+        "@prefix": true,
+        "@context": {}
+      },
+      "OperationMetadataCollectorInput": {
+        "@id": "scs:dist/http/ldp/metadata/OperationMetadataCollector#OperationMetadataCollectorInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WebAclMetadataCollector": {
+        "@id": "scs:dist/http/ldp/metadata/WebAclMetadataCollector#WebAclMetadataCollector",
+        "@prefix": true,
+        "@context": {}
+      },
+      "DeleteOperationHandler": {
+        "@id": "scs:dist/http/ldp/DeleteOperationHandler#DeleteOperationHandler",
+        "@prefix": true,
+        "@context": {
+          "store": {
+            "@id": "scs:dist/http/ldp/DeleteOperationHandler#DeleteOperationHandler_store"
+          }
+        }
+      },
+      "GetOperationHandler": {
+        "@id": "scs:dist/http/ldp/GetOperationHandler#GetOperationHandler",
+        "@prefix": true,
+        "@context": {
+          "store": {
+            "@id": "scs:dist/http/ldp/GetOperationHandler#GetOperationHandler_store"
+          }
+        }
+      },
+      "HeadOperationHandler": {
+        "@id": "scs:dist/http/ldp/HeadOperationHandler#HeadOperationHandler",
+        "@prefix": true,
+        "@context": {
+          "store": {
+            "@id": "scs:dist/http/ldp/HeadOperationHandler#HeadOperationHandler_store"
+          }
+        }
+      },
+      "OperationHandler": {
+        "@id": "scs:dist/http/ldp/OperationHandler#OperationHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "OperationHandlerInput": {
+        "@id": "scs:dist/http/ldp/OperationHandler#OperationHandlerInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "PatchOperationHandler": {
+        "@id": "scs:dist/http/ldp/PatchOperationHandler#PatchOperationHandler",
+        "@prefix": true,
+        "@context": {
+          "store": {
+            "@id": "scs:dist/http/ldp/PatchOperationHandler#PatchOperationHandler_store"
+          }
+        }
+      },
+      "PostOperationHandler": {
+        "@id": "scs:dist/http/ldp/PostOperationHandler#PostOperationHandler",
+        "@prefix": true,
+        "@context": {
+          "store": {
+            "@id": "scs:dist/http/ldp/PostOperationHandler#PostOperationHandler_store"
+          }
+        }
+      },
+      "PutOperationHandler": {
+        "@id": "scs:dist/http/ldp/PutOperationHandler#PutOperationHandler",
+        "@prefix": true,
+        "@context": {
+          "store": {
+            "@id": "scs:dist/http/ldp/PutOperationHandler#PutOperationHandler_store"
+          }
+        }
+      },
+      "ConvertingErrorHandler": {
+        "@id": "scs:dist/http/output/error/ConvertingErrorHandler#ConvertingErrorHandler",
+        "@prefix": true,
+        "@context": {
+          "showStackTrace": {
+            "@id": "scs:dist/http/output/error/ConvertingErrorHandler#ConvertingErrorHandler_showStackTrace"
+          },
+          "converter": {
+            "@id": "scs:dist/http/output/error/ConvertingErrorHandler#ConvertingErrorHandler_converter"
+          }
+        }
+      },
+      "ErrorHandler": {
+        "@id": "scs:dist/http/output/error/ErrorHandler#ErrorHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ErrorHandlerArgs": {
+        "@id": "scs:dist/http/output/error/ErrorHandler#ErrorHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SafeErrorHandler": {
+        "@id": "scs:dist/http/output/error/SafeErrorHandler#SafeErrorHandler",
+        "@prefix": true,
+        "@context": {
+          "showStackTrace": {
+            "@id": "scs:dist/http/output/error/SafeErrorHandler#SafeErrorHandler_showStackTrace"
+          },
+          "errorHandler": {
+            "@id": "scs:dist/http/output/error/SafeErrorHandler#SafeErrorHandler_errorHandler"
+          }
+        }
+      },
+      "ConstantMetadataWriter": {
+        "@id": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter",
+        "@prefix": true,
+        "@context": {
+          "headers": {
+            "@id": "scs:dist/http/output/metadata/ConstantMetadataWriter#ConstantMetadataWriter_headers",
+            "@container": "@list"
+          }
+        }
+      },
+      "LinkRelMetadataWriter": {
+        "@id": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter",
+        "@prefix": true,
+        "@context": {
+          "linkRelMap": {
+            "@id": "scs:dist/http/output/metadata/LinkRelMetadataWriter#LinkRelMetadataWriter_linkRelMap",
+            "@container": "@list"
+          }
+        }
+      },
+      "MappedMetadataWriter": {
+        "@id": "scs:dist/http/output/metadata/MappedMetadataWriter#MappedMetadataWriter",
+        "@prefix": true,
+        "@context": {
+          "headerMap": {
+            "@id": "scs:dist/http/output/metadata/MappedMetadataWriter#MappedMetadataWriter_headerMap",
+            "@container": "@list"
+          }
+        }
+      },
+      "MetadataWriter": {
+        "@id": "scs:dist/http/output/metadata/MetadataWriter#MetadataWriter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ModifiedMetadataWriter": {
+        "@id": "scs:dist/http/output/metadata/ModifiedMetadataWriter#ModifiedMetadataWriter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WacAllowMetadataWriter": {
+        "@id": "scs:dist/http/output/metadata/WacAllowMetadataWriter#WacAllowMetadataWriter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WwwAuthMetadataWriter": {
+        "@id": "scs:dist/http/output/metadata/WwwAuthMetadataWriter#WwwAuthMetadataWriter",
+        "@prefix": true,
+        "@context": {
+          "auth": {
+            "@id": "scs:dist/http/output/metadata/WwwAuthMetadataWriter#WwwAuthMetadataWriter_auth"
+          }
+        }
+      },
+      "CreatedResponseDescription": {
+        "@id": "scs:dist/http/output/response/CreatedResponseDescription#CreatedResponseDescription",
+        "@prefix": true,
+        "@context": {
+          "location_path": {
+            "@id": "scs:dist/http/output/response/CreatedResponseDescription#CreatedResponseDescription_location_path"
+          }
+        }
+      },
+      "OkResponseDescription": {
+        "@id": "scs:dist/http/output/response/OkResponseDescription#OkResponseDescription",
+        "@prefix": true,
+        "@context": {
+          "metadata": {
+            "@id": "scs:dist/http/output/response/OkResponseDescription#OkResponseDescription_metadata"
+          }
+        }
+      },
+      "ResetResponseDescription": {
+        "@id": "scs:dist/http/output/response/ResetResponseDescription#ResetResponseDescription",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ResponseDescription": {
+        "@id": "scs:dist/http/output/response/ResponseDescription#ResponseDescription",
+        "@prefix": true,
+        "@context": {
+          "statusCode": {
+            "@id": "scs:dist/http/output/response/ResponseDescription#ResponseDescription_statusCode"
+          },
+          "metadata": {
+            "@id": "scs:dist/http/output/response/ResponseDescription#ResponseDescription_metadata"
+          }
+        }
+      },
+      "BasicResponseWriter": {
+        "@id": "scs:dist/http/output/BasicResponseWriter#BasicResponseWriter",
+        "@prefix": true,
+        "@context": {
+          "metadataWriter": {
+            "@id": "scs:dist/http/output/BasicResponseWriter#BasicResponseWriter_metadataWriter"
+          }
+        }
+      },
+      "ResponseWriter": {
+        "@id": "scs:dist/http/output/ResponseWriter#ResponseWriter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Patch": {
+        "@id": "scs:dist/http/representation/Patch#Patch",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Representation": {
+        "@id": "scs:dist/http/representation/Representation#Representation",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RepresentationMetadata": {
+        "@id": "scs:dist/http/representation/RepresentationMetadata#RepresentationMetadata",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RepresentationPreferences": {
+        "@id": "scs:dist/http/representation/RepresentationPreferences#RepresentationPreferences",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ResourceIdentifier": {
+        "@id": "scs:dist/http/representation/ResourceIdentifier#ResourceIdentifier",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SparqlUpdatePatch": {
+        "@id": "scs:dist/http/representation/SparqlUpdatePatch#SparqlUpdatePatch",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WellKnownHandler": {
+        "@id": "scs:dist/http/well-known/WellKnownHandler#WellKnownHandler",
+        "@prefix": true,
+        "@context": {
+          "wellKnownBuilder": {
+            "@id": "scs:dist/http/well-known/WellKnownHandler#WellKnownHandler_wellKnownBuilder"
+          }
+        }
+      },
+      "WellKnownBuilder": {
+        "@id": "scs:dist/http/well-known/WellKnownBuilder#WellKnownBuilder",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AggregateWellKnownBuilder": {
+        "@id": "scs:dist/http/well-known/AggregateWellKnownBuilder#AggregateWellKnownBuilder",
+        "@prefix": true,
+        "@context": {
+          "wellKnownBuilders": {
+            "@id": "scs:dist/http/well-known/AggregateWellKnownBuilder#AggregateWellKnownBuilder_wellKnownBuilders",
+            "@container": "@list"
+          }
+        }
+      },
+      "Operation": {
+        "@id": "scs:dist/http/Operation#Operation",
+        "@prefix": true,
+        "@context": {}
+      },
+      "UnsecureWebSocketsProtocol": {
+        "@id": "scs:dist/http/UnsecureWebSocketsProtocol#UnsecureWebSocketsProtocol",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "scs:dist/http/UnsecureWebSocketsProtocol#UnsecureWebSocketsProtocol_source"
+          }
+        }
+      },
+      "IdentityProviderFactory": {
+        "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory",
+        "@prefix": true,
+        "@context": {
+          "config": {
+            "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_config",
+            "@type": "@json"
+          },
+          "args_adapterFactory": {
+            "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_adapterFactory"
+          },
+          "args_baseUrl": {
+            "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_baseUrl"
+          },
+          "args_idpPath": {
+            "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_idpPath"
+          },
+          "args_storage": {
+            "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_storage"
+          },
+          "args_errorHandler": {
+            "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_errorHandler"
+          },
+          "args_responseWriter": {
+            "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_responseWriter"
+          },
+          "args_jwksKeyGenerator": {
+            "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactory_args_jwksKeyGenerator"
+          }
+        }
+      },
+      "IdentityProviderFactoryArgs": {
+        "@id": "scs:dist/identity/configuration/IdentityProviderFactory#IdentityProviderFactoryArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ProviderFactory": {
+        "@id": "scs:dist/identity/configuration/ProviderFactory#ProviderFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BasicJwksKeyGenerator": {
+        "@id": "scs:dist/identity/configuration/BasicJwksKeyGenerator#BasicJwksKeyGenerator",
+        "@prefix": true,
+        "@context": {
+          "args_storage": {
+            "@id": "scs:dist/identity/configuration/BasicJwksKeyGenerator#BasicJwksKeyGenerator_args_storage"
+          }
+        }
+      },
+      "BasicJwksKeyGeneratorArgs": {
+        "@id": "scs:dist/identity/configuration/BasicJwksKeyGenerator#BasicJwksKeyGeneratorArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "JwksKeyGenerator": {
+        "@id": "scs:dist/identity/configuration/JwksKeyGenerator#JwksKeyGenerator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "InteractionHandler": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "InteractionHandlerInput": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionHandlerInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "InteractionResponseResult": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionResponseResult",
+        "@prefix": true,
+        "@context": {}
+      },
+      "InteractionCompleteResult": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionCompleteResult",
+        "@prefix": true,
+        "@context": {}
+      },
+      "InteractionErrorResult": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionErrorResult",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ForgotPasswordHandler": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/ForgotPasswordHandler#ForgotPasswordHandler",
+        "@prefix": true,
+        "@context": {
+          "args_accountStore": {
+            "@id": "scs:dist/identity/interaction/email-password/handler/ForgotPasswordHandler#ForgotPasswordHandler_args_accountStore"
+          },
+          "args_baseUrl": {
+            "@id": "scs:dist/identity/interaction/email-password/handler/ForgotPasswordHandler#ForgotPasswordHandler_args_baseUrl"
+          },
+          "args_idpPath": {
+            "@id": "scs:dist/identity/interaction/email-password/handler/ForgotPasswordHandler#ForgotPasswordHandler_args_idpPath"
+          },
+          "args_templateEngine": {
+            "@id": "scs:dist/identity/interaction/email-password/handler/ForgotPasswordHandler#ForgotPasswordHandler_args_templateEngine"
+          },
+          "args_emailSender": {
+            "@id": "scs:dist/identity/interaction/email-password/handler/ForgotPasswordHandler#ForgotPasswordHandler_args_emailSender"
+          }
+        }
+      },
+      "ForgotPasswordHandlerArgs": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/ForgotPasswordHandler#ForgotPasswordHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "LoginHandler": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/LoginHandler#LoginHandler",
+        "@prefix": true,
+        "@context": {
+          "accountStore": {
+            "@id": "scs:dist/identity/interaction/email-password/handler/LoginHandler#LoginHandler_accountStore"
+          }
+        }
+      },
+      "RegistrationHandler": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/RegistrationHandler#RegistrationHandler",
+        "@prefix": true,
+        "@context": {
+          "registrationManager": {
+            "@id": "scs:dist/identity/interaction/email-password/handler/RegistrationHandler#RegistrationHandler_registrationManager"
+          }
+        }
+      },
+      "ResetPasswordHandler": {
+        "@id": "scs:dist/identity/interaction/email-password/handler/ResetPasswordHandler#ResetPasswordHandler",
+        "@prefix": true,
+        "@context": {
+          "accountStore": {
+            "@id": "scs:dist/identity/interaction/email-password/handler/ResetPasswordHandler#ResetPasswordHandler_accountStore"
+          }
+        }
+      },
+      "AccountSettings": {
+        "@id": "scs:dist/identity/interaction/email-password/storage/AccountStore#AccountSettings",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AccountStore": {
+        "@id": "scs:dist/identity/interaction/email-password/storage/AccountStore#AccountStore",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BaseAccountStore": {
+        "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#BaseAccountStore",
+        "@prefix": true,
+        "@context": {
+          "saltRounds": {
+            "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#BaseAccountStore_saltRounds"
+          },
+          "storage": {
+            "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#BaseAccountStore_storage"
+          }
+        }
+      },
+      "AccountPayload": {
+        "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#AccountPayload",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ForgotPasswordPayload": {
+        "@id": "scs:dist/identity/interaction/email-password/storage/BaseAccountStore#ForgotPasswordPayload",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RegistrationManager": {
+        "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_baseUrl"
+          },
+          "args_webIdSuffix": {
+            "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_webIdSuffix"
+          },
+          "args_identifierGenerator": {
+            "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_identifierGenerator"
+          },
+          "args_ownershipValidator": {
+            "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_ownershipValidator"
+          },
+          "args_accountStore": {
+            "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_accountStore"
+          },
+          "args_podManager": {
+            "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManager_args_podManager"
+          }
+        }
+      },
+      "RegistrationManagerArgs": {
+        "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationManagerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RegistrationParams": {
+        "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationParams",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RegistrationResponse": {
+        "@id": "scs:dist/identity/interaction/email-password/util/RegistrationManager#RegistrationResponse",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BasicInteractionRoute": {
+        "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute",
+        "@prefix": true,
+        "@context": {
+          "route": {
+            "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_route"
+          },
+          "prompt": {
+            "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_prompt"
+          },
+          "viewTemplates": {
+            "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_viewTemplates",
+            "@container": "@list"
+          },
+          "responseTemplates": {
+            "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_responseTemplates",
+            "@container": "@list"
+          },
+          "controls": {
+            "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_controls",
+            "@container": "@list"
+          },
+          "handler": {
+            "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_handler"
+          }
+        }
+      },
+      "InteractionRoute": {
+        "@id": "scs:dist/identity/interaction/routing/InteractionRoute#InteractionRoute",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BaseEmailSender": {
+        "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender",
+        "@prefix": true,
+        "@context": {
+          "args_emailConfig_host": {
+            "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_host"
+          },
+          "args_emailConfig_port": {
+            "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_port"
+          },
+          "args_emailConfig_auth_user": {
+            "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_auth_user"
+          },
+          "args_emailConfig_auth_pass": {
+            "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_emailConfig_auth_pass"
+          },
+          "args_senderName": {
+            "@id": "scs:dist/identity/interaction/util/BaseEmailSender#BaseEmailSender_args_senderName"
+          }
+        }
+      },
+      "EmailSenderArgs": {
+        "@id": "scs:dist/identity/interaction/util/BaseEmailSender#EmailSenderArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "EmailSender": {
+        "@id": "scs:dist/identity/interaction/util/EmailSender#EmailSender",
+        "@prefix": true,
+        "@context": {}
+      },
+      "EmailArgs": {
+        "@id": "scs:dist/identity/interaction/util/EmailSender#EmailArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "InteractionCompleter": {
+        "@id": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleter",
+        "@prefix": true,
+        "@context": {
+          "providerFactory": {
+            "@id": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleter_providerFactory"
+          }
+        }
+      },
+      "InteractionCompleterParams": {
+        "@id": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleterParams",
+        "@prefix": true,
+        "@context": {}
+      },
+      "InteractionCompleterInput": {
+        "@id": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleterInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SessionHttpHandler": {
+        "@id": "scs:dist/identity/interaction/SessionHttpHandler#SessionHttpHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "NoCheckOwnershipValidator": {
+        "@id": "scs:dist/identity/ownership/NoCheckOwnershipValidator#NoCheckOwnershipValidator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "OwnershipValidator": {
+        "@id": "scs:dist/identity/ownership/OwnershipValidator#OwnershipValidator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "TokenOwnershipValidator": {
+        "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator",
+        "@prefix": true,
+        "@context": {
+          "expiration": {
+            "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator_expiration"
+          },
+          "converter": {
+            "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator_converter"
+          },
+          "storage": {
+            "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator_storage"
+          }
+        }
+      },
+      "AdapterFactory": {
+        "@id": "scs:dist/identity/storage/AdapterFactory#AdapterFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ExpiringAdapter": {
+        "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapter",
+        "@prefix": true,
+        "@context": {
+          "name": {
+            "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapter_name"
+          },
+          "storage": {
+            "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapter_storage"
+          }
+        }
+      },
+      "ExpiringAdapterFactory": {
+        "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapterFactory",
+        "@prefix": true,
+        "@context": {
+          "storage": {
+            "@id": "scs:dist/identity/storage/ExpiringAdapterFactory#ExpiringAdapterFactory_storage"
+          }
+        }
+      },
+      "WebIdAdapter": {
+        "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter",
+        "@prefix": true,
+        "@context": {
+          "name": {
+            "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter_name"
+          },
+          "source": {
+            "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter_source"
+          },
+          "converter": {
+            "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapter_converter"
+          }
+        }
+      },
+      "WebIdAdapterFactory": {
+        "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapterFactory",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapterFactory_source"
+          },
+          "converter": {
+            "@id": "scs:dist/identity/storage/WebIdAdapterFactory#WebIdAdapterFactory_converter"
+          }
+        }
+      },
+      "IdentityProviderHttpHandler": {
+        "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_baseUrl"
+          },
+          "args_idpPath": {
+            "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_idpPath"
+          },
+          "args_providerFactory": {
+            "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_providerFactory"
+          },
+          "args_interactionRoutes": {
+            "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_interactionRoutes",
+            "@container": "@list"
+          },
+          "args_converter": {
+            "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_converter"
+          },
+          "args_interactionCompleter": {
+            "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_interactionCompleter"
+          },
+          "args_errorHandler": {
+            "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_errorHandler"
+          }
+        }
+      },
+      "IdentityProviderHttpHandlerArgs": {
+        "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Finalizable": {
+        "@id": "scs:dist/init/final/Finalizable#Finalizable",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ParallelFinalizer": {
+        "@id": "scs:dist/init/final/ParallelFinalizer#ParallelFinalizer",
+        "@prefix": true,
+        "@context": {
+          "finalizers": {
+            "@id": "scs:dist/init/final/ParallelFinalizer#ParallelFinalizer_finalizers",
+            "@container": "@list"
+          }
+        }
+      },
+      "SetupHttpHandler": {
+        "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "args_registrationManager": {
+            "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_registrationManager"
+          },
+          "args_initializer": {
+            "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_initializer"
+          },
+          "args_converter": {
+            "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_converter"
+          },
+          "args_storageKey": {
+            "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_storageKey"
+          },
+          "args_storage": {
+            "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_storage"
+          },
+          "args_viewTemplate": {
+            "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_viewTemplate"
+          },
+          "args_responseTemplate": {
+            "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_responseTemplate"
+          },
+          "args_errorHandler": {
+            "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandler_args_errorHandler"
+          }
+        }
+      },
+      "SetupInput": {
+        "@id": "scs:dist/init/setup/SetupHttpHandler#SetupInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SetupHttpHandlerArgs": {
+        "@id": "scs:dist/init/setup/SetupHttpHandler#SetupHttpHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "App": {
+        "@id": "scs:dist/init/App#App",
+        "@prefix": true,
+        "@context": {
+          "initializer": {
+            "@id": "scs:dist/init/App#App_initializer"
+          },
+          "finalizer": {
+            "@id": "scs:dist/init/App#App_finalizer"
+          }
+        }
+      },
+      "AppRunner": {
+        "@id": "scs:dist/init/AppRunner#AppRunner",
+        "@prefix": true,
+        "@context": {}
+      },
+      "CliParams": {
+        "@id": "scs:dist/init/AppRunner#CliParams",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ConfigPodInitializer": {
+        "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer",
+        "@prefix": true,
+        "@context": {
+          "storeFactory": {
+            "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer_storeFactory"
+          },
+          "configStorage": {
+            "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer_configStorage"
+          },
+          "routingStorage": {
+            "@id": "scs:dist/init/ConfigPodInitializer#ConfigPodInitializer_routingStorage"
+          }
+        }
+      },
+      "ContainerInitializer": {
+        "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_baseUrl"
+          },
+          "args_path": {
+            "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_path"
+          },
+          "args_store": {
+            "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_store"
+          },
+          "args_generator": {
+            "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_generator"
+          },
+          "args_storageKey": {
+            "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_storageKey"
+          },
+          "args_storage": {
+            "@id": "scs:dist/init/ContainerInitializer#ContainerInitializer_args_storage"
+          }
+        }
+      },
+      "ContainerInitializerArgs": {
+        "@id": "scs:dist/init/ContainerInitializer#ContainerInitializerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Initializer": {
+        "@id": "scs:dist/init/Initializer#Initializer",
+        "@prefix": true,
+        "@context": {}
+      },
+      "LoggerInitializer": {
+        "@id": "scs:dist/init/LoggerInitializer#LoggerInitializer",
+        "@prefix": true,
+        "@context": {
+          "loggerFactory": {
+            "@id": "scs:dist/init/LoggerInitializer#LoggerInitializer_loggerFactory"
+          }
+        }
+      },
+      "ServerInitializer": {
+        "@id": "scs:dist/init/ServerInitializer#ServerInitializer",
+        "@prefix": true,
+        "@context": {
+          "port": {
+            "@id": "scs:dist/init/ServerInitializer#ServerInitializer_port"
+          },
+          "serverFactory": {
+            "@id": "scs:dist/init/ServerInitializer#ServerInitializer_serverFactory"
+          }
+        }
+      },
+      "LazyLogger": {
+        "@id": "scs:dist/logging/LazyLogger#LazyLogger",
+        "@prefix": true,
+        "@context": {
+          "label": {
+            "@id": "scs:dist/logging/LazyLogger#LazyLogger_label"
+          },
+          "lazyLoggerFactory": {
+            "@id": "scs:dist/logging/LazyLogger#LazyLogger_lazyLoggerFactory"
+          }
+        }
+      },
+      "LazyLoggerFactory": {
+        "@id": "scs:dist/logging/LazyLoggerFactory#LazyLoggerFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Logger": {
+        "@id": "scs:dist/logging/Logger#Logger",
+        "@prefix": true,
+        "@context": {}
+      },
+      "LoggerFactory": {
+        "@id": "scs:dist/logging/LoggerFactory#LoggerFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "VoidLogger": {
+        "@id": "scs:dist/logging/VoidLogger#VoidLogger",
+        "@prefix": true,
+        "@context": {}
+      },
+      "VoidLoggerFactory": {
+        "@id": "scs:dist/logging/VoidLoggerFactory#VoidLoggerFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WinstonLoggerFactory": {
+        "@id": "scs:dist/logging/WinstonLoggerFactory#WinstonLoggerFactory",
+        "@prefix": true,
+        "@context": {
+          "level": {
+            "@id": "scs:dist/logging/WinstonLoggerFactory#WinstonLoggerFactory_level"
+          }
+        }
+      },
+      "BaseUrlHandler": {
+        "@id": "scs:dist/pods/generate/variables/BaseUrlHandler#BaseUrlHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RootFilePathHandler": {
+        "@id": "scs:dist/pods/generate/variables/RootFilePathHandler#RootFilePathHandler",
+        "@prefix": true,
+        "@context": {
+          "fileMapper": {
+            "@id": "scs:dist/pods/generate/variables/RootFilePathHandler#RootFilePathHandler_fileMapper"
+          }
+        }
+      },
+      "VariableHandler": {
+        "@id": "scs:dist/pods/generate/variables/VariableHandler#VariableHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "VariableSetter": {
+        "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter",
+        "@prefix": true,
+        "@context": {
+          "variable": {
+            "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter_variable"
+          },
+          "value": {
+            "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter_value"
+          },
+          "override": {
+            "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter_override"
+          }
+        }
+      },
+      "BaseComponentsJsFactory": {
+        "@id": "scs:dist/pods/generate/BaseComponentsJsFactory#BaseComponentsJsFactory",
+        "@prefix": true,
+        "@context": {
+          "relativeModulePath": {
+            "@id": "scs:dist/pods/generate/BaseComponentsJsFactory#BaseComponentsJsFactory_relativeModulePath"
+          },
+          "logLevel": {
+            "@id": "scs:dist/pods/generate/BaseComponentsJsFactory#BaseComponentsJsFactory_logLevel"
+          }
+        }
+      },
+      "ComponentsJsFactory": {
+        "@id": "scs:dist/pods/generate/ComponentsJsFactory#ComponentsJsFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IdentifierGenerator": {
+        "@id": "scs:dist/pods/generate/IdentifierGenerator#IdentifierGenerator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "PodGenerator": {
+        "@id": "scs:dist/pods/generate/PodGenerator#PodGenerator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Resource": {
+        "@id": "scs:dist/pods/generate/ResourcesGenerator#Resource",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ResourcesGenerator": {
+        "@id": "scs:dist/pods/generate/ResourcesGenerator#ResourcesGenerator",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SubdomainIdentifierGenerator": {
+        "@id": "scs:dist/pods/generate/SubdomainIdentifierGenerator#SubdomainIdentifierGenerator",
+        "@prefix": true,
+        "@context": {
+          "baseUrl": {
+            "@id": "scs:dist/pods/generate/SubdomainIdentifierGenerator#SubdomainIdentifierGenerator_baseUrl"
+          }
+        }
+      },
+      "SuffixIdentifierGenerator": {
+        "@id": "scs:dist/pods/generate/SuffixIdentifierGenerator#SuffixIdentifierGenerator",
+        "@prefix": true,
+        "@context": {
+          "base": {
+            "@id": "scs:dist/pods/generate/SuffixIdentifierGenerator#SuffixIdentifierGenerator_base"
+          }
+        }
+      },
+      "TemplatedPodGenerator": {
+        "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator",
+        "@prefix": true,
+        "@context": {
+          "configTemplatePath": {
+            "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_configTemplatePath"
+          },
+          "storeFactory": {
+            "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_storeFactory"
+          },
+          "variableHandler": {
+            "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_variableHandler"
+          },
+          "configStorage": {
+            "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_configStorage"
+          }
+        }
+      },
+      "TemplatedResourcesGenerator": {
+        "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator",
+        "@prefix": true,
+        "@context": {
+          "templateFolder": {
+            "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_templateFolder"
+          },
+          "templateEngine": {
+            "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_templateEngine"
+          },
+          "templateExtension": {
+            "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_templateExtension"
+          },
+          "factory": {
+            "@id": "scs:dist/pods/generate/TemplatedResourcesGenerator#TemplatedResourcesGenerator_factory"
+          }
+        }
+      },
+      "PodSettings": {
+        "@id": "scs:dist/pods/settings/PodSettings#PodSettings",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ConfigPodManager": {
+        "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager",
+        "@prefix": true,
+        "@context": {
+          "podGenerator": {
+            "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager_podGenerator"
+          },
+          "resourcesGenerator": {
+            "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager_resourcesGenerator"
+          },
+          "routingStorage": {
+            "@id": "scs:dist/pods/ConfigPodManager#ConfigPodManager_routingStorage"
+          }
+        }
+      },
+      "GeneratedPodManager": {
+        "@id": "scs:dist/pods/GeneratedPodManager#GeneratedPodManager",
+        "@prefix": true,
+        "@context": {
+          "store": {
+            "@id": "scs:dist/pods/GeneratedPodManager#GeneratedPodManager_store"
+          },
+          "resourcesGenerator": {
+            "@id": "scs:dist/pods/GeneratedPodManager#GeneratedPodManager_resourcesGenerator"
+          }
+        }
+      },
+      "PodManager": {
+        "@id": "scs:dist/pods/PodManager#PodManager",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AuthorizingHttpHandler": {
+        "@id": "scs:dist/server/AuthorizingHttpHandler#AuthorizingHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "args_credentialsExtractor": {
+            "@id": "scs:dist/server/AuthorizingHttpHandler#AuthorizingHttpHandler_args_credentialsExtractor"
+          },
+          "args_modesExtractor": {
+            "@id": "scs:dist/server/AuthorizingHttpHandler#AuthorizingHttpHandler_args_modesExtractor"
+          },
+          "args_permissionReader": {
+            "@id": "scs:dist/server/AuthorizingHttpHandler#AuthorizingHttpHandler_args_permissionReader"
+          },
+          "args_authorizer": {
+            "@id": "scs:dist/server/AuthorizingHttpHandler#AuthorizingHttpHandler_args_authorizer"
+          },
+          "args_operationHandler": {
+            "@id": "scs:dist/server/AuthorizingHttpHandler#AuthorizingHttpHandler_args_operationHandler"
+          }
+        }
+      },
+      "AuthorizingHttpHandlerArgs": {
+        "@id": "scs:dist/server/AuthorizingHttpHandler#AuthorizingHttpHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BaseHttpServerFactory": {
+        "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory",
+        "@prefix": true,
+        "@context": {
+          "options_https": {
+            "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_https"
+          },
+          "handler": {
+            "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_handler"
+          },
+          "options_showStackTrace": {
+            "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_showStackTrace"
+          },
+          "options_key": {
+            "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_key"
+          },
+          "options_cert": {
+            "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_cert"
+          },
+          "options_pfx": {
+            "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_pfx"
+          },
+          "options_passphrase": {
+            "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerFactory_options_passphrase"
+          }
+        }
+      },
+      "BaseHttpServerOptions": {
+        "@id": "scs:dist/server/BaseHttpServerFactory#BaseHttpServerOptions",
+        "@prefix": true,
+        "@context": {}
+      },
+      "HttpHandler": {
+        "@id": "scs:dist/server/HttpHandler#HttpHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "HttpHandlerInput": {
+        "@id": "scs:dist/server/HttpHandler#HttpHandlerInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "HttpServerFactory": {
+        "@id": "scs:dist/server/HttpServerFactory#HttpServerFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "OperationHttpHandler": {
+        "@id": "scs:dist/server/OperationHttpHandler#OperationHttpHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "OperationHttpHandlerInput": {
+        "@id": "scs:dist/server/OperationHttpHandler#OperationHttpHandlerInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ParsingHttpHandler": {
+        "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "args_requestParser": {
+            "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_requestParser"
+          },
+          "args_metadataCollector": {
+            "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_metadataCollector"
+          },
+          "args_errorHandler": {
+            "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_errorHandler"
+          },
+          "args_responseWriter": {
+            "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_responseWriter"
+          },
+          "args_operationHandler": {
+            "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_operationHandler"
+          }
+        }
+      },
+      "ParsingHttpHandlerArgs": {
+        "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WebSocketHandler": {
+        "@id": "scs:dist/server/WebSocketHandler#WebSocketHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WebSocketServerFactory": {
+        "@id": "scs:dist/server/WebSocketServerFactory#WebSocketServerFactory",
+        "@prefix": true,
+        "@context": {
+          "baseServerFactory": {
+            "@id": "scs:dist/server/WebSocketServerFactory#WebSocketServerFactory_baseServerFactory"
+          },
+          "webSocketHandler": {
+            "@id": "scs:dist/server/WebSocketServerFactory#WebSocketServerFactory_webSocketHandler"
+          }
+        }
+      },
+      "CorsHandler": {
+        "@id": "scs:dist/server/middleware/CorsHandler#CorsHandler",
+        "@prefix": true,
+        "@context": {
+          "options_origin": {
+            "@id": "scs:dist/server/middleware/CorsHandler#CorsHandler_options_origin"
+          },
+          "options_methods": {
+            "@id": "scs:dist/server/middleware/CorsHandler#CorsHandler_options_methods",
+            "@container": "@list"
+          },
+          "options_allowedHeaders": {
+            "@id": "scs:dist/server/middleware/CorsHandler#CorsHandler_options_allowedHeaders",
+            "@container": "@list"
+          },
+          "options_exposedHeaders": {
+            "@id": "scs:dist/server/middleware/CorsHandler#CorsHandler_options_exposedHeaders",
+            "@container": "@list"
+          },
+          "options_credentials": {
+            "@id": "scs:dist/server/middleware/CorsHandler#CorsHandler_options_credentials"
+          },
+          "options_maxAge": {
+            "@id": "scs:dist/server/middleware/CorsHandler#CorsHandler_options_maxAge"
+          },
+          "options_preflightContinue": {
+            "@id": "scs:dist/server/middleware/CorsHandler#CorsHandler_options_preflightContinue"
+          },
+          "options_optionsSuccessStatus": {
+            "@id": "scs:dist/server/middleware/CorsHandler#CorsHandler_options_optionsSuccessStatus"
+          }
+        }
+      },
+      "HeaderHandler": {
+        "@id": "scs:dist/server/middleware/HeaderHandler#HeaderHandler",
+        "@prefix": true,
+        "@context": {
+          "headers": {
+            "@id": "scs:dist/server/middleware/HeaderHandler#HeaderHandler_headers",
+            "@container": "@list"
+          }
+        }
+      },
+      "StaticAssetHandler": {
+        "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler",
+        "@prefix": true,
+        "@context": {
+          "options_expires": {
+            "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_options_expires"
+          },
+          "assets": {
+            "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_assets",
+            "@container": "@list"
+          }
+        }
+      },
+      "WebSocketAdvertiser": {
+        "@id": "scs:dist/server/middleware/WebSocketAdvertiser#WebSocketAdvertiser",
+        "@prefix": true,
+        "@context": {
+          "baseUrl": {
+            "@id": "scs:dist/server/middleware/WebSocketAdvertiser#WebSocketAdvertiser_baseUrl"
+          }
+        }
+      },
+      "RedirectAllHttpHandler": {
+        "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_baseUrl"
+          },
+          "args_target": {
+            "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_target"
+          },
+          "args_targetExtractor": {
+            "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_targetExtractor"
+          },
+          "args_responseWriter": {
+            "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_responseWriter"
+          }
+        }
+      },
+      "RedirectAllHttpHandlerArgs": {
+        "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RouterHandler": {
+        "@id": "scs:dist/server/util/RouterHandler#RouterHandler",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/server/util/RouterHandler#RouterHandler_args_baseUrl"
+          },
+          "args_targetExtractor": {
+            "@id": "scs:dist/server/util/RouterHandler#RouterHandler_args_targetExtractor"
+          },
+          "args_handler": {
+            "@id": "scs:dist/server/util/RouterHandler#RouterHandler_args_handler"
+          },
+          "args_allowedMethods": {
+            "@id": "scs:dist/server/util/RouterHandler#RouterHandler_args_allowedMethods",
+            "@container": "@list"
+          },
+          "args_allowedPathNames": {
+            "@id": "scs:dist/server/util/RouterHandler#RouterHandler_args_allowedPathNames",
+            "@container": "@list"
+          }
+        }
+      },
+      "RouterHandlerArgs": {
+        "@id": "scs:dist/server/util/RouterHandler#RouterHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "DataAccessor": {
+        "@id": "scs:dist/storage/accessors/DataAccessor#DataAccessor",
+        "@prefix": true,
+        "@context": {}
+      },
+      "FileDataAccessor": {
+        "@id": "scs:dist/storage/accessors/FileDataAccessor#FileDataAccessor",
+        "@prefix": true,
+        "@context": {
+          "resourceMapper": {
+            "@id": "scs:dist/storage/accessors/FileDataAccessor#FileDataAccessor_resourceMapper"
+          }
+        }
+      },
+      "InMemoryDataAccessor": {
+        "@id": "scs:dist/storage/accessors/InMemoryDataAccessor#InMemoryDataAccessor",
+        "@prefix": true,
+        "@context": {
+          "identifierStrategy": {
+            "@id": "scs:dist/storage/accessors/InMemoryDataAccessor#InMemoryDataAccessor_identifierStrategy"
+          }
+        }
+      },
+      "SparqlDataAccessor": {
+        "@id": "scs:dist/storage/accessors/SparqlDataAccessor#SparqlDataAccessor",
+        "@prefix": true,
+        "@context": {
+          "endpoint": {
+            "@id": "scs:dist/storage/accessors/SparqlDataAccessor#SparqlDataAccessor_endpoint"
+          },
+          "identifierStrategy": {
+            "@id": "scs:dist/storage/accessors/SparqlDataAccessor#SparqlDataAccessor_identifierStrategy"
+          }
+        }
+      },
+      "ChainedConverter": {
+        "@id": "scs:dist/storage/conversion/ChainedConverter#ChainedConverter",
+        "@prefix": true,
+        "@context": {
+          "converters": {
+            "@id": "scs:dist/storage/conversion/ChainedConverter#ChainedConverter_converters",
+            "@container": "@list"
+          }
+        }
+      },
+      "ConstantConverter": {
+        "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter",
+        "@prefix": true,
+        "@context": {
+          "filePath": {
+            "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_filePath"
+          },
+          "contentType": {
+            "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_contentType"
+          },
+          "options_container": {
+            "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_container"
+          },
+          "options_document": {
+            "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_document"
+          },
+          "options_minQuality": {
+            "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_minQuality"
+          },
+          "options_enabledMediaRanges": {
+            "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_enabledMediaRanges",
+            "@container": "@list"
+          },
+          "options_disabledMediaRanges": {
+            "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverter_options_disabledMediaRanges",
+            "@container": "@list"
+          }
+        }
+      },
+      "ConstantConverterOptions": {
+        "@id": "scs:dist/storage/conversion/ConstantConverter#ConstantConverterOptions",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ContainerToTemplateConverter": {
+        "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter",
+        "@prefix": true,
+        "@context": {
+          "templateEngine": {
+            "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter_templateEngine"
+          },
+          "contentType": {
+            "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter_contentType"
+          },
+          "identifierStrategy": {
+            "@id": "scs:dist/storage/conversion/ContainerToTemplateConverter#ContainerToTemplateConverter_identifierStrategy"
+          }
+        }
+      },
+      "ContentTypeReplacer": {
+        "@id": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer",
+        "@prefix": true,
+        "@context": {
+          "replacements": {
+            "@id": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer_replacements",
+            "@container": "@list"
+          }
+        }
+      },
+      "DynamicJsonToTemplateConverter": {
+        "@id": "scs:dist/storage/conversion/DynamicJsonToTemplateConverter#DynamicJsonToTemplateConverter",
+        "@prefix": true,
+        "@context": {
+          "templateEngine": {
+            "@id": "scs:dist/storage/conversion/DynamicJsonToTemplateConverter#DynamicJsonToTemplateConverter_templateEngine"
+          }
+        }
+      },
+      "ErrorToJsonConverter": {
+        "@id": "scs:dist/storage/conversion/ErrorToJsonConverter#ErrorToJsonConverter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ErrorToQuadConverter": {
+        "@id": "scs:dist/storage/conversion/ErrorToQuadConverter#ErrorToQuadConverter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ErrorToTemplateConverter": {
+        "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter",
+        "@prefix": true,
+        "@context": {
+          "templateEngine": {
+            "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateEngine"
+          },
+          "templateOptions_mainTemplatePath": {
+            "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_mainTemplatePath"
+          },
+          "templateOptions_codeTemplatesPath": {
+            "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_codeTemplatesPath"
+          },
+          "templateOptions_extension": {
+            "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_extension"
+          },
+          "templateOptions_contentType": {
+            "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_contentType"
+          }
+        }
+      },
+      "TemplateOptions": {
+        "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#TemplateOptions",
+        "@prefix": true,
+        "@context": {}
+      },
+      "FormToJsonConverter": {
+        "@id": "scs:dist/storage/conversion/FormToJsonConverter#FormToJsonConverter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IfNeededConverter": {
+        "@id": "scs:dist/storage/conversion/IfNeededConverter#IfNeededConverter",
+        "@prefix": true,
+        "@context": {
+          "converter": {
+            "@id": "scs:dist/storage/conversion/IfNeededConverter#IfNeededConverter_converter"
+          }
+        }
+      },
+      "MarkdownToHtmlConverter": {
+        "@id": "scs:dist/storage/conversion/MarkdownToHtmlConverter#MarkdownToHtmlConverter",
+        "@prefix": true,
+        "@context": {
+          "templateEngine": {
+            "@id": "scs:dist/storage/conversion/MarkdownToHtmlConverter#MarkdownToHtmlConverter_templateEngine"
+          }
+        }
+      },
+      "PassthroughConverter": {
+        "@id": "scs:dist/storage/conversion/PassthroughConverter#PassthroughConverter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "QuadToRdfConverter": {
+        "@id": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter",
+        "@prefix": true,
+        "@context": {
+          "options_outputPreferences": {
+            "@id": "scs:dist/storage/conversion/QuadToRdfConverter#QuadToRdfConverter_options_outputPreferences",
+            "@container": "@list"
+          }
+        }
+      },
+      "RdfToQuadConverter": {
+        "@id": "scs:dist/storage/conversion/RdfToQuadConverter#RdfToQuadConverter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RepresentationConverter": {
+        "@id": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RepresentationConverterArgs": {
+        "@id": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverterArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "TypedRepresentationConverter": {
+        "@id": "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter",
+        "@prefix": true,
+        "@context": {
+          "inputTypes": {
+            "@id": "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter_inputTypes"
+          },
+          "outputTypes": {
+            "@id": "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter_outputTypes"
+          }
+        }
+      },
+      "ExpiringStorage": {
+        "@id": "scs:dist/storage/keyvalue/ExpiringStorage#ExpiringStorage",
+        "@prefix": true,
+        "@context": {}
+      },
+      "JsonFileStorage": {
+        "@id": "scs:dist/storage/keyvalue/JsonFileStorage#JsonFileStorage",
+        "@prefix": true,
+        "@context": {
+          "filePath": {
+            "@id": "scs:dist/storage/keyvalue/JsonFileStorage#JsonFileStorage_filePath"
+          },
+          "locker": {
+            "@id": "scs:dist/storage/keyvalue/JsonFileStorage#JsonFileStorage_locker"
+          }
+        }
+      },
+      "JsonResourceStorage": {
+        "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage",
+        "@prefix": true,
+        "@context": {
+          "baseUrl": {
+            "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage_baseUrl"
+          },
+          "container": {
+            "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage_container"
+          },
+          "source": {
+            "@id": "scs:dist/storage/keyvalue/JsonResourceStorage#JsonResourceStorage_source"
+          }
+        }
+      },
+      "KeyValueStorage": {
+        "@id": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+        "@prefix": true,
+        "@context": {}
+      },
+      "MemoryMapStorage": {
+        "@id": "scs:dist/storage/keyvalue/MemoryMapStorage#MemoryMapStorage",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WrappedExpiringStorage": {
+        "@id": "scs:dist/storage/keyvalue/WrappedExpiringStorage#WrappedExpiringStorage",
+        "@prefix": true,
+        "@context": {
+          "timeout": {
+            "@id": "scs:dist/storage/keyvalue/WrappedExpiringStorage#WrappedExpiringStorage_timeout"
+          },
+          "source": {
+            "@id": "scs:dist/storage/keyvalue/WrappedExpiringStorage#WrappedExpiringStorage_source"
+          }
+        }
+      },
+      "BaseFileIdentifierMapper": {
+        "@id": "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper",
+        "@prefix": true,
+        "@context": {
+          "base": {
+            "@id": "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper_base"
+          },
+          "rootFilepath": {
+            "@id": "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper_rootFilepath"
+          }
+        }
+      },
+      "ExtensionBasedMapper": {
+        "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper",
+        "@prefix": true,
+        "@context": {
+          "base": {
+            "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_base"
+          },
+          "rootFilepath": {
+            "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_rootFilepath"
+          },
+          "customTypes": {
+            "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_customTypes",
+            "@container": "@list"
+          }
+        }
+      },
+      "ExtensionBasedMapperFactory": {
+        "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapperFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ResourceLink": {
+        "@id": "scs:dist/storage/mapping/FileIdentifierMapper#ResourceLink",
+        "@prefix": true,
+        "@context": {}
+      },
+      "FileIdentifierMapper": {
+        "@id": "scs:dist/storage/mapping/FileIdentifierMapper#FileIdentifierMapper",
+        "@prefix": true,
+        "@context": {}
+      },
+      "FileIdentifierMapperFactory": {
+        "@id": "scs:dist/storage/mapping/FileIdentifierMapper#FileIdentifierMapperFactory",
+        "@prefix": true,
+        "@context": {}
+      },
+      "FixedContentTypeMapper": {
+        "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper",
+        "@prefix": true,
+        "@context": {
+          "base": {
+            "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_base"
+          },
+          "rootFilepath": {
+            "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_rootFilepath"
+          },
+          "contentType": {
+            "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_contentType"
+          },
+          "pathSuffix": {
+            "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_pathSuffix"
+          },
+          "urlSuffix": {
+            "@id": "scs:dist/storage/mapping/FixedContentTypeMapper#FixedContentTypeMapper_urlSuffix"
+          }
+        }
+      },
+      "SubdomainExtensionBasedMapper": {
+        "@id": "scs:dist/storage/mapping/SubdomainExtensionBasedMapper#SubdomainExtensionBasedMapper",
+        "@prefix": true,
+        "@context": {
+          "base": {
+            "@id": "scs:dist/storage/mapping/SubdomainExtensionBasedMapper#SubdomainExtensionBasedMapper_base"
+          },
+          "rootFilepath": {
+            "@id": "scs:dist/storage/mapping/SubdomainExtensionBasedMapper#SubdomainExtensionBasedMapper_rootFilepath"
+          },
+          "baseSubdomain": {
+            "@id": "scs:dist/storage/mapping/SubdomainExtensionBasedMapper#SubdomainExtensionBasedMapper_baseSubdomain"
+          },
+          "customTypes": {
+            "@id": "scs:dist/storage/mapping/SubdomainExtensionBasedMapper#SubdomainExtensionBasedMapper_customTypes",
+            "@container": "@list"
+          }
+        }
+      },
+      "ContainerPatcher": {
+        "@id": "scs:dist/storage/patch/ContainerPatcher#ContainerPatcher",
+        "@prefix": true,
+        "@context": {
+          "patcher": {
+            "@id": "scs:dist/storage/patch/ContainerPatcher#ContainerPatcher_patcher"
+          }
+        }
+      },
+      "ConvertingPatcher": {
+        "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher",
+        "@prefix": true,
+        "@context": {
+          "intermediateType": {
+            "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_intermediateType"
+          },
+          "defaultType": {
+            "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_defaultType"
+          },
+          "patcher": {
+            "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_patcher"
+          },
+          "converter": {
+            "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_converter"
+          }
+        }
+      },
+      "PatchHandler": {
+        "@id": "scs:dist/storage/patch/PatchHandler#PatchHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RepresentationPatcher": {
+        "@id": "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcher",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RepresentationPatcherInput": {
+        "@id": "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcherInput",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RepresentationPatchHandler": {
+        "@id": "scs:dist/storage/patch/RepresentationPatchHandler#RepresentationPatchHandler",
+        "@prefix": true,
+        "@context": {
+          "patcher": {
+            "@id": "scs:dist/storage/patch/RepresentationPatchHandler#RepresentationPatchHandler_patcher"
+          }
+        }
+      },
+      "SparqlUpdatePatcher": {
+        "@id": "scs:dist/storage/patch/SparqlUpdatePatcher#SparqlUpdatePatcher",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BaseUrlRouterRule": {
+        "@id": "scs:dist/storage/routing/BaseUrlRouterRule#BaseUrlRouterRule",
+        "@prefix": true,
+        "@context": {
+          "stores": {
+            "@id": "scs:dist/storage/routing/BaseUrlRouterRule#BaseUrlRouterRule_stores"
+          },
+          "baseStore": {
+            "@id": "scs:dist/storage/routing/BaseUrlRouterRule#BaseUrlRouterRule_baseStore"
+          }
+        }
+      },
+      "ConvertingRouterRule": {
+        "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule",
+        "@prefix": true,
+        "@context": {
+          "typedStore_store": {
+            "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule_typedStore_store"
+          },
+          "defaultStore": {
+            "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule_defaultStore"
+          },
+          "typedStore_supportChecker": {
+            "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingRouterRule_typedStore_supportChecker"
+          }
+        }
+      },
+      "ConvertingStoreEntry": {
+        "@id": "scs:dist/storage/routing/ConvertingRouterRule#ConvertingStoreEntry",
+        "@prefix": true,
+        "@context": {}
+      },
+      "PreferenceSupport": {
+        "@id": "scs:dist/storage/routing/PreferenceSupport#PreferenceSupport",
+        "@prefix": true,
+        "@context": {
+          "type": {
+            "@id": "scs:dist/storage/routing/PreferenceSupport#PreferenceSupport_type"
+          },
+          "converter": {
+            "@id": "scs:dist/storage/routing/PreferenceSupport#PreferenceSupport_converter"
+          }
+        }
+      },
+      "RegexRouterRule": {
+        "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule",
+        "@prefix": true,
+        "@context": {
+          "base": {
+            "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_base"
+          },
+          "storeMap": {
+            "@id": "scs:dist/storage/routing/RegexRouterRule#RegexRouterRule_storeMap",
+            "@container": "@list"
+          }
+        }
+      },
+      "RouterRule": {
+        "@id": "scs:dist/storage/routing/RouterRule#RouterRule",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AtomicResourceStore": {
+        "@id": "scs:dist/storage/AtomicResourceStore#AtomicResourceStore",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BaseResourceStore": {
+        "@id": "scs:dist/storage/BaseResourceStore#BaseResourceStore",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BasicConditionsOptions": {
+        "@id": "scs:dist/storage/BasicConditions#BasicConditionsOptions",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Conditions": {
+        "@id": "scs:dist/storage/Conditions#Conditions",
+        "@prefix": true,
+        "@context": {}
+      },
+      "DataAccessorBasedStore": {
+        "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore",
+        "@prefix": true,
+        "@context": {
+          "accessor": {
+            "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore_accessor"
+          },
+          "identifierStrategy": {
+            "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore_identifierStrategy"
+          },
+          "auxiliaryStrategy": {
+            "@id": "scs:dist/storage/DataAccessorBasedStore#DataAccessorBasedStore_auxiliaryStrategy"
+          }
+        }
+      },
+      "IndexRepresentationStore": {
+        "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore",
+        "@prefix": true,
+        "@context": {
+          "indexName": {
+            "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore_indexName"
+          },
+          "mediaRange": {
+            "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore_mediaRange"
+          },
+          "source": {
+            "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore_source"
+          }
+        }
+      },
+      "LockingResourceStore": {
+        "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore_source"
+          },
+          "locks": {
+            "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore_locks"
+          },
+          "auxiliaryStrategy": {
+            "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore_auxiliaryStrategy"
+          }
+        }
+      },
+      "MonitoringStore": {
+        "@id": "scs:dist/storage/MonitoringStore#MonitoringStore",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "scs:dist/storage/MonitoringStore#MonitoringStore_source"
+          }
+        }
+      },
+      "PassthroughStore": {
+        "@id": "scs:dist/storage/PassthroughStore#PassthroughStore",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "scs:dist/storage/PassthroughStore#PassthroughStore_source"
+          }
+        }
+      },
+      "PatchingStore": {
+        "@id": "scs:dist/storage/PatchingStore#PatchingStore",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "scs:dist/storage/PatchingStore#PatchingStore_source"
+          },
+          "patchHandler": {
+            "@id": "scs:dist/storage/PatchingStore#PatchingStore_patchHandler"
+          }
+        }
+      },
+      "ReadOnlyStore": {
+        "@id": "scs:dist/storage/ReadOnlyStore#ReadOnlyStore",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "scs:dist/storage/ReadOnlyStore#ReadOnlyStore_source"
+          }
+        }
+      },
+      "RepresentationConvertingStore": {
+        "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_source"
+          },
+          "options_outConverter": {
+            "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_options_outConverter"
+          },
+          "options_inConverter": {
+            "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_options_inConverter"
+          },
+          "options_inType": {
+            "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_options_inType"
+          }
+        }
+      },
+      "ModifiedResource": {
+        "@id": "scs:dist/storage/ResourceStore#ModifiedResource",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ResourceStore": {
+        "@id": "scs:dist/storage/ResourceStore#ResourceStore",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RoutingResourceStore": {
+        "@id": "scs:dist/storage/RoutingResourceStore#RoutingResourceStore",
+        "@prefix": true,
+        "@context": {
+          "rule": {
+            "@id": "scs:dist/storage/RoutingResourceStore#RoutingResourceStore_rule"
+          }
+        }
+      },
+      "BadRequestHttpError": {
+        "@id": "scs:dist/util/errors/BadRequestHttpError#BadRequestHttpError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/BadRequestHttpError#BadRequestHttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/BadRequestHttpError#BadRequestHttpError_options"
+          }
+        }
+      },
+      "ConflictHttpError": {
+        "@id": "scs:dist/util/errors/ConflictHttpError#ConflictHttpError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/ConflictHttpError#ConflictHttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/ConflictHttpError#ConflictHttpError_options"
+          }
+        }
+      },
+      "ForbiddenHttpError": {
+        "@id": "scs:dist/util/errors/ForbiddenHttpError#ForbiddenHttpError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/ForbiddenHttpError#ForbiddenHttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/ForbiddenHttpError#ForbiddenHttpError_options"
+          }
+        }
+      },
+      "HttpError": {
+        "@id": "scs:dist/util/errors/HttpError#HttpError",
+        "@prefix": true,
+        "@context": {
+          "statusCode": {
+            "@id": "scs:dist/util/errors/HttpError#HttpError_statusCode"
+          },
+          "name": {
+            "@id": "scs:dist/util/errors/HttpError#HttpError_name"
+          },
+          "message": {
+            "@id": "scs:dist/util/errors/HttpError#HttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/HttpError#HttpError_options"
+          }
+        }
+      },
+      "InternalServerError": {
+        "@id": "scs:dist/util/errors/InternalServerError#InternalServerError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/InternalServerError#InternalServerError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/InternalServerError#InternalServerError_options"
+          }
+        }
+      },
+      "MethodNotAllowedHttpError": {
+        "@id": "scs:dist/util/errors/MethodNotAllowedHttpError#MethodNotAllowedHttpError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/MethodNotAllowedHttpError#MethodNotAllowedHttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/MethodNotAllowedHttpError#MethodNotAllowedHttpError_options"
+          }
+        }
+      },
+      "NotFoundHttpError": {
+        "@id": "scs:dist/util/errors/NotFoundHttpError#NotFoundHttpError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/NotFoundHttpError#NotFoundHttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/NotFoundHttpError#NotFoundHttpError_options"
+          }
+        }
+      },
+      "NotImplementedHttpError": {
+        "@id": "scs:dist/util/errors/NotImplementedHttpError#NotImplementedHttpError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/NotImplementedHttpError#NotImplementedHttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/NotImplementedHttpError#NotImplementedHttpError_options"
+          }
+        }
+      },
+      "PreconditionFailedHttpError": {
+        "@id": "scs:dist/util/errors/PreconditionFailedHttpError#PreconditionFailedHttpError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/PreconditionFailedHttpError#PreconditionFailedHttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/PreconditionFailedHttpError#PreconditionFailedHttpError_options"
+          }
+        }
+      },
+      "SystemError": {
+        "@id": "scs:dist/util/errors/SystemError#SystemError",
+        "@prefix": true,
+        "@context": {}
+      },
+      "UnauthorizedHttpError": {
+        "@id": "scs:dist/util/errors/UnauthorizedHttpError#UnauthorizedHttpError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/UnauthorizedHttpError#UnauthorizedHttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/UnauthorizedHttpError#UnauthorizedHttpError_options"
+          }
+        }
+      },
+      "UnsupportedMediaTypeHttpError": {
+        "@id": "scs:dist/util/errors/UnsupportedMediaTypeHttpError#UnsupportedMediaTypeHttpError",
+        "@prefix": true,
+        "@context": {
+          "message": {
+            "@id": "scs:dist/util/errors/UnsupportedMediaTypeHttpError#UnsupportedMediaTypeHttpError_message"
+          },
+          "options": {
+            "@id": "scs:dist/util/errors/UnsupportedMediaTypeHttpError#UnsupportedMediaTypeHttpError_options"
+          }
+        }
+      },
+      "AsyncHandler": {
+        "@id": "scs:dist/util/handlers/AsyncHandler#AsyncHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BooleanHandler": {
+        "@id": "scs:dist/util/handlers/BooleanHandler#BooleanHandler",
+        "@prefix": true,
+        "@context": {
+          "handlers": {
+            "@id": "scs:dist/util/handlers/BooleanHandler#BooleanHandler_handlers",
+            "@container": "@list"
+          }
+        }
+      },
+      "ConditionalHandler": {
+        "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler",
+        "@prefix": true,
+        "@context": {
+          "storageKey": {
+            "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_storageKey"
+          },
+          "storageValue": {
+            "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_storageValue"
+          },
+          "source": {
+            "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_source"
+          },
+          "storage": {
+            "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_storage"
+          }
+        }
+      },
+      "ParallelHandler": {
+        "@id": "scs:dist/util/handlers/ParallelHandler#ParallelHandler",
+        "@prefix": true,
+        "@context": {
+          "handlers": {
+            "@id": "scs:dist/util/handlers/ParallelHandler#ParallelHandler_handlers",
+            "@container": "@list"
+          }
+        }
+      },
+      "SequenceHandler": {
+        "@id": "scs:dist/util/handlers/SequenceHandler#SequenceHandler",
+        "@prefix": true,
+        "@context": {
+          "handlers": {
+            "@id": "scs:dist/util/handlers/SequenceHandler#SequenceHandler_handlers",
+            "@container": "@list"
+          }
+        }
+      },
+      "StaticHandler": {
+        "@id": "scs:dist/util/handlers/StaticHandler#StaticHandler",
+        "@prefix": true,
+        "@context": {
+          "value": {
+            "@id": "scs:dist/util/handlers/StaticHandler#StaticHandler_value"
+          }
+        }
+      },
+      "UnionHandler": {
+        "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler",
+        "@prefix": true,
+        "@context": {
+          "requireAll": {
+            "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler_requireAll"
+          },
+          "ignoreErrors": {
+            "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler_ignoreErrors"
+          },
+          "handlers": {
+            "@id": "scs:dist/util/handlers/UnionHandler#UnionHandler_handlers",
+            "@container": "@list"
+          }
+        }
+      },
+      "UnsupportedAsyncHandler": {
+        "@id": "scs:dist/util/handlers/UnsupportedAsyncHandler#UnsupportedAsyncHandler",
+        "@prefix": true,
+        "@context": {
+          "errorMessage": {
+            "@id": "scs:dist/util/handlers/UnsupportedAsyncHandler#UnsupportedAsyncHandler_errorMessage"
+          }
+        }
+      },
+      "WaterfallHandler": {
+        "@id": "scs:dist/util/handlers/WaterfallHandler#WaterfallHandler",
+        "@prefix": true,
+        "@context": {
+          "handlers": {
+            "@id": "scs:dist/util/handlers/WaterfallHandler#WaterfallHandler_handlers",
+            "@container": "@list"
+          }
+        }
+      },
+      "BaseIdentifierStrategy": {
+        "@id": "scs:dist/util/identifiers/BaseIdentifierStrategy#BaseIdentifierStrategy",
+        "@prefix": true,
+        "@context": {}
+      },
+      "IdentifierStrategy": {
+        "@id": "scs:dist/util/identifiers/IdentifierStrategy#IdentifierStrategy",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SingleRootIdentifierStrategy": {
+        "@id": "scs:dist/util/identifiers/SingleRootIdentifierStrategy#SingleRootIdentifierStrategy",
+        "@prefix": true,
+        "@context": {
+          "baseUrl": {
+            "@id": "scs:dist/util/identifiers/SingleRootIdentifierStrategy#SingleRootIdentifierStrategy_baseUrl"
+          }
+        }
+      },
+      "SubdomainIdentifierStrategy": {
+        "@id": "scs:dist/util/identifiers/SubdomainIdentifierStrategy#SubdomainIdentifierStrategy",
+        "@prefix": true,
+        "@context": {
+          "baseUrl": {
+            "@id": "scs:dist/util/identifiers/SubdomainIdentifierStrategy#SubdomainIdentifierStrategy_baseUrl"
+          }
+        }
+      },
+      "ExpiringReadWriteLocker": {
+        "@id": "scs:dist/util/locking/ExpiringReadWriteLocker#ExpiringReadWriteLocker",
+        "@prefix": true,
+        "@context": {}
+      },
+      "EqualReadWriteLocker": {
+        "@id": "scs:dist/util/locking/EqualReadWriteLocker#EqualReadWriteLocker",
+        "@prefix": true,
+        "@context": {
+          "locker": {
+            "@id": "scs:dist/util/locking/EqualReadWriteLocker#EqualReadWriteLocker_locker"
+          }
+        }
+      },
+      "GreedyReadWriteLocker": {
+        "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker",
+        "@prefix": true,
+        "@context": {
+          "suffixes_count": {
+            "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_suffixes_count"
+          },
+          "locker": {
+            "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_locker"
+          },
+          "storage": {
+            "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_storage"
+          },
+          "suffixes_read": {
+            "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_suffixes_read"
+          },
+          "suffixes_write": {
+            "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteLocker_suffixes_write"
+          }
+        }
+      },
+      "GreedyReadWriteSuffixes": {
+        "@id": "scs:dist/util/locking/GreedyReadWriteLocker#GreedyReadWriteSuffixes",
+        "@prefix": true,
+        "@context": {}
+      },
+      "ReadWriteLocker": {
+        "@id": "scs:dist/util/locking/ReadWriteLocker#ReadWriteLocker",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RedisResourceLocker": {
+        "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker",
+        "@prefix": true,
+        "@context": {
+          "redisClients": {
+            "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redisClients",
+            "@container": "@list"
+          },
+          "redlockOptions": {
+            "@id": "scs:dist/util/locking/RedisResourceLocker#RedisResourceLocker_redlockOptions",
+            "@container": "@list"
+          }
+        }
+      },
+      "ResourceLocker": {
+        "@id": "scs:dist/util/locking/ResourceLocker#ResourceLocker",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SingleThreadedResourceLocker": {
+        "@id": "scs:dist/util/locking/SingleThreadedResourceLocker#SingleThreadedResourceLocker",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WrappedExpiringReadWriteLocker": {
+        "@id": "scs:dist/util/locking/WrappedExpiringReadWriteLocker#WrappedExpiringReadWriteLocker",
+        "@prefix": true,
+        "@context": {
+          "expiration": {
+            "@id": "scs:dist/util/locking/WrappedExpiringReadWriteLocker#WrappedExpiringReadWriteLocker_expiration"
+          },
+          "locker": {
+            "@id": "scs:dist/util/locking/WrappedExpiringReadWriteLocker#WrappedExpiringReadWriteLocker_locker"
+          }
+        }
+      },
+      "ChainedTemplateEngine": {
+        "@id": "scs:dist/util/templates/ChainedTemplateEngine#ChainedTemplateEngine",
+        "@prefix": true,
+        "@context": {
+          "engines": {
+            "@id": "scs:dist/util/templates/ChainedTemplateEngine#ChainedTemplateEngine_engines",
+            "@container": "@list"
+          },
+          "renderedName": {
+            "@id": "scs:dist/util/templates/ChainedTemplateEngine#ChainedTemplateEngine_renderedName"
+          }
+        }
+      },
+      "EjsTemplateEngine": {
+        "@id": "scs:dist/util/templates/EjsTemplateEngine#EjsTemplateEngine",
+        "@prefix": true,
+        "@context": {
+          "template": {
+            "@id": "scs:dist/util/templates/EjsTemplateEngine#EjsTemplateEngine_template",
+            "@type": "@json"
+          }
+        }
+      },
+      "HandlebarsTemplateEngine": {
+        "@id": "scs:dist/util/templates/HandlebarsTemplateEngine#HandlebarsTemplateEngine",
+        "@prefix": true,
+        "@context": {
+          "template": {
+            "@id": "scs:dist/util/templates/HandlebarsTemplateEngine#HandlebarsTemplateEngine_template",
+            "@type": "@json"
+          }
+        }
+      },
+      "TemplateString": {
+        "@id": "scs:dist/util/templates/TemplateEngine#TemplateString",
+        "@prefix": true,
+        "@context": {}
+      },
+      "TemplatePath": {
+        "@id": "scs:dist/util/templates/TemplateEngine#TemplatePath",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AcceptHeader": {
+        "@id": "scs:dist/util/HeaderUtil#AcceptHeader",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Accept": {
+        "@id": "scs:dist/util/HeaderUtil#Accept",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AcceptCharset": {
+        "@id": "scs:dist/util/HeaderUtil#AcceptCharset",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AcceptEncoding": {
+        "@id": "scs:dist/util/HeaderUtil#AcceptEncoding",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AcceptLanguage": {
+        "@id": "scs:dist/util/HeaderUtil#AcceptLanguage",
+        "@prefix": true,
+        "@context": {}
+      },
+      "AcceptDatetime": {
+        "@id": "scs:dist/util/HeaderUtil#AcceptDatetime",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Forwarded": {
+        "@id": "scs:dist/util/HeaderUtil#Forwarded",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RecordObject": {
+        "@id": "scs:dist/util/RecordObject#RecordObject",
+        "@prefix": true,
+        "@context": {
+          "record": {
+            "@id": "scs:dist/util/RecordObject#RecordObject_record",
+            "@container": "@list"
+          }
+        }
+      },
+      "AsyncTransformOptions": {
+        "@id": "scs:dist/util/StreamUtil#AsyncTransformOptions",
+        "@prefix": true,
+        "@context": {}
+      },
+      "NotificationGatewayHttpHandler": {
+        "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler_args_baseUrl"
+          },
+          "args_subscriptionPath": {
+            "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler_args_subscriptionPath"
+          },
+          "args_subscriptionHandler": {
+            "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandler_args_subscriptionHandler"
+          }
+        }
+      },
+      "NotificationGatewayHttpHandlerArgs": {
+        "@id": "scs:dist/http/NotificationGatewayHttpHandler#NotificationGatewayHttpHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "NotificationSubscriptionHttpHandler": {
+        "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_baseUrl"
+          },
+          "args_wsEndpoint": {
+            "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_wsEndpoint"
+          },
+          "args_credentialsExtractor": {
+            "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_credentialsExtractor"
+          },
+          "args_permissionReader": {
+            "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_permissionReader"
+          },
+          "args_notificationStorage": {
+            "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_notificationStorage"
+          },
+          "args_handlers": {
+            "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_handlers",
+            "@container": "@list"
+          },
+          "args_source": {
+            "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandler_args_source"
+          }
+        }
+      },
+      "NotificationSubscriptionHttpHandlerArgs": {
+        "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#NotificationSubscriptionHttpHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Topic": {
+        "@id": "scs:dist/http/NotificationSubscriptionHttpHandler#Topic",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WebHookSubscription2021UnsubscribeHttpHandler": {
+        "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler_args_baseUrl"
+          },
+          "args_credentialsExtractor": {
+            "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler_args_credentialsExtractor"
+          },
+          "args_notificationStorage": {
+            "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler_args_notificationStorage"
+          }
+        }
+      },
+      "WebHookSubscription2021UnsubscribeHttpHandlerArgs": {
+        "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BaseSubscriptionHandler": {
+        "@id": "scs:dist/notification/BaseSubscriptionHandler#BaseSubscriptionHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "Subscription": {
+        "@id": "scs:dist/notification/SubscriptionHandler#Subscription",
+        "@prefix": true,
+        "@context": {}
+      },
+      "SubscriptionHandler": {
+        "@id": "scs:dist/notification/SubscriptionHandler#SubscriptionHandler",
+        "@prefix": true,
+        "@context": {}
+      },
+      "NotificationWellKnownBuilder": {
+        "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilder",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilder_args_baseUrl"
+          },
+          "args_notificationEndpointPath": {
+            "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilder_args_notificationEndpointPath"
+          }
+        }
+      },
+      "NotificationWellKnownBuilderArgs": {
+        "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilderArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WebHookSubscription2021Handler": {
+        "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler",
+        "@prefix": true,
+        "@context": {
+          "args_httpClient": {
+            "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler_args_httpClient"
+          },
+          "args_webhookUnsubscribePath": {
+            "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler_args_webhookUnsubscribePath"
+          },
+          "args_baseUrl": {
+            "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler_args_baseUrl"
+          }
+        }
+      },
+      "WebHookSubscription2021": {
+        "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WebHookSubscription2021Args": {
+        "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Args",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WebHook2021AuthWellKnownBuilder": {
+        "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHook2021AuthWellKnownBuilder#WebHook2021AuthWellKnownBuilder",
+        "@prefix": true,
+        "@context": {
+          "args_baseUrl": {
+            "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHook2021AuthWellKnownBuilder#WebHook2021AuthWellKnownBuilder_args_baseUrl"
+          },
+          "args_jwksEndpointPath": {
+            "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHook2021AuthWellKnownBuilder#WebHook2021AuthWellKnownBuilder_args_jwksEndpointPath"
+          }
+        }
+      },
+      "PodJwksHttpHandler": {
+        "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/PodJwksHttpHandler#PodJwksHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "args_jwksKeyGenerator": {
+            "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/PodJwksHttpHandler#PodJwksHttpHandler_args_jwksKeyGenerator"
+          }
+        }
+      },
+      "PodJwksHttpHandlerArgs": {
+        "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/PodJwksHttpHandler#PodJwksHttpHandlerArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "WebHookAuthHttpClient": {
+        "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClient",
+        "@prefix": true,
+        "@context": {
+          "args_jwksKeyGenerator": {
+            "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClient_args_jwksKeyGenerator"
+          },
+          "args_baseUrl": {
+            "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClient_args_baseUrl"
+          }
+        }
+      },
+      "WebHookAuthHttpClientArgs": {
+        "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/WebHookAuthHttpClient#WebHookAuthHttpClientArgs",
+        "@prefix": true,
+        "@context": {}
+      },
+      "HttpClient": {
+        "@id": "scs:dist/http/client/HttpClient#HttpClient",
+        "@prefix": true,
+        "@context": {}
+      },
+      "BaseHttpClient": {
+        "@id": "scs:dist/http/client/BaseHttpClient#BaseHttpClient",
+        "@prefix": true,
+        "@context": {}
+      }
+    }
+  ]
+}

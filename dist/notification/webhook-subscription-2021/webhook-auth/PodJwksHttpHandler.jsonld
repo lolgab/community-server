@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/PodJwksHttpHandler#PodJwksHttpHandler",
+      "@type": "Class",
+      "requireElement": "PodJwksHttpHandler",
+      "extends": [
+        "scs:dist/server/HttpHandler#HttpHandler"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/PodJwksHttpHandler#PodJwksHttpHandler_args_jwksKeyGenerator",
+          "range": "scs:dist/identity/configuration/JwksKeyGenerator#JwksKeyGenerator",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "jwksKeyGenerator",
+              "value": {
+                "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/PodJwksHttpHandler#PodJwksHttpHandler_args_jwksKeyGenerator"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/notification/webhook-subscription-2021/webhook-auth/PodJwksHttpHandler#PodJwksHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "PodJwksHttpHandlerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

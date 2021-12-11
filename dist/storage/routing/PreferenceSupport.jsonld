@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/routing/PreferenceSupport#PreferenceSupport",
+      "@type": "Class",
+      "requireElement": "PreferenceSupport",
+      "extends": [],
+      "comment": "Helper class that checks if the stored {@link RepresentationConverter} and {@link RepresentationPreferences} support the given input {@link RepresentationPreferences} and {@link Representation}.  Creates a new object by combining the input arguments together with the stored preferences and checks if the converter can handle that object.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/routing/PreferenceSupport#PreferenceSupport_type",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/routing/PreferenceSupport#PreferenceSupport_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/routing/PreferenceSupport#PreferenceSupport_type"
+        },
+        {
+          "@id": "scs:dist/storage/routing/PreferenceSupport#PreferenceSupport_converter"
+        }
+      ]
+    }
+  ]
+}

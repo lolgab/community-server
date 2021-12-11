@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/access/AgentClassAccessChecker#AgentClassAccessChecker",
+      "@type": "Class",
+      "requireElement": "AgentClassAccessChecker",
+      "extends": [
+        "scs:dist/authorization/access/AccessChecker#AccessChecker"
+      ],
+      "comment": "Checks access based on the agent class.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

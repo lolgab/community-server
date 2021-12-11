@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/identifiers/SingleRootIdentifierStrategy#SingleRootIdentifierStrategy",
+      "@type": "Class",
+      "requireElement": "SingleRootIdentifierStrategy",
+      "extends": [
+        "scs:dist/util/identifiers/BaseIdentifierStrategy#BaseIdentifierStrategy"
+      ],
+      "comment": "An IdentifierStrategy that assumes there is only 1 root and all other identifiers are made by appending to that root.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/identifiers/SingleRootIdentifierStrategy#SingleRootIdentifierStrategy_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/identifiers/SingleRootIdentifierStrategy#SingleRootIdentifierStrategy_baseUrl"
+        }
+      ]
+    }
+  ]
+}

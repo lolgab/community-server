@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper",
+      "@type": "Class",
+      "requireElement": "ExtensionBasedMapper",
+      "extends": [
+        "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper"
+      ],
+      "comment": "Supports the behaviour described in https://www.w3.org/DesignIssues/HTTPFilenameMapping.html Determines content-type based on the file extension. In case an identifier does not end on an extension matching its content-type, the corresponding file will be appended with the correct extension, preceded by $.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_base",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_rootFilepath",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_customTypes",
+          "range": {
+            "@type": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_customTypes_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_customTypes_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_customTypes_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          }
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_base"
+        },
+        {
+          "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_rootFilepath"
+        },
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_customTypes",
+              "key": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_customTypes_key",
+              "value": {
+                "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapper_customTypes_value"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/storage/mapping/ExtensionBasedMapper#ExtensionBasedMapperFactory",
+      "@type": "Class",
+      "requireElement": "ExtensionBasedMapperFactory",
+      "extends": [
+        "scs:dist/storage/mapping/FileIdentifierMapper#FileIdentifierMapperFactory"
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

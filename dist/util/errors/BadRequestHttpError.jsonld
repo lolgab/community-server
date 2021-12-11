@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/errors/BadRequestHttpError#BadRequestHttpError",
+      "@type": "Class",
+      "requireElement": "BadRequestHttpError",
+      "extends": [
+        "scs:dist/util/errors/HttpError#HttpError"
+      ],
+      "comment": "An error thrown when incoming data is not supported. Probably because an {@link AsyncHandler} returns false on the canHandle call.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/errors/BadRequestHttpError#BadRequestHttpError_message",
+          "range": "xsd:string",
+          "comment": "Optional, more specific, message.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/util/errors/BadRequestHttpError#BadRequestHttpError_options",
+          "comment": "Optional error options.",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/errors/BadRequestHttpError#BadRequestHttpError_message"
+        },
+        {
+          "@id": "scs:dist/util/errors/BadRequestHttpError#BadRequestHttpError_options"
+        }
+      ]
+    }
+  ]
+}

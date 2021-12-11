@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/output/metadata/WwwAuthMetadataWriter#WwwAuthMetadataWriter",
+      "@type": "Class",
+      "requireElement": "WwwAuthMetadataWriter",
+      "extends": [
+        "scs:dist/http/output/metadata/MetadataWriter#MetadataWriter"
+      ],
+      "comment": "Adds the `WWW-Authenticate` header with the injected value in case the response status code is 401.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/output/metadata/WwwAuthMetadataWriter#WwwAuthMetadataWriter_auth",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/output/metadata/WwwAuthMetadataWriter#WwwAuthMetadataWriter_auth"
+        }
+      ]
+    }
+  ]
+}

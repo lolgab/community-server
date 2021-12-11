@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore",
+      "@type": "Class",
+      "requireElement": "RepresentationConvertingStore",
+      "extends": [
+        "scs:dist/storage/PassthroughStore#PassthroughStore"
+      ],
+      "comment": "Store that provides (optional) conversion of incoming and outgoing {@link Representation}s.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_source",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_options_outConverter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_options_inConverter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_options_inType",
+          "range": "xsd:string",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_source"
+        },
+        {
+          "fields": [
+            {
+              "keyRaw": "outConverter",
+              "value": {
+                "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_options_outConverter"
+              }
+            },
+            {
+              "keyRaw": "inConverter",
+              "value": {
+                "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_options_inConverter"
+              }
+            },
+            {
+              "keyRaw": "inType",
+              "value": {
+                "@id": "scs:dist/storage/RepresentationConvertingStore#RepresentationConvertingStore_options_inType"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

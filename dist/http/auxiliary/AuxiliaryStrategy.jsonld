@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/auxiliary/AuxiliaryStrategy#AuxiliaryStrategy",
+      "@type": "AbstractClass",
+      "requireElement": "AuxiliaryStrategy",
+      "extends": [
+        "scs:dist/http/auxiliary/AuxiliaryIdentifierStrategy#AuxiliaryIdentifierStrategy"
+      ],
+      "comment": "A strategy for handling one or more types of auxiliary resources. References to \"an auxiliary resource\" implicitly imply a specific type of auxiliary resources supported by this strategy.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

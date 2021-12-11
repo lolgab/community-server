@@ -1,0 +1,1 @@
+{"version":3,"file":"Finalizable.js","sourceRoot":"","sources":["../../../src/init/final/Finalizable.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * Allows for cleaning up an object and stopping relevant loops when the application needs to be stopped.\n */\nexport interface Finalizable {\n  finalize: () => Promise<void>;\n}\n"]}

@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/patch/ContainerPatcher#ContainerPatcher",
+      "@type": "Class",
+      "requireElement": "ContainerPatcher",
+      "extends": [
+        "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcher"
+      ],
+      "comment": "A `RepresentationPatcher` specifically for patching containers. A new body will be constructed from the metadata by removing all generated metadata. This body will be passed to the wrapped patcher.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/patch/ContainerPatcher#ContainerPatcher_patcher",
+          "range": "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcher",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/patch/ContainerPatcher#ContainerPatcher_patcher"
+        }
+      ]
+    }
+  ]
+}

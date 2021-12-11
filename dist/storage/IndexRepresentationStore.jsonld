@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore",
+      "@type": "Class",
+      "requireElement": "IndexRepresentationStore",
+      "extends": [
+        "scs:dist/storage/PassthroughStore#PassthroughStore"
+      ],
+      "comment": "Allow containers to have a custom representation. The index representation will be returned when the following conditions are fulfilled: * The request targets a container. * A resource with the given `indexName` exists in the container. (default: \"index.html\") * The highest weighted preference matches the `mediaRange` (default: \"text/html\") Otherwise the request will be passed on to the source store. In case the index representation should always be returned when it exists, the `mediaRange` should be set to \"\\*∕\\*\".  Note: this functionality is not yet part of the specification. Relevant issues are: - https://github.com/solid/specification/issues/69 - https://github.com/solid/specification/issues/198 - https://github.com/solid/specification/issues/109 - https://github.com/solid/web-access-control-spec/issues/36",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore_indexName",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore_mediaRange",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore_source",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore_source"
+        },
+        {
+          "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore_indexName"
+        },
+        {
+          "@id": "scs:dist/storage/IndexRepresentationStore#IndexRepresentationStore_mediaRange"
+        }
+      ]
+    }
+  ]
+}

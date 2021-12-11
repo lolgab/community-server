@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/storage/AdapterFactory#AdapterFactory",
+      "@type": "AbstractClass",
+      "requireElement": "AdapterFactory",
+      "extends": [],
+      "comment": "A factory that generates a StorageAdapter to be used by the IDP to persist information.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

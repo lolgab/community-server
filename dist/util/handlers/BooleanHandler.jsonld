@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/handlers/BooleanHandler#BooleanHandler",
+      "@type": "Class",
+      "requireElement": "BooleanHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "A composite handler that returns true if any of its handlers can handle the input and return true. Handler errors are interpreted as false results.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/handlers/BooleanHandler#BooleanHandler_handlers",
+          "range": "scs:dist/util/handlers/AsyncHandler#AsyncHandler",
+          "comment": "Handlers over which it will run.",
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/handlers/BooleanHandler#BooleanHandler_handlers"
+        }
+      ]
+    }
+  ]
+}

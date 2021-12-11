@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore",
+      "@type": "Class",
+      "requireElement": "LockingResourceStore",
+      "extends": [
+        "scs:dist/storage/AtomicResourceStore#AtomicResourceStore"
+      ],
+      "comment": "Store that for every call acquires a lock before executing it on the requested resource, and releases it afterwards. In case the request returns a Representation the lock will only be released when the data stream is finished.  For auxiliary resources the lock will be applied to the subject resource. The actual operation is still executed on the auxiliary resource.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore_source",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore_locks",
+          "range": "scs:dist/util/locking/ExpiringReadWriteLocker#ExpiringReadWriteLocker",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore_auxiliaryStrategy",
+          "range": "scs:dist/http/auxiliary/AuxiliaryIdentifierStrategy#AuxiliaryIdentifierStrategy",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore_source"
+        },
+        {
+          "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore_locks"
+        },
+        {
+          "@id": "scs:dist/storage/LockingResourceStore#LockingResourceStore_auxiliaryStrategy"
+        }
+      ]
+    }
+  ]
+}

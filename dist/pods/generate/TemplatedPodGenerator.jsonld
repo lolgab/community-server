@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator",
+      "@type": "Class",
+      "requireElement": "TemplatedPodGenerator",
+      "extends": [
+        "scs:dist/pods/generate/PodGenerator#PodGenerator"
+      ],
+      "comment": "Creates a new ResourceStore when creating a pod based on a Components.js configuration.  Part of the dynamic pod creation. 1. It calls a VariableHandler to add necessary variable values. E.g. setting the base url variable for components.js to the pod identifier. 2. It filters/cleans the input agent values using {@link VariableHandler}s 3. It calls a ComponentsJsFactory with the variables and template location to instantiate a new ResourceStore. 4. It stores these values in the configuration storage, which is used as a permanent storage for pod configurations.",
+      "parameters": [
+        {
+          "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_configTemplatePath",
+          "range": "xsd:string",
+          "comment": "Where to find the configuration templates.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_storeFactory",
+          "range": "scs:dist/pods/generate/ComponentsJsFactory#ComponentsJsFactory",
+          "comment": "Factory used for Components.js instantiation.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_variableHandler",
+          "range": "scs:dist/pods/generate/variables/VariableHandler#VariableHandler",
+          "comment": "Handler used for setting variable values.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_configStorage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "comment": "Where to store the configuration values to instantiate the store for this pod.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_storeFactory"
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_variableHandler"
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_configStorage"
+        },
+        {
+          "@id": "scs:dist/pods/generate/TemplatedPodGenerator#TemplatedPodGenerator_configTemplatePath"
+        }
+      ]
+    }
+  ]
+}

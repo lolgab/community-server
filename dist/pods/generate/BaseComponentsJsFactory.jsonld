@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/generate/BaseComponentsJsFactory#BaseComponentsJsFactory",
+      "@type": "Class",
+      "requireElement": "BaseComponentsJsFactory",
+      "extends": [
+        "scs:dist/pods/generate/ComponentsJsFactory#ComponentsJsFactory"
+      ],
+      "comment": "Can be used to instantiate objects using Components.js. Default main module path is the root folder of the project. For every generate call a new manager will be made, but moduleState will be stored in between calls.",
+      "parameters": [
+        {
+          "@id": "scs:dist/pods/generate/BaseComponentsJsFactory#BaseComponentsJsFactory_relativeModulePath",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/pods/generate/BaseComponentsJsFactory#BaseComponentsJsFactory_logLevel",
+          "range": "xsd:string",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/pods/generate/BaseComponentsJsFactory#BaseComponentsJsFactory_relativeModulePath"
+        },
+        {
+          "@id": "scs:dist/pods/generate/BaseComponentsJsFactory#BaseComponentsJsFactory_logLevel"
+        }
+      ]
+    }
+  ]
+}

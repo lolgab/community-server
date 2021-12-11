@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/representation/SparqlUpdatePatch#SparqlUpdatePatch",
+      "@type": "AbstractClass",
+      "requireElement": "SparqlUpdatePatch",
+      "extends": [
+        "scs:dist/http/representation/Patch#Patch"
+      ],
+      "comment": "A specific type of {@link Patch} corresponding to a SPARQL update.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

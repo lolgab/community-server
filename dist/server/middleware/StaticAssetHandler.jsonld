@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler",
+      "@type": "Class",
+      "requireElement": "StaticAssetHandler",
+      "extends": [
+        "scs:dist/server/HttpHandler#HttpHandler"
+      ],
+      "comment": "Handler that serves static resources on specific paths. Relative file paths are assumed to be relative to cwd. Relative file paths can be preceded by `@css:`, e.g. `@css:foo/bar`, in case they need to be relative to the module root.",
+      "parameters": [
+        {
+          "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_options_expires",
+          "range": "xsd:number",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_assets",
+          "range": {
+            "@type": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_assets_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_assets_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_assets_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          },
+          "comment": "A mapping from URL paths to paths, where URL paths ending in a slash are interpreted as entire folders."
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_assets",
+              "key": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_assets_key",
+              "value": {
+                "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_assets_value"
+              }
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "keyRaw": "expires",
+              "value": {
+                "@id": "scs:dist/server/middleware/StaticAssetHandler#StaticAssetHandler_options_expires"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

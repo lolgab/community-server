@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/WebAclReader#WebAclReader",
+      "@type": "Class",
+      "requireElement": "WebAclReader",
+      "extends": [
+        "scs:dist/authorization/PermissionReader#PermissionReader"
+      ],
+      "comment": "Handles permissions according to the WAC specification. Specific access checks are done by the provided {@link AccessChecker}.",
+      "parameters": [
+        {
+          "@id": "scs:dist/authorization/WebAclReader#WebAclReader_aclStrategy",
+          "range": "scs:dist/http/auxiliary/AuxiliaryIdentifierStrategy#AuxiliaryIdentifierStrategy",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/authorization/WebAclReader#WebAclReader_aclStore",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/authorization/WebAclReader#WebAclReader_identifierStrategy",
+          "range": "scs:dist/util/identifiers/IdentifierStrategy#IdentifierStrategy",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/authorization/WebAclReader#WebAclReader_accessChecker",
+          "range": "scs:dist/authorization/access/AccessChecker#AccessChecker",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/authorization/WebAclReader#WebAclReader_aclStrategy"
+        },
+        {
+          "@id": "scs:dist/authorization/WebAclReader#WebAclReader_aclStore"
+        },
+        {
+          "@id": "scs:dist/authorization/WebAclReader#WebAclReader_identifierStrategy"
+        },
+        {
+          "@id": "scs:dist/authorization/WebAclReader#WebAclReader_accessChecker"
+        }
+      ]
+    }
+  ]
+}

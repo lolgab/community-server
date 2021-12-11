@@ -1,0 +1,123 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler",
+      "@type": "Class",
+      "requireElement": "IdentityProviderHttpHandler",
+      "extends": [
+        "scs:dist/server/OperationHttpHandler#OperationHttpHandler"
+      ],
+      "comment": "Handles all requests relevant for the entire IDP interaction, by sending them to either a matching {@link InteractionRoute}, or the generated Provider from the {@link ProviderFactory} if there is no match.  The InteractionRoutes handle all requests where we need custom behaviour, such as everything related to generating and validating an account. The Provider handles all the default request such as the initial handshake.  This handler handles all requests since it assumes all those requests are relevant for the IDP interaction. A {@link RouterHandler} should be used to filter out other requests.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the server.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_idpPath",
+          "range": "xsd:string",
+          "comment": "Relative path of the IDP entry point.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_providerFactory",
+          "range": "scs:dist/identity/configuration/ProviderFactory#ProviderFactory",
+          "comment": "Used to generate the OIDC provider.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_interactionRoutes",
+          "range": "scs:dist/identity/interaction/routing/InteractionRoute#InteractionRoute",
+          "comment": "All routes handling the custom IDP behaviour.",
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "comment": "Used for content negotiation.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_interactionCompleter",
+          "range": "scs:dist/identity/interaction/util/InteractionCompleter#InteractionCompleter",
+          "comment": "Used for POST requests that need to be handled by the OIDC library.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_errorHandler",
+          "range": "scs:dist/http/output/error/ErrorHandler#ErrorHandler",
+          "comment": "Used for converting output errors.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "idpPath",
+              "value": {
+                "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_idpPath"
+              }
+            },
+            {
+              "keyRaw": "providerFactory",
+              "value": {
+                "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_providerFactory"
+              }
+            },
+            {
+              "keyRaw": "interactionRoutes",
+              "value": {
+                "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_interactionRoutes"
+              }
+            },
+            {
+              "keyRaw": "converter",
+              "value": {
+                "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_converter"
+              }
+            },
+            {
+              "keyRaw": "interactionCompleter",
+              "value": {
+                "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_interactionCompleter"
+              }
+            },
+            {
+              "keyRaw": "errorHandler",
+              "value": {
+                "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandler_args_errorHandler"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/identity/IdentityProviderHttpHandler#IdentityProviderHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IdentityProviderHttpHandlerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

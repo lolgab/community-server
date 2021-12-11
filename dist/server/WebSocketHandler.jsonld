@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/server/WebSocketHandler#WebSocketHandler",
+      "@type": "AbstractClass",
+      "requireElement": "WebSocketHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "A WebSocketHandler handles the communication with multiple WebSockets",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

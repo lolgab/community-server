@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/input/metadata/MetadataParser#MetadataParser",
+      "@type": "AbstractClass",
+      "requireElement": "MetadataParser",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "A parser that takes a specific part of an HttpRequest and converts it into metadata, such as the value of a header entry.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

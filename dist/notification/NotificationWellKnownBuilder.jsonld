@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilder",
+      "@type": "Class",
+      "requireElement": "NotificationWellKnownBuilder",
+      "extends": [
+        "scs:dist/http/well-known/WellKnownBuilder#WellKnownBuilder"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilder_args_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilder_args_notificationEndpointPath",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilder_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "notificationEndpointPath",
+              "value": {
+                "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilder_args_notificationEndpointPath"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/notification/NotificationWellKnownBuilder#NotificationWellKnownBuilderArgs",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationWellKnownBuilderArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

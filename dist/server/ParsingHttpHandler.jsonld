@@ -1,0 +1,98 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler",
+      "@type": "Class",
+      "requireElement": "ParsingHttpHandler",
+      "extends": [
+        "scs:dist/server/HttpHandler#HttpHandler"
+      ],
+      "comment": "Parses requests and sends the resulting Operation to wrapped operationHandler. Errors are caught and handled by the Errorhandler. In case the operationHandler returns a result it will be sent to the ResponseWriter.",
+      "parameters": [
+        {
+          "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_requestParser",
+          "range": "scs:dist/http/input/RequestParser#RequestParser",
+          "comment": "Parses the incoming requests.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_metadataCollector",
+          "range": "scs:dist/http/ldp/metadata/OperationMetadataCollector#OperationMetadataCollector",
+          "comment": "Generates generic operation metadata that is required for a response.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_errorHandler",
+          "range": "scs:dist/http/output/error/ErrorHandler#ErrorHandler",
+          "comment": "Converts errors to a serializable format.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_responseWriter",
+          "range": "scs:dist/http/output/ResponseWriter#ResponseWriter",
+          "comment": "Writes out the response of the operation.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_operationHandler",
+          "range": "scs:dist/server/OperationHttpHandler#OperationHttpHandler",
+          "comment": "Handler to send the operation to.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "requestParser",
+              "value": {
+                "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_requestParser"
+              }
+            },
+            {
+              "keyRaw": "metadataCollector",
+              "value": {
+                "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_metadataCollector"
+              }
+            },
+            {
+              "keyRaw": "errorHandler",
+              "value": {
+                "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_errorHandler"
+              }
+            },
+            {
+              "keyRaw": "responseWriter",
+              "value": {
+                "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_responseWriter"
+              }
+            },
+            {
+              "keyRaw": "operationHandler",
+              "value": {
+                "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandler_args_operationHandler"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/server/ParsingHttpHandler#ParsingHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "ParsingHttpHandlerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

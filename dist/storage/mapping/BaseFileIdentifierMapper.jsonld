@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper",
+      "@type": "Class",
+      "requireElement": "BaseFileIdentifierMapper",
+      "extends": [
+        "scs:dist/storage/mapping/FileIdentifierMapper#FileIdentifierMapper"
+      ],
+      "comment": "Base class for {@link FileIdentifierMapper} implementations.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper_base",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper_rootFilepath",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper_base"
+        },
+        {
+          "@id": "scs:dist/storage/mapping/BaseFileIdentifierMapper#BaseFileIdentifierMapper_rootFilepath"
+        }
+      ]
+    }
+  ]
+}

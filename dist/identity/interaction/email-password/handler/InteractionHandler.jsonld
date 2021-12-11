@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionHandler",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Handler used for IDP interactions. Only supports JSON data.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionHandlerInput",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionHandlerInput",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionResponseResult",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionResponseResult",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionCompleteResult",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionCompleteResult",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionErrorResult",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionErrorResult",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

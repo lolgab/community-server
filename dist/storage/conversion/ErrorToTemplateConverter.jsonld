@@ -1,0 +1,85 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter",
+      "@type": "Class",
+      "requireElement": "ErrorToTemplateConverter",
+      "extends": [
+        "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter"
+      ],
+      "comment": "Serializes an Error by filling in the provided template. Content-type is based on the constructor parameter.  In case the input Error has an `errorCode` value, the converter will look in the `descriptions` for a file with the exact same name as that error code + `extension`. The templating engine will then be applied to that file. That result will be passed as an additional parameter to the main templating call, using the variable `codeMessage`.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateEngine",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_mainTemplatePath",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_codeTemplatesPath",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_extension",
+          "range": "xsd:string",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_contentType",
+          "range": "xsd:string",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateEngine"
+        },
+        {
+          "fields": [
+            {
+              "keyRaw": "mainTemplatePath",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_mainTemplatePath"
+              }
+            },
+            {
+              "keyRaw": "codeTemplatesPath",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_codeTemplatesPath"
+              }
+            },
+            {
+              "keyRaw": "extension",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_extension"
+              }
+            },
+            {
+              "keyRaw": "contentType",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#ErrorToTemplateConverter_templateOptions_contentType"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/storage/conversion/ErrorToTemplateConverter#TemplateOptions",
+      "@type": "AbstractClass",
+      "requireElement": "TemplateOptions",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

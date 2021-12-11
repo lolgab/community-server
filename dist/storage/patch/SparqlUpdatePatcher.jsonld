@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/patch/SparqlUpdatePatcher#SparqlUpdatePatcher",
+      "@type": "Class",
+      "requireElement": "SparqlUpdatePatcher",
+      "extends": [
+        "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcher"
+      ],
+      "comment": "Supports application/sparql-update PATCH requests on RDF resources.  Only DELETE/INSERT updates without variables are supported.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

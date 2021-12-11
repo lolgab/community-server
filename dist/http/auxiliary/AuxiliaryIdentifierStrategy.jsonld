@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/auxiliary/AuxiliaryIdentifierStrategy#AuxiliaryIdentifierStrategy",
+      "@type": "AbstractClass",
+      "requireElement": "AuxiliaryIdentifierStrategy",
+      "extends": [],
+      "comment": "A strategy for handling auxiliary related ResourceIdentifiers.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

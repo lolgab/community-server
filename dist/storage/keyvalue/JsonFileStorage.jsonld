@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/keyvalue/JsonFileStorage#JsonFileStorage",
+      "@type": "Class",
+      "requireElement": "JsonFileStorage",
+      "extends": [
+        "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage"
+      ],
+      "comment": "Uses a JSON file to store key/value pairs.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonFileStorage#JsonFileStorage_filePath",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonFileStorage#JsonFileStorage_locker",
+          "range": "scs:dist/util/locking/ReadWriteLocker#ReadWriteLocker",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonFileStorage#JsonFileStorage_filePath"
+        },
+        {
+          "@id": "scs:dist/storage/keyvalue/JsonFileStorage#JsonFileStorage_locker"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/BaseResourceStore#BaseResourceStore",
+      "@type": "Class",
+      "requireElement": "BaseResourceStore",
+      "extends": [
+        "scs:dist/storage/ResourceStore#ResourceStore"
+      ],
+      "comment": "Base implementation of ResourceStore for implementers of custom stores.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

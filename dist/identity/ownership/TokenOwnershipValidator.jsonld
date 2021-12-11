@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator",
+      "@type": "Class",
+      "requireElement": "TokenOwnershipValidator",
+      "extends": [
+        "scs:dist/identity/ownership/OwnershipValidator#OwnershipValidator"
+      ],
+      "comment": "Validates ownership of a WebId by seeing if a specific triple can be added. `expiration` parameter is how long the token should be valid in minutes.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator_expiration",
+          "range": "xsd:number",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator_storage",
+          "range": "scs:dist/storage/keyvalue/ExpiringStorage#ExpiringStorage",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator_converter"
+        },
+        {
+          "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator_storage"
+        },
+        {
+          "@id": "scs:dist/identity/ownership/TokenOwnershipValidator#TokenOwnershipValidator_expiration"
+        }
+      ]
+    }
+  ]
+}

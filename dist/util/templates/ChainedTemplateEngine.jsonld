@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/templates/ChainedTemplateEngine#ChainedTemplateEngine",
+      "@type": "Class",
+      "requireElement": "ChainedTemplateEngine",
+      "extends": [],
+      "comment": "Calls the given array of {@link TemplateEngine}s in the order they appear, feeding the output of one into the input of the next.  The first engine will be called with the provided contents and template parameters. All subsequent engines will be called with no template parameter. Contents will still be passed along and another entry will be added for the body of the previous output.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/templates/ChainedTemplateEngine#ChainedTemplateEngine_engines",
+          "comment": "Engines will be executed in the same order as the array.",
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/templates/ChainedTemplateEngine#ChainedTemplateEngine_renderedName",
+          "range": "xsd:string",
+          "comment": "The name of the key used to pass the body of one engine to the next.",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/templates/ChainedTemplateEngine#ChainedTemplateEngine_engines"
+        },
+        {
+          "@id": "scs:dist/util/templates/ChainedTemplateEngine#ChainedTemplateEngine_renderedName"
+        }
+      ]
+    }
+  ]
+}

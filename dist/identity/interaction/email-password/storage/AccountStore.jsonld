@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/email-password/storage/AccountStore#AccountSettings",
+      "@type": "AbstractClass",
+      "requireElement": "AccountSettings",
+      "extends": [],
+      "comment": "Options that can be set on an account.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/identity/interaction/email-password/storage/AccountStore#AccountStore",
+      "@type": "AbstractClass",
+      "requireElement": "AccountStore",
+      "extends": [],
+      "comment": "Storage needed for the email-password interaction",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

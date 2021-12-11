@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter",
+      "@type": "Class",
+      "requireElement": "VariableSetter",
+      "extends": [
+        "scs:dist/pods/generate/variables/VariableHandler#VariableHandler"
+      ],
+      "comment": "A VariableHandler that will set the given variable to the given value, unless there already is a value for the variable and override is false.",
+      "parameters": [
+        {
+          "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter_variable",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter_value",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter_override",
+          "range": "xsd:boolean",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter_variable"
+        },
+        {
+          "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter_value"
+        },
+        {
+          "@id": "scs:dist/pods/generate/variables/VariableSetter#VariableSetter_override"
+        }
+      ]
+    }
+  ]
+}

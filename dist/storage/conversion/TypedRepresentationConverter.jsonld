@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter",
+      "@type": "AbstractClass",
+      "requireElement": "TypedRepresentationConverter",
+      "extends": [
+        "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that allows requesting the supported types.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter_inputTypes",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter_outputTypes",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter_inputTypes"
+        },
+        {
+          "@id": "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter_outputTypes"
+        }
+      ]
+    }
+  ]
+}

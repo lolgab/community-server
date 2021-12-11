@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/handlers/StaticHandler#StaticHandler",
+      "@type": "Class",
+      "requireElement": "StaticHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "A handler that always resolves and always returns the stored value. Will return undefined if no value is stored.  The generic type extends `any` due to Components.js requirements.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/handlers/StaticHandler#StaticHandler_value",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/handlers/StaticHandler#StaticHandler_value"
+        }
+      ]
+    }
+  ]
+}

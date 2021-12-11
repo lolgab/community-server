@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/keyvalue/ExpiringStorage#ExpiringStorage",
+      "@type": "AbstractClass",
+      "requireElement": "ExpiringStorage",
+      "extends": [
+        "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage"
+      ],
+      "comment": "A KeyValueStorage in which the values can expire. Entries with no expiration date never expire.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

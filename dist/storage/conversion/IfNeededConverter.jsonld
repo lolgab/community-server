@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/IfNeededConverter#IfNeededConverter",
+      "@type": "Class",
+      "requireElement": "IfNeededConverter",
+      "extends": [
+        "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that only converts representations that are not compatible with the preferences.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/conversion/IfNeededConverter#IfNeededConverter_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/conversion/IfNeededConverter#IfNeededConverter_converter"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/keyvalue/WrappedExpiringStorage#WrappedExpiringStorage",
+      "@type": "Class",
+      "requireElement": "WrappedExpiringStorage",
+      "extends": [
+        "scs:dist/storage/keyvalue/ExpiringStorage#ExpiringStorage",
+        "scs:dist/init/final/Finalizable#Finalizable"
+      ],
+      "comment": "A storage that wraps around another storage and expires resources based on the given (optional) expiry date. Will delete expired entries when trying to get their value. Has a timer that will delete all expired data every hour (default value).",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/keyvalue/WrappedExpiringStorage#WrappedExpiringStorage_timeout",
+          "range": "xsd:number",
+          "comment": "How often the expired data needs to be checked in minutes.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/keyvalue/WrappedExpiringStorage#WrappedExpiringStorage_source",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "comment": "KeyValueStorage to actually store the data.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/keyvalue/WrappedExpiringStorage#WrappedExpiringStorage_source"
+        },
+        {
+          "@id": "scs:dist/storage/keyvalue/WrappedExpiringStorage#WrappedExpiringStorage_timeout"
+        }
+      ]
+    }
+  ]
+}

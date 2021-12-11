@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler",
+      "@type": "Class",
+      "requireElement": "RedirectAllHttpHandler",
+      "extends": [
+        "scs:dist/server/HttpHandler#HttpHandler"
+      ],
+      "comment": "Will redirect all incoming requests to the given target. In case the incoming request already has the correct target, the `canHandle` call will reject the input.",
+      "parameters": [
+        {
+          "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_target",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_targetExtractor",
+          "range": "scs:dist/http/input/identifier/TargetExtractor#TargetExtractor",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_responseWriter",
+          "range": "scs:dist/http/output/ResponseWriter#ResponseWriter",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "target",
+              "value": {
+                "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_target"
+              }
+            },
+            {
+              "keyRaw": "targetExtractor",
+              "value": {
+                "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_targetExtractor"
+              }
+            },
+            {
+              "keyRaw": "responseWriter",
+              "value": {
+                "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandler_args_responseWriter"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/server/util/RedirectAllHttpHandler#RedirectAllHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "RedirectAllHttpHandlerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/AtomicResourceStore#AtomicResourceStore",
+      "@type": "AbstractClass",
+      "requireElement": "AtomicResourceStore",
+      "extends": [
+        "scs:dist/storage/ResourceStore#ResourceStore"
+      ],
+      "comment": "A {@link ResourceStore} of which all operations are atomic.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute",
+      "@type": "Class",
+      "requireElement": "BasicInteractionRoute",
+      "extends": [
+        "scs:dist/identity/interaction/routing/InteractionRoute#InteractionRoute"
+      ],
+      "comment": "Default implementation of the InteractionRoute. See function comments for specifics.",
+      "parameters": [
+        {
+          "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_route",
+          "range": "xsd:string",
+          "comment": "Regex to match this route.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_prompt",
+          "range": "xsd:string",
+          "comment": "In case of requests to the IDP entry point, the session prompt will be compared to this.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_viewTemplates",
+          "range": {
+            "@type": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_viewTemplates_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_viewTemplates_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_viewTemplates_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          },
+          "comment": "Templates to render on GET requests. Keys are content-types, values paths to a template."
+        },
+        {
+          "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_responseTemplates",
+          "range": {
+            "@type": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_responseTemplates_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_responseTemplates_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_responseTemplates_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          },
+          "comment": "Templates to render as a response to POST requests when required. Keys are content-types, values paths to a template."
+        },
+        {
+          "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_controls",
+          "range": {
+            "@type": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_controls_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_controls_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_controls_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          },
+          "comment": "Controls to add to the response JSON. The keys will be copied and the values will be converted to full URLs."
+        },
+        {
+          "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_handler",
+          "range": "scs:dist/identity/interaction/email-password/handler/InteractionHandler#InteractionHandler",
+          "comment": "Handler to call on POST requests.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_route"
+        },
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_viewTemplates",
+              "key": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_viewTemplates_key",
+              "value": {
+                "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_viewTemplates_value"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_handler"
+        },
+        {
+          "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_prompt"
+        },
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_responseTemplates",
+              "key": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_responseTemplates_key",
+              "value": {
+                "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_responseTemplates_value"
+              }
+            }
+          ]
+        },
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_controls",
+              "key": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_controls_key",
+              "value": {
+                "@id": "scs:dist/identity/interaction/routing/BasicInteractionRoute#BasicInteractionRoute_controls_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

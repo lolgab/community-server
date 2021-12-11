@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/Authorizer#Authorizer",
+      "@type": "AbstractClass",
+      "requireElement": "Authorizer",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Verifies if the credentials provide access with the given permissions on the resource. An {@link Error} with the necessary explanation will be thrown when permissions are not granted.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/authorization/Authorizer#AuthorizerInput",
+      "@type": "AbstractClass",
+      "requireElement": "AuthorizerInput",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

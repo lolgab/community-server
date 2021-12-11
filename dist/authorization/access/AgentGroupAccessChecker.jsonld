@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker",
+      "@type": "Class",
+      "requireElement": "AgentGroupAccessChecker",
+      "extends": [
+        "scs:dist/authorization/access/AccessChecker#AccessChecker"
+      ],
+      "comment": "Checks if the given WebID belongs to a group that has access. Implements the behaviour of groups from the WAC specification.  Fetched results will be stored in an ExpiringStorage.  Requires a storage that can store JS objects. `expiration` parameter is how long entries in the cache should be stored in seconds, defaults to 3600.",
+      "parameters": [
+        {
+          "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker_expiration",
+          "range": "xsd:number",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker_cache",
+          "range": "scs:dist/storage/keyvalue/ExpiringStorage#ExpiringStorage",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker_converter"
+        },
+        {
+          "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker_cache"
+        },
+        {
+          "@id": "scs:dist/authorization/access/AgentGroupAccessChecker#AgentGroupAccessChecker_expiration"
+        }
+      ]
+    }
+  ]
+}

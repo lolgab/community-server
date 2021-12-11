@@ -1,0 +1,52 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer",
+      "@type": "Class",
+      "requireElement": "ContentTypeReplacer",
+      "extends": [
+        "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that changes the content type but does not alter the representation.  Useful for when a content type is binary-compatible with another one; for instance, all JSON-LD files are valid JSON files.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer_replacements",
+          "range": {
+            "@type": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer_replacements_range",
+            "parameters": [
+              {
+                "@id": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer_replacements_key",
+                "required": true,
+                "unique": true
+              },
+              {
+                "@id": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer_replacements_value",
+                "range": "xsd:string",
+                "required": true,
+                "unique": true
+              }
+            ]
+          },
+          "comment": "Map of content type patterns and content types to replace them by."
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "collectEntries": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer_replacements",
+              "key": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer_replacements_key",
+              "value": {
+                "@id": "scs:dist/storage/conversion/ContentTypeReplacer#ContentTypeReplacer_replacements_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

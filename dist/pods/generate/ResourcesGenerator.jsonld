@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/pods/generate/ResourcesGenerator#Resource",
+      "@type": "AbstractClass",
+      "requireElement": "Resource",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/pods/generate/ResourcesGenerator#ResourcesGenerator",
+      "@type": "AbstractClass",
+      "requireElement": "ResourcesGenerator",
+      "extends": [],
+      "comment": "Generator used to create resources relative to a given base identifier. Note that this is not an AsyncHandler since it returns an AsyncIterable instead of a promise.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher",
+      "@type": "Class",
+      "requireElement": "ConvertingPatcher",
+      "extends": [
+        "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcher"
+      ],
+      "comment": "A `ConvertingPatcher` converts a document to its `intermediateType`, sends the result to the wrapped patcher, and then converts back to its original type. No changes will take place if no `intermediateType` is provided.  In case there is no resource yet and a new one needs to be created, the result of the wrapped patcher will be converted to the provided `defaultType`. In case no `defaultType` is provided, the patcher output will be returned directly.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_intermediateType",
+          "range": "xsd:string",
+          "comment": "Content-type of the intermediate Representation if conversion is needed.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_defaultType",
+          "range": "xsd:string",
+          "comment": "Content-type in case a new resource gets created and needs to be converted.",
+          "unique": true
+        },
+        {
+          "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_patcher",
+          "range": "scs:dist/storage/patch/RepresentationPatcher#RepresentationPatcher",
+          "comment": "Patcher that will be called with the Representation.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_converter",
+          "range": "scs:dist/storage/conversion/RepresentationConverter#RepresentationConverter",
+          "comment": "Converter that will be used to generate intermediate Representation.",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_patcher"
+        },
+        {
+          "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_converter"
+        },
+        {
+          "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_intermediateType"
+        },
+        {
+          "@id": "scs:dist/storage/patch/ConvertingPatcher#ConvertingPatcher_defaultType"
+        }
+      ]
+    }
+  ]
+}

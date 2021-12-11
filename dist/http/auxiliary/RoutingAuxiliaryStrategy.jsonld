@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/auxiliary/RoutingAuxiliaryStrategy#RoutingAuxiliaryStrategy",
+      "@type": "Class",
+      "requireElement": "RoutingAuxiliaryStrategy",
+      "extends": [
+        "scs:dist/http/auxiliary/RoutingAuxiliaryIdentifierStrategy#RoutingAuxiliaryIdentifierStrategy",
+        "scs:dist/http/auxiliary/AuxiliaryStrategy#AuxiliaryStrategy"
+      ],
+      "comment": "An {@link AuxiliaryStrategy} that combines multiple AuxiliaryStrategies into one. Uses `isAuxiliaryIdentifier` to know which strategy to call for which call.  `addMetadata` will either call all strategies if the input is the subject identifier, or only the matching strategy if the input is an auxiliary identifier.",
+      "parameters": [
+        {
+          "@id": "scs:dist/http/auxiliary/RoutingAuxiliaryStrategy#RoutingAuxiliaryStrategy_sources",
+          "range": "scs:dist/http/auxiliary/AuxiliaryStrategy#AuxiliaryStrategy",
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/http/auxiliary/RoutingAuxiliaryStrategy#RoutingAuxiliaryStrategy_sources"
+        }
+      ]
+    }
+  ]
+}

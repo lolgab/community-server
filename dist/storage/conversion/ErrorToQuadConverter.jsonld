@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/conversion/ErrorToQuadConverter#ErrorToQuadConverter",
+      "@type": "Class",
+      "requireElement": "ErrorToQuadConverter",
+      "extends": [
+        "scs:dist/storage/conversion/TypedRepresentationConverter#TypedRepresentationConverter"
+      ],
+      "comment": "Converts an error object into quads by creating a triple for each of name/message/stack.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler",
+      "@type": "Class",
+      "requireElement": "ConditionalHandler",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "This handler will pass all requests to the wrapped handler, until a specific value has been set in the given storage. After that all input will be rejected. Once the value has been matched this behaviour will be cached, so changing the value again afterwards will not enable this handler again.",
+      "parameters": [
+        {
+          "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_storageKey",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_storageValue",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_source",
+          "range": "scs:dist/util/handlers/AsyncHandler#AsyncHandler",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_storage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_source"
+        },
+        {
+          "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_storage"
+        },
+        {
+          "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_storageKey"
+        },
+        {
+          "@id": "scs:dist/util/handlers/ConditionalHandler#ConditionalHandler_storageValue"
+        }
+      ]
+    }
+  ]
+}

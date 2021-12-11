@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler",
+      "@type": "Class",
+      "requireElement": "WebHookSubscription2021UnsubscribeHttpHandler",
+      "extends": [
+        "scs:dist/server/OperationHttpHandler#OperationHttpHandler"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler_args_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler_args_credentialsExtractor",
+          "range": "scs:dist/authentication/CredentialsExtractor#CredentialsExtractor",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler_args_notificationStorage",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "credentialsExtractor",
+              "value": {
+                "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler_args_credentialsExtractor"
+              }
+            },
+            {
+              "keyRaw": "notificationStorage",
+              "value": {
+                "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandler_args_notificationStorage"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/http/WebHookSubscription2021UnsubscribeHttpHandler#WebHookSubscription2021UnsubscribeHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "WebHookSubscription2021UnsubscribeHttpHandlerArgs",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

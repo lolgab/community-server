@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/routing/BaseUrlRouterRule#BaseUrlRouterRule",
+      "@type": "Class",
+      "requireElement": "BaseUrlRouterRule",
+      "extends": [
+        "scs:dist/storage/routing/RouterRule#RouterRule"
+      ],
+      "comment": "Routes requests based on their base url. Checks if any of the stored base URLs match the request identifier. If there are no matches the base store will be returned if one was configured.  Part of the dynamic pod creation. Uses the identifiers that were added to the routing storage.",
+      "parameters": [
+        {
+          "@id": "scs:dist/storage/routing/BaseUrlRouterRule#BaseUrlRouterRule_stores",
+          "range": "scs:dist/storage/keyvalue/KeyValueStorage#KeyValueStorage",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/storage/routing/BaseUrlRouterRule#BaseUrlRouterRule_baseStore",
+          "range": "scs:dist/storage/ResourceStore#ResourceStore",
+          "unique": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "scs:dist/storage/routing/BaseUrlRouterRule#BaseUrlRouterRule_stores"
+        },
+        {
+          "@id": "scs:dist/storage/routing/BaseUrlRouterRule#BaseUrlRouterRule_baseStore"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/http/input/conditions/ConditionsParser#ConditionsParser",
+      "@type": "AbstractClass",
+      "requireElement": "ConditionsParser",
+      "extends": [
+        "scs:dist/util/handlers/AsyncHandler#AsyncHandler"
+      ],
+      "comment": "Creates a Conditions object based on the input HttpRequest.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

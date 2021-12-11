@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler",
+      "@type": "Class",
+      "requireElement": "WebHookSubscription2021Handler",
+      "extends": [
+        "scs:dist/notification/BaseSubscriptionHandler#BaseSubscriptionHandler"
+      ],
+      "parameters": [
+        {
+          "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler_args_httpClient",
+          "range": "scs:dist/http/client/HttpClient#HttpClient",
+          "comment": "Writes out the response of the operation.",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler_args_webhookUnsubscribePath",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        },
+        {
+          "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler_args_baseUrl",
+          "range": "xsd:string",
+          "unique": true,
+          "required": true
+        }
+      ],
+      "constructorArguments": [
+        {
+          "fields": [
+            {
+              "keyRaw": "httpClient",
+              "value": {
+                "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler_args_httpClient"
+              }
+            },
+            {
+              "keyRaw": "webhookUnsubscribePath",
+              "value": {
+                "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler_args_webhookUnsubscribePath"
+              }
+            },
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Handler_args_baseUrl"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021",
+      "@type": "AbstractClass",
+      "requireElement": "WebHookSubscription2021",
+      "extends": [
+        "scs:dist/notification/SubscriptionHandler#Subscription"
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "scs:dist/notification/webhook-subscription-2021/WebHookSubscription2021Handler#WebHookSubscription2021Args",
+      "@type": "AbstractClass",
+      "requireElement": "WebHookSubscription2021Args",
+      "extends": [],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

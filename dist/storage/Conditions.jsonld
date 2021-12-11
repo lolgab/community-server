@@ -1,0 +1,17 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^2.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "scs:dist/storage/Conditions#Conditions",
+      "@type": "AbstractClass",
+      "requireElement": "Conditions",
+      "extends": [],
+      "comment": "The conditions of an HTTP conditional request.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}
