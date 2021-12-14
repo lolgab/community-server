@@ -3,12 +3,15 @@
 ## v3.0.0
 ### New features
 - The Identity Provider now uses the `webid` scope as required for Solid-OIDC.
+- It is now possible to modify how CLI variables are parsed.
 
 ### Configuration changes
 You might need to make changes to your v2 configuration if you use a custom config.
 
 The following changes pertain to the imports in the default configs:
-- ...
+- There is a new configuration option that needs to be imported:
+  - `/app/variables/default/json` contains everything related to parsing CLI arguments 
+    and assigning values to variables.
 
 The following changes are relevant for v2 custom configs that replaced certain features.
 - Conversion has been simplified so most converters are part of the conversion chain:
